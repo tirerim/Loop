@@ -674,7 +674,8 @@ extension LoopDataManager {
                     return promise(.success(()))
                 }
 
-                self.setRecommendedTempBasal { error in
+                self.setRecommendedTempBasal { [weak self] error in
+                    self?.notify(forChange: .tempBasal)
                     if let error = error {
                         promise(.failure(error))
                     }
@@ -708,7 +709,6 @@ extension LoopDataManager {
                     self.logger.error(error)
                 }
                 self.logger.default("Loop ended")
-                self.notify(forChange: .tempBasal)
             },
             receiveValue: { [weak self] event in
                 guard let event = event, let self = self else { return }
@@ -1204,6 +1204,17 @@ extension LoopDataManager {
                     completion(nil)
                 case .failure(let error):
                     completion(error)
+                }
+            }
+        }
+    }
+
+    func setManualTempBasal(_ reccomendation: TempBasalRecommendation) {
+        self.dataAccessQueue.async {
+            let recommendedTempBasal = (recommendation: reccomendation, date: Date())
+            self.delegate?.loopDataManager(self, didRecommendBasalChange: recommendedTempBasal) { (result) in
+                self.dataAccessQueue.async {
+                    self.notify(forChange: .tempBasal)
                 }
             }
         }
