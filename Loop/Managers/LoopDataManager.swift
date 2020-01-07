@@ -1208,6 +1208,17 @@ extension LoopDataManager {
             }
         }
     }
+
+    func setManualTempBasal(_ reccomendation: TempBasalRecommendation) {
+        self.dataAccessQueue.async {
+            let recommendedTempBasal = (recommendation: reccomendation, date: Date())
+            self.delegate?.loopDataManager(self, didRecommendBasalChange: recommendedTempBasal) { (result) in
+                self.dataAccessQueue.async {
+                    self.notify(forChange: .tempBasal)
+                }
+            }
+        }
+    }
 }
 
 

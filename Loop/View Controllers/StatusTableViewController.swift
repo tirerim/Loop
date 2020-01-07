@@ -1218,6 +1218,10 @@ final class StatusTableViewController: ChartsTableViewController {
 
             let glucoseTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(openCGMApp(_:)))
             hudView.glucoseHUD.addGestureRecognizer(glucoseTapGestureRecognizer)
+
+            let tempBasalTap = UITapGestureRecognizer(target: self, action: #selector(openTempBasalView))
+            tempBasalTap.numberOfTapsRequired = 5
+            hudView.basalRateHUD.addGestureRecognizer(tempBasalTap)
             
             if deviceManager.cgmManager?.appURL != nil {
                 hudView.glucoseHUD.accessibilityHint = NSLocalizedString("Launches CGM app", comment: "Glucose HUD accessibility hint")
@@ -1294,6 +1298,17 @@ final class StatusTableViewController: ChartsTableViewController {
             case .openAppURL(let url):
                 UIApplication.shared.open(url)
             }
+        }
+    }
+
+    @objc private func openTempBasalView() {
+        guard !deviceManager.loopManager.settings.dosingEnabled else { return }
+        let vc = TempBasalViewController()
+        present(vc, animated: true, completion: nil)
+        vc.onChange = { [weak self] recommendation in
+            guard let self = self, let recommendation = recommendation else { return }
+            vc.dismiss(animated: true, completion: nil)
+            self.deviceManager.loopManager.setManualTempBasal(recommendation)
         }
     }
 
