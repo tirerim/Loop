@@ -70,6 +70,7 @@ final class LoopDataManager {
         carbStore = CarbStore(
             healthStore: healthStore,
             cacheStore: cacheStore,
+            cacheLength: .hours(24),
             defaultAbsorptionTimes: LoopSettings.defaultCarbAbsorptionTimes,
             carbRatioSchedule: carbRatioSchedule,
             insulinSensitivitySchedule: insulinSensitivitySchedule,
@@ -794,7 +795,7 @@ extension LoopDataManager {
                 case .failure(let error):
                     self.logger.error(error)
                     self.carbEffect = nil
-                case .success(let effects):
+                case .success(let (_, effects)):
                     self.carbEffect = effects
                 }
 
@@ -1004,8 +1005,13 @@ extension LoopDataManager {
         let predictedGlucose = try predictGlucose(using: settings.enabledEffects)
         self.predictedGlucose = predictedGlucose
 
+        let useCurrentBasalRateMultiplier = checkCOBforMicrobolus() && checkTempOverrideForMicrobolus()
+        let selectedMaxBasal = useCurrentBasalRateMultiplier
+            ? settings.currentMaximumBasalRatePerHour(date: startDate, basalRates: basalRateScheduleApplyingOverrideHistory)
+            : settings.maximumBasalRatePerHour
+
         guard
-            let maxBasal = settings.maximumBasalRatePerHour,
+            let maxBasal = selectedMaxBasal,
             let glucoseTargetRange = settings.glucoseTargetRangeScheduleApplyingOverrideIfActive,
             let insulinSensitivity = insulinSensitivityScheduleApplyingOverrideHistory,
             let basalRates = basalRateScheduleApplyingOverrideHistory,
@@ -1038,6 +1044,7 @@ extension LoopDataManager {
         
         let tempBasal = predictedGlucose.recommendedTempBasal(
             to: glucoseTargetRange,
+            at: predictedGlucose[0].startDate,
             suspendThreshold: settings.suspendThreshold?.quantity,
             sensitivity: insulinSensitivity,
             model: model,
@@ -1064,6 +1071,7 @@ extension LoopDataManager {
 
         let recommendation = predictedGlucose.recommendedBolus(
             to: glucoseTargetRange,
+            at: predictedGlucose[0].startDate,
             suspendThreshold: settings.suspendThreshold?.quantity,
             sensitivity: insulinSensitivity,
             model: model,
@@ -1121,19 +1129,12 @@ extension LoopDataManager {
             return
         }
 
-        let cob = carbsOnBoard?.quantity.doubleValue(for: .gram()) ?? 0
-        let cobChek = (cob > 0 && settings.microbolusSettings.enabled) || (cob == 0 && settings.microbolusSettings.enabledWithoutCarbs)
-
-        guard cobChek else {
-            completion(.canceled(date: startDate, recommended: insulinReq, reason: "Microboluses disabled. COB = \(cob)"), nil)
+        guard checkCOBforMicrobolus() else {
+            completion(.canceled(date: startDate, recommended: insulinReq, reason: "Microboluses disabled."), nil)
             return
         }
 
-        if settings.microbolusSettings.disableByOverride,
-            let override = settings.scheduleOverride,
-            !override.hasFinished(),
-            let overrideLowerBound = override.settings.targetRange?.lowerBound,
-            overrideLowerBound >= HKQuantity(unit: unit, doubleValue: settings.microbolusSettings.overrideLowerBound) {
+        guard checkTempOverrideForMicrobolus() else {
             completion(.canceled(date: startDate, recommended: insulinReq, reason: "Canceled by temporary override."), nil)
             return
         }
@@ -1180,6 +1181,23 @@ extension LoopDataManager {
                 completion(.succeeded(date: startDate, recommended: insulinReq, amount: microBolus), nil)
             }
         }
+    }
+
+    private func checkCOBforMicrobolus() -> Bool {
+        let cob = carbsOnBoard?.quantity.doubleValue(for: .gram()) ?? 0
+        return (cob > 0 && settings.microbolusSettings.enabled) || (cob == 0 && settings.microbolusSettings.enabledWithoutCarbs)
+    }
+
+    private func checkTempOverrideForMicrobolus() -> Bool {
+        if settings.microbolusSettings.disableByOverride,
+            let unit = glucoseStore.preferredUnit,
+            let override = settings.scheduleOverride,
+            !override.hasFinished(),
+            let overrideLowerBound = override.settings.targetRange?.lowerBound,
+            overrideLowerBound >= HKQuantity(unit: unit, doubleValue: settings.microbolusSettings.overrideLowerBound) {
+            return false
+        }
+        return true
     }
 
     /// *This method should only be called from the `dataAccessQueue`*
