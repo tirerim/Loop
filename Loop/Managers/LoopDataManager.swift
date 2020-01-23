@@ -646,6 +646,8 @@ extension LoopDataManager {
         let updatePublisher = Deferred {
             Future<(), Error> { promise in
                 do {
+                    self.logger.default("Loop running")
+                    NotificationCenter.default.post(name: .LoopRunning, object: self)
                     try self.update()
                     promise(.success(()))
                 } catch let error {
@@ -687,9 +689,6 @@ extension LoopDataManager {
         }
         .subscribe(on: dataAccessQueue)
         .eraseToAnyPublisher()
-
-        logger.default("Loop running")
-        NotificationCenter.default.post(name: .LoopRunning, object: self)
 
         loopSubscription?.cancel()
 
