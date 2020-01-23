@@ -1227,9 +1227,14 @@ extension LoopDataManager {
         }
     }
 
-    func setManualTempBasal(_ reccomendation: TempBasalRecommendation) {
+    func setManualTempBasal(_ recommendation: TempBasalRecommendation) {
+        guard let maxBasal = self.settings.maximumBasalRatePerHour else { return }
         self.dataAccessQueue.async {
-            let recommendedTempBasal = (recommendation: reccomendation, date: Date())
+            let units = min(recommendation.unitsPerHour, maxBasal)
+            let recommendedTempBasal = (
+                recommendation: TempBasalRecommendation(unitsPerHour: units, duration: recommendation.duration),
+                date: Date()
+            )
             self.delegate?.loopDataManager(self, didRecommendBasalChange: recommendedTempBasal) { (result) in
                 self.dataAccessQueue.async {
                     self.notify(forChange: .tempBasal)

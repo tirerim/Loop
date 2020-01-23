@@ -11,9 +11,11 @@ import Combine
 
 struct TempBasalView: View {
     @State private var amount: String = ""
-    @State private var duration: String = ""
+    @State private var durationIndex = 0
 
     let recommendation = PassthroughSubject<TempBasalRecommendation?, Never>()
+
+    private let durationValues = stride(from: 30.0, to: 720.1, by: 30.0).map { $0 }
 
     private let formatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -27,8 +29,20 @@ struct TempBasalView: View {
             Form {
                 Section {
                     TextField("Basal rate (U/h)", text: $amount).keyboardType(.decimalPad)
-                    TextField("Duration (minutes)", text: $duration).keyboardType(.decimalPad)
-
+                    Picker(selection: $durationIndex, label: Text("Duration")) {
+                        ForEach(0 ..< durationValues.count) { index in
+                            Text(
+                                String(
+                                    format: "%.0f h %02.0f min",
+                                    self.durationValues[index] / 60,
+                                    self.durationValues[index].truncatingRemainder(dividingBy: 60)
+                                )
+                            ).tag(index)
+                        }
+                    }
+                }
+                Button("Cancel Temp Basal") {
+                    self.recommendation.send(.init(unitsPerHour: 0, duration: 0))
                 }
 
             }
@@ -38,12 +52,12 @@ struct TempBasalView: View {
                     self.recommendation.send(nil)
                 },
                 trailing: Button("Set") {
-                    guard let amount = self.formatter.number(from: self.amount)?.doubleValue,
-                        let duration = self.formatter.number(from: self.duration)?.doubleValue
+                    guard let amount = self.formatter.number(from: self.amount)?.doubleValue
                         else {
                             self.recommendation.send(nil)
                             return
                     }
+                    let duration = self.durationValues[self.durationIndex]
                     self.recommendation.send(.init(unitsPerHour: amount, duration: duration * 60))
                 }
             )
