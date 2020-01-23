@@ -1220,7 +1220,6 @@ final class StatusTableViewController: ChartsTableViewController {
             hudView.glucoseHUD.addGestureRecognizer(glucoseTapGestureRecognizer)
 
             let tempBasalTap = UITapGestureRecognizer(target: self, action: #selector(openTempBasalView))
-            tempBasalTap.numberOfTapsRequired = 5
             hudView.basalRateHUD.addGestureRecognizer(tempBasalTap)
             
             if deviceManager.cgmManager?.appURL != nil {
@@ -1306,8 +1305,8 @@ final class StatusTableViewController: ChartsTableViewController {
         let vc = TempBasalViewController()
         present(vc, animated: true, completion: nil)
         vc.onChange = { [weak self] recommendation in
-            guard let self = self, let recommendation = recommendation else { return }
             vc.dismiss(animated: true, completion: nil)
+            guard let self = self, let recommendation = recommendation else { return }
             self.deviceManager.loopManager.setManualTempBasal(recommendation)
         }
     }

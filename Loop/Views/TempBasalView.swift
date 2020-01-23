@@ -23,25 +23,31 @@ struct TempBasalView: View {
     }()
 
     var body: some View {
-        Form {
-            Section {
-                TextField("Amount (U/h)", text: $amount).keyboardType(.decimalPad)
-                TextField("Duration (min)", text: $duration).keyboardType(.decimalPad)
-                Button(action: {
+        NavigationView {
+            Form {
+                Section {
+                    TextField("Basal rate (U/h)", text: $amount).keyboardType(.decimalPad)
+                    TextField("Duration (minutes)", text: $duration).keyboardType(.decimalPad)
+
+                }
+
+            }
+            .navigationBarTitle("Manual Temp Basal")
+            .navigationBarItems(
+                leading: Button("Cancel") {
+                    self.recommendation.send(nil)
+                },
+                trailing: Button("Set") {
                     guard let amount = self.formatter.number(from: self.amount)?.doubleValue,
-                    let duration = self.formatter.number(from: self.duration)?.doubleValue
-                    else {
-                        self.recommendation.send(nil)
-                        return
+                        let duration = self.formatter.number(from: self.duration)?.doubleValue
+                        else {
+                            self.recommendation.send(nil)
+                            return
                     }
                     self.recommendation.send(.init(unitsPerHour: amount, duration: duration * 60))
-                }) {
-                    Text("Set")
                 }
-            }
-
+            )
         }
-        .navigationBarTitle("Manual Temp Basal")
     }
 }
 
