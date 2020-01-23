@@ -646,6 +646,8 @@ extension LoopDataManager {
         let updatePublisher = Deferred {
             Future<(), Error> { promise in
                 do {
+                    self.logger.default("Loop running")
+                    NotificationCenter.default.post(name: .LoopRunning, object: self)
                     try self.update()
                     promise(.success(()))
                 } catch let error {
@@ -687,9 +689,6 @@ extension LoopDataManager {
         }
         .subscribe(on: dataAccessQueue)
         .eraseToAnyPublisher()
-
-        logger.default("Loop running")
-        NotificationCenter.default.post(name: .LoopRunning, object: self)
 
         loopSubscription?.cancel()
 
@@ -1227,9 +1226,14 @@ extension LoopDataManager {
         }
     }
 
-    func setManualTempBasal(_ reccomendation: TempBasalRecommendation) {
+    func setManualTempBasal(_ recommendation: TempBasalRecommendation) {
+        guard let maxBasal = self.settings.maximumBasalRatePerHour else { return }
         self.dataAccessQueue.async {
-            let recommendedTempBasal = (recommendation: reccomendation, date: Date())
+            let units = min(recommendation.unitsPerHour, maxBasal)
+            let recommendedTempBasal = (
+                recommendation: TempBasalRecommendation(unitsPerHour: units, duration: recommendation.duration),
+                date: Date()
+            )
             self.delegate?.loopDataManager(self, didRecommendBasalChange: recommendedTempBasal) { (result) in
                 self.dataAccessQueue.async {
                     self.notify(forChange: .tempBasal)

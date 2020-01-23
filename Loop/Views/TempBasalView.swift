@@ -11,9 +11,11 @@ import Combine
 
 struct TempBasalView: View {
     @State private var amount: String = ""
-    @State private var duration: String = ""
+    @State private var durationIndex = 0
 
     let recommendation = PassthroughSubject<TempBasalRecommendation?, Never>()
+
+    private let durationValues = stride(from: 30.0, to: 720.1, by: 30.0).map { $0 }
 
     private let formatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -23,25 +25,43 @@ struct TempBasalView: View {
     }()
 
     var body: some View {
-        Form {
-            Section {
-                TextField("Amount (U/h)", text: $amount).keyboardType(.decimalPad)
-                TextField("Duration (min)", text: $duration).keyboardType(.decimalPad)
-                Button(action: {
-                    guard let amount = self.formatter.number(from: self.amount)?.doubleValue,
-                    let duration = self.formatter.number(from: self.duration)?.doubleValue
-                    else {
-                        self.recommendation.send(nil)
-                        return
+        NavigationView {
+            Form {
+                Section {
+                    TextField("Basal rate (U/h)", text: $amount).keyboardType(.decimalPad)
+                    Picker(selection: $durationIndex, label: Text("Duration")) {
+                        ForEach(0 ..< durationValues.count) { index in
+                            Text(
+                                String(
+                                    format: "%.0f h %02.0f min",
+                                    self.durationValues[index] / 60,
+                                    self.durationValues[index].truncatingRemainder(dividingBy: 60)
+                                )
+                            ).tag(index)
+                        }
                     }
-                    self.recommendation.send(.init(unitsPerHour: amount, duration: duration * 60))
-                }) {
-                    Text("Set")
                 }
-            }
+                Button("Cancel Temp Basal") {
+                    self.recommendation.send(.init(unitsPerHour: 0, duration: 0))
+                }
 
+            }
+            .navigationBarTitle("Manual Temp Basal")
+            .navigationBarItems(
+                leading: Button("Cancel") {
+                    self.recommendation.send(nil)
+                },
+                trailing: Button("Set") {
+                    guard let amount = self.formatter.number(from: self.amount)?.doubleValue
+                        else {
+                            self.recommendation.send(nil)
+                            return
+                    }
+                    let duration = self.durationValues[self.durationIndex]
+                    self.recommendation.send(.init(unitsPerHour: amount, duration: duration * 60))
+                }
+            )
         }
-        .navigationBarTitle("Manual Temp Basal")
     }
 }
 
