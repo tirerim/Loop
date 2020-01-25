@@ -643,11 +643,12 @@ extension LoopDataManager {
     /// Executes an analysis of the current data, and recommends an adjustment to the current
     /// temporary basal rate.
     func loop() {
+        self.logger.default("Loop running")
+        NotificationCenter.default.post(name: .LoopRunning, object: self)
+
         let updatePublisher = Deferred {
             Future<(), Error> { promise in
                 do {
-                    self.logger.default("Loop running")
-                    NotificationCenter.default.post(name: .LoopRunning, object: self)
                     try self.update()
                     promise(.success(()))
                 } catch let error {
@@ -696,7 +697,7 @@ extension LoopDataManager {
         loopSubscription = updatePublisher
             .flatMap { _ in setBasalPublisher }
             .flatMap { _ in enactBolusPublisher }
-            .receive(on: dataAccessQueue)
+            .receive(on: DispatchQueue.main)
         .sink(
             receiveCompletion: { [weak self] completion in
                 guard let self = self else { return }
