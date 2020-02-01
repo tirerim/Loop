@@ -1114,12 +1114,10 @@ final class StatusTableViewController: ChartsTableViewController {
                 }
             }
 
-            let notOpenBolusScreen = deviceManager.loopManager.settings.notOpenBolusScreen
             deviceManager.loopManager.addCarbEntryAndRecommendBolus(carbEntry) { result in
                 DispatchQueue.main.async {
                     switch result {
                     case .success:
-                        guard !notOpenBolusScreen else { return }
                         // Enact the user-entered bolus
                         if let bolus = bolusViewController.bolus, bolus > 0 {
                             self.deviceManager.enactBolus(units: bolus) { _ in }

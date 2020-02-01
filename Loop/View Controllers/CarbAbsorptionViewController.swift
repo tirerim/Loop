@@ -529,12 +529,10 @@ final class CarbAbsorptionViewController: ChartsTableViewController, Identifiabl
                 }
             }
 
-            let notOpenBolusScreen = deviceManager.loopManager.settings.notOpenBolusScreen
             deviceManager.loopManager.addCarbEntryAndRecommendBolus(updatedEntry, replacing: bolusViewController.originalCarbEntry) { (result) in
                 DispatchQueue.main.async {
                     switch result {
                     case .success:
-                        guard !notOpenBolusScreen else { return }
                         // Enact the user-entered bolus
                         if let bolus = bolusViewController.bolus, bolus > 0 {
                             self.deviceManager.enactBolus(units: bolus) { _ in }
