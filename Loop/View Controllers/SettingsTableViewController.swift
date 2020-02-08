@@ -48,6 +48,7 @@ final class SettingsTableViewController: UITableViewController {
         case configuration
         case services
         case exportSettings
+        case importSettings
         case testingPumpDataDeletion
         case testingCGMDataDeletion
     }
@@ -149,7 +150,7 @@ final class SettingsTableViewController: UITableViewController {
             return ConfigurationRow.count
         case .services:
             return ServiceRow.count
-        case .exportSettings, .testingPumpDataDeletion, .testingCGMDataDeletion:
+        case .exportSettings, .importSettings, .testingPumpDataDeletion, .testingCGMDataDeletion:
             return 1
         }
     }
@@ -335,7 +336,11 @@ final class SettingsTableViewController: UITableViewController {
         case .exportSettings:
             let cell = tableView.dequeueReusableCell(withIdentifier: TextButtonTableViewCell.className, for: indexPath) as! TextButtonTableViewCell
             cell.textLabel?.text = "Export Settings"
-            cell.textLabel?.textAlignment = .center
+            cell.isEnabled = true
+            return cell
+        case .importSettings:
+            let cell = tableView.dequeueReusableCell(withIdentifier: TextButtonTableViewCell.className, for: indexPath) as! TextButtonTableViewCell
+            cell.textLabel?.text = "Import Settings"
             cell.isEnabled = true
             return cell
         case .testingPumpDataDeletion:
@@ -367,7 +372,7 @@ final class SettingsTableViewController: UITableViewController {
             return NSLocalizedString("Configuration", comment: "The title of the configuration section in settings")
         case .services:
             return NSLocalizedString("Services", comment: "The title of the services section in settings")
-        case .exportSettings, .testingPumpDataDeletion, .testingCGMDataDeletion:
+        case .exportSettings, .importSettings, .testingPumpDataDeletion, .testingCGMDataDeletion:
             return nil
         }
     }
@@ -640,6 +645,8 @@ final class SettingsTableViewController: UITableViewController {
             }
         case .exportSettings:
             exportSettings()
+        case .importSettings:
+            importSettings()
         case .testingPumpDataDeletion:
             let confirmVC = UIAlertController(pumpDataDeletionHandler: { self.dataManager.deleteTestingPumpData() })
             present(confirmVC, animated: true) {
@@ -677,10 +684,30 @@ final class SettingsTableViewController: UITableViewController {
 
                 let activity = UIActivityViewController(activityItems: [url], applicationActivities: nil)
                 present(activity, animated: true)
-            } catch {
-                fatalError("Can not export the settings")
-            }
+            } catch {}
         }
+    }
+
+    private func importSettings() {
+        let picker = UIDocumentPickerViewController(documentTypes: ["public.data"], in: .import)
+        picker.delegate = self
+        picker.allowsMultipleSelection = false
+        present(picker, animated: true)
+    }
+}
+
+extension SettingsTableViewController: UIDocumentPickerDelegate {
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        guard let url = urls.last else { return }
+
+        do {
+            let data = try Data(contentsOf: url)
+            let objects = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data)
+
+            if let rawData = objects as? [String: Any], let settings = LoopSettings(rawValue: rawData) {
+                dataManager.loopManager.settings = settings
+            }
+        } catch {}
     }
 }
 
