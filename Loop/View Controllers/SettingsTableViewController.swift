@@ -47,6 +47,7 @@ final class SettingsTableViewController: UITableViewController {
         case cgm
         case configuration
         case services
+        case exportSettings
         case testingPumpDataDeletion
         case testingCGMDataDeletion
     }
@@ -148,7 +149,7 @@ final class SettingsTableViewController: UITableViewController {
             return ConfigurationRow.count
         case .services:
             return ServiceRow.count
-        case .testingPumpDataDeletion, .testingCGMDataDeletion:
+        case .exportSettings, .testingPumpDataDeletion, .testingCGMDataDeletion:
             return 1
         }
     }
@@ -331,6 +332,12 @@ final class SettingsTableViewController: UITableViewController {
 
             configCell.accessoryType = .disclosureIndicator
             return configCell
+        case .exportSettings:
+            let cell = tableView.dequeueReusableCell(withIdentifier: TextButtonTableViewCell.className, for: indexPath) as! TextButtonTableViewCell
+            cell.textLabel?.text = "Export Settings"
+            cell.textLabel?.textAlignment = .center
+            cell.isEnabled = true
+            return cell
         case .testingPumpDataDeletion:
             let cell = tableView.dequeueReusableCell(withIdentifier: TextButtonTableViewCell.className, for: indexPath) as! TextButtonTableViewCell
             cell.textLabel?.text = "Delete Pump Data"
@@ -360,7 +367,7 @@ final class SettingsTableViewController: UITableViewController {
             return NSLocalizedString("Configuration", comment: "The title of the configuration section in settings")
         case .services:
             return NSLocalizedString("Services", comment: "The title of the services section in settings")
-        case .testingPumpDataDeletion, .testingCGMDataDeletion:
+        case .exportSettings, .testingPumpDataDeletion, .testingCGMDataDeletion:
             return nil
         }
     }
@@ -631,6 +638,8 @@ final class SettingsTableViewController: UITableViewController {
 
                 show(vc, sender: sender)
             }
+        case .exportSettings:
+            exportSettings()
         case .testingPumpDataDeletion:
             let confirmVC = UIAlertController(pumpDataDeletionHandler: { self.dataManager.deleteTestingPumpData() })
             present(confirmVC, animated: true) {
@@ -653,6 +662,25 @@ final class SettingsTableViewController: UITableViewController {
             ],
             with: .none
         )
+    }
+
+    private func exportSettings() {
+        let settingsRaw = dataManager.loopManager.settings.rawValue
+
+        if let data = try? NSKeyedArchiver.archivedData(withRootObject: settingsRaw, requiringSecureCoding: false) {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd-HH-mm"
+            let dateString = dateFormatter.string(from: Date())
+            let url = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("settings-\(dateString).freeaps")
+            do {
+                try data.write(to: url)
+
+                let activity = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+                present(activity, animated: true)
+            } catch {
+                fatalError("Can not export the settings")
+            }
+        }
     }
 }
 
