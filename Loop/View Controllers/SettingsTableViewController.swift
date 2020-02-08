@@ -351,7 +351,7 @@ final class SettingsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch sections[section] {
         case .loop:
-            return Bundle.main.localizedNameAndVersion
+            return Bundle.main.localizedNameAndVersionAndBuild
         case .pump:
             return NSLocalizedString("Pump", comment: "The title of the pump section in settings")
         case .cgm:
