@@ -700,7 +700,7 @@ final class SettingsTableViewController: UITableViewController {
     }
 
     private func importSettings() {
-        let picker = UIDocumentPickerViewController(documentTypes: ["public.data"], in: .import)
+        let picker = UIDocumentPickerViewController(documentTypes: ["freeaps.settings"], in: .import)
         picker.delegate = self
         picker.allowsMultipleSelection = false
         present(picker, animated: true)
