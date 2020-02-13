@@ -34,7 +34,7 @@ struct TempBasalView: View {
                             Text(
                                 String(
                                     format: "%.0f h %02.0f min",
-                                    self.durationValues[index] / 60,
+                                    self.durationValues[index] / 60 - 0.1,
                                     self.durationValues[index].truncatingRemainder(dividingBy: 60)
                                 )
                             ).tag(index)
