@@ -774,8 +774,9 @@ extension SettingsTableViewController: UIDocumentPickerDelegate {
                 self.importMessage = "Settings import completed successfully. "
 
                 present(syncAlert, animated: true) {
-                    self.importCancellable = self.syncDeliveryLimits()
-                        .flatMap { self.syncBasalSchedule() }
+                    self.importCancellable = self.syncDeliveryLimits().subscribe(on: DispatchQueue.main)
+                        .flatMap { self.syncBasalSchedule().subscribe(on: DispatchQueue.main) }
+                        .receive(on: DispatchQueue.main)
                         .sink {
                             syncAlert.dismiss(animated: true) {
                                 let successAlert = UIAlertController(
