@@ -265,7 +265,7 @@
 "Loop Failure" = "Ошибка в работе цикла/контура";
 
 /* The notification alert describing a long-lasting loop failure. The substitution parameter is the time interval since the last loop */
-"Loop has not completed successfully in %@" = "Ну удалось успешно  замкнуть цикл/контур в %@";
+"Loop has not completed successfully in %@" = "Не удалось успешно  замкнуть цикл/контур в %@";
 
 /* The error message for missing data. (1: missing data details) */
 "Missing data: %1$@" = "Пропущены данные: %1$@";
