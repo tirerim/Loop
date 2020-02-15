@@ -98,6 +98,8 @@ final class SettingsTableViewController: UITableViewController {
     }()
 
     private var microbolusCancellable: AnyCancellable?
+    private var importCancellable: AnyCancellable?
+    private var importMessage: String?
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.destination {
@@ -682,20 +684,40 @@ final class SettingsTableViewController: UITableViewController {
             with: .none
         )
     }
+}
 
+// MARK: - Export/Import settings
+
+extension SettingsTableViewController: UIDocumentPickerDelegate {
     private func exportSettings() {
-        let settingsRaw = dataManager.loopManager.settings.rawValue
+        var settingsRaw = dataManager.loopManager.settings.rawValue
+        settingsRaw["basalRateSchedule"] = dataManager.loopManager.basalRateSchedule?.rawValue
+        settingsRaw["insulinModelSettings"] = dataManager.loopManager.insulinModelSettings?.rawValue
+        settingsRaw["carbRatioSchedule"] = dataManager.loopManager.carbRatioSchedule?.rawValue
+        settingsRaw["insulinSensitivitySchedule"] = dataManager.loopManager.insulinSensitivitySchedule?.rawValue
 
-        if let data = try? NSKeyedArchiver.archivedData(withRootObject: settingsRaw, requiringSecureCoding: false) {
+        do {
+            let data = try NSKeyedArchiver.archivedData(withRootObject: settingsRaw, requiringSecureCoding: false)
+
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd-HH-mm"
             let dateString = dateFormatter.string(from: Date())
+
             let url = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("settings-\(dateString).freeaps")
-            do {
-                try data.write(to: url)
-                let picker = UIDocumentPickerViewController(url: url, in: .exportToService)
-                present(picker, animated: true)
-            } catch {}
+
+            try data.write(to: url)
+            let picker = UIDocumentPickerViewController(url: url, in: .exportToService)
+            picker.delegate = self
+
+            present(picker, animated: true)
+        } catch let error {
+            let alert = UIAlertController(
+                title: "Export settings",
+                message: error.localizedDescription,
+                preferredStyle: .alert
+            )
+            alert.addAction(.init(title: "Ok", style: .cancel))
+            present(alert, animated: true) { self.tableView.reloadData() }
         }
     }
 
@@ -705,20 +727,134 @@ final class SettingsTableViewController: UITableViewController {
         picker.allowsMultipleSelection = false
         present(picker, animated: true)
     }
-}
 
-extension SettingsTableViewController: UIDocumentPickerDelegate {
+    func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
+        tableView.reloadData()
+    }
+
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
-        guard let url = urls.last else { return }
+        guard controller.documentPickerMode == .import, let url = urls.last else {
+            tableView.reloadData()
+            return
+        }
 
         do {
             let data = try Data(contentsOf: url)
             let objects = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data)
 
-            if let rawData = objects as? [String: Any], let settings = LoopSettings(rawValue: rawData) {
+            if let rawData = objects as? LoopSettings.RawValue, let settings = LoopSettings(rawValue: rawData) {
                 dataManager.loopManager.settings = settings
+
+                if let rawValue = rawData["basalRateSchedule"] as? BasalRateSchedule.RawValue,
+                    let basalRateSchedule = BasalRateSchedule(rawValue: rawValue) {
+                    dataManager.loopManager.basalRateSchedule = basalRateSchedule
+                }
+
+                if let rawValue = rawData["insulinModelSettings"] as? InsulinModelSettings.RawValue,
+                    let insulinModelSettings = InsulinModelSettings(rawValue: rawValue) {
+                    dataManager.loopManager.insulinModelSettings = insulinModelSettings
+                }
+
+                if let rawValue = rawData["carbRatioSchedule"] as? CarbRatioSchedule.RawValue,
+                    let carbRatioSchedule = CarbRatioSchedule(rawValue: rawValue) {
+                    dataManager.loopManager.carbRatioSchedule = carbRatioSchedule
+                }
+
+                if let rawValue = rawData["insulinSensitivitySchedule"] as? InsulinSensitivitySchedule.RawValue,
+                    let insulinSensitivitySchedule = InsulinSensitivitySchedule(rawValue: rawValue) {
+                    dataManager.loopManager.insulinSensitivitySchedule = insulinSensitivitySchedule
+                }
+
+                let syncAlert = UIAlertController(
+                    title: "Pump synchronization in progress",
+                    message: "Saving delivery limits and basal schedule to pump",
+                    preferredStyle: .alert
+                )
+
+                self.importMessage = "Settings import completed successfully. "
+
+                present(syncAlert, animated: true) {
+                    self.importCancellable = self.syncDeliveryLimits()
+                        .flatMap { self.syncBasalSchedule() }
+                        .sink {
+                            syncAlert.dismiss(animated: true) {
+                                let successAlert = UIAlertController(
+                                    title: "Done!",
+                                    message: self.importMessage,
+                                    preferredStyle: .alert
+                                )
+                                successAlert.addAction(.init(title: "Ok", style: .cancel))
+                                self.present(successAlert, animated: true)
+                            }
+                    }
+                }
+
             }
-        } catch {}
+        } catch let error {
+            let alert = UIAlertController(
+                title: "Import settings",
+                message: error.localizedDescription,
+                preferredStyle: .alert
+            )
+            alert.addAction(.init(title: "OK", style: .cancel))
+            present(alert, animated: true) { self.tableView.reloadData() }
+        }
+
+        tableView.reloadData()
+    }
+
+    private func syncBasalSchedule() -> Future<(), Never> {
+        Future { promise in
+            guard let pumpManager = self.dataManager.pumpManager else {
+                promise(.success(()))
+                return
+            }
+
+            // TODO: change ptotocol
+            let vc = BasalScheduleTableViewController(
+                allowedBasalRates: pumpManager.supportedBasalRates,
+                maximumScheduleItemCount: pumpManager.maximumBasalScheduleEntryCount,
+                minimumTimeInterval: pumpManager.minimumBasalScheduleEntryDuration
+            )
+
+            pumpManager.syncScheduleValues(for: vc) { result in
+                switch result {
+                case .success:
+                    self.importMessage = self.importMessage
+                        .map { $0 + "\nBasal schedule saved to pump." }
+                case let .failure(error):
+                    self.importMessage = self.importMessage
+                        .map { $0 + "\nBasal schedule not saved to pump: \(error.localizedDescription)." }
+                }
+                promise(.success(()))
+            }
+        }
+    }
+
+    private func syncDeliveryLimits() -> Future<(), Never> {
+        Future { promise in
+            guard let pumpManager = self.dataManager.pumpManager else {
+                promise(.success(()))
+                return
+            }
+
+            // TODO: change ptotocol
+            let vc = DeliveryLimitSettingsTableViewController(style: .grouped)
+            vc.maximumBasalRatePerHour = self.dataManager.loopManager.settings.maximumBasalRatePerHour
+            vc.maximumBolus = self.dataManager.loopManager.settings.maximumBolus
+
+            pumpManager.syncDeliveryLimitSettings(for: vc) { result in
+                switch result {
+                case .success:
+                    self.importMessage = self.importMessage
+                        .map { $0 + "\nDelivery limit saved to pump." }
+                case let .failure(error):
+                    self.importMessage = self.importMessage
+                        .map { $0 + "\nDelivery limit not saved to pump: \(error.localizedDescription)." }
+                }
+                promise(.success(()))
+            }
+        }
     }
 }
 
