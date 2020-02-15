@@ -767,23 +767,46 @@ extension SettingsTableViewController: UIDocumentPickerDelegate {
 
                 let syncAlert = UIAlertController(
                     title: "Pump synchronization in progress",
-                    message: "Saving delivery limits and basal schedule to pump",
+                    message: "Saving delivery limits and basal schedule to pump. Don't close the app!\n\n",
                     preferredStyle: .alert
                 )
 
-                self.importMessage = "Settings import completed successfully. "
+                let indicator = UIActivityIndicatorView()
+                indicator.translatesAutoresizingMaskIntoConstraints = false
+                syncAlert.view.addSubview(indicator)
+                syncAlert.view.addConstraints([
+                    indicator.bottomAnchor.constraint(equalTo: syncAlert.view.bottomAnchor, constant: -10),
+                    indicator.centerXAnchor.constraint(equalTo: syncAlert.view.centerXAnchor)
+                ])
+                indicator.startAnimating()
+
+                self.importMessage = "✅ Settings import completed successfully. "
 
                 present(syncAlert, animated: true) {
-                    self.importCancellable = self.syncDeliveryLimits().subscribe(on: DispatchQueue.main)
-                        .flatMap { self.syncBasalSchedule().subscribe(on: DispatchQueue.main) }
+                    self.importCancellable = self.syncDeliveryLimits()
+                        .receive(on: DispatchQueue.main)
+                        .flatMap { self.syncBasalSchedule() }
                         .receive(on: DispatchQueue.main)
                         .sink {
                             syncAlert.dismiss(animated: true) {
+                                let paragraphStyle = NSMutableParagraphStyle()
+                                paragraphStyle.alignment = .left
+
+                                let messageText = NSMutableAttributedString(
+                                    string: self.importMessage!,
+                                    attributes: [
+                                        .paragraphStyle: paragraphStyle,
+                                        .font: UIFont.systemFont(ofSize: UIFont.systemFontSize)
+                                    ]
+                                )
+
                                 let successAlert = UIAlertController(
                                     title: "Done!",
-                                    message: self.importMessage,
+                                    message: nil,
                                     preferredStyle: .alert
                                 )
+                                successAlert.setValue(messageText, forKey: "attributedMessage")
+
                                 successAlert.addAction(.init(title: "Ok", style: .cancel))
                                 self.present(successAlert, animated: true)
                             }
@@ -806,26 +829,30 @@ extension SettingsTableViewController: UIDocumentPickerDelegate {
 
     private func syncBasalSchedule() -> Future<(), Never> {
         Future { promise in
-            guard let pumpManager = self.dataManager.pumpManager else {
+            guard let pumpManager = self.dataManager.pumpManager,
+                let profile = self.dataManager.loopManager.basalRateSchedule else {
                 promise(.success(()))
                 return
             }
 
-            // TODO: change ptotocol
+            // TODO: change protocol to not use view controller
             let vc = BasalScheduleTableViewController(
                 allowedBasalRates: pumpManager.supportedBasalRates,
                 maximumScheduleItemCount: pumpManager.maximumBasalScheduleEntryCount,
                 minimumTimeInterval: pumpManager.minimumBasalScheduleEntryDuration
             )
 
+            vc.scheduleItems = profile.items
+            vc.timeZone = profile.timeZone
+
             pumpManager.syncScheduleValues(for: vc) { result in
                 switch result {
                 case .success:
                     self.importMessage = self.importMessage
-                        .map { $0 + "\nBasal schedule saved to pump." }
+                        .map { $0 + "\n\n✅ Basal schedule saved to pump." }
                 case let .failure(error):
                     self.importMessage = self.importMessage
-                        .map { $0 + "\nBasal schedule not saved to pump: \(error.localizedDescription)." }
+                        .map { $0 + "\n\n❌ Basal schedule not saved to pump: \(error.localizedDescription)." }
                 }
                 promise(.success(()))
             }
@@ -839,7 +866,7 @@ extension SettingsTableViewController: UIDocumentPickerDelegate {
                 return
             }
 
-            // TODO: change ptotocol
+            // TODO: change protocol to not use view controller
             let vc = DeliveryLimitSettingsTableViewController(style: .grouped)
             vc.maximumBasalRatePerHour = self.dataManager.loopManager.settings.maximumBasalRatePerHour
             vc.maximumBolus = self.dataManager.loopManager.settings.maximumBolus
@@ -848,10 +875,10 @@ extension SettingsTableViewController: UIDocumentPickerDelegate {
                 switch result {
                 case .success:
                     self.importMessage = self.importMessage
-                        .map { $0 + "\nDelivery limit saved to pump." }
+                        .map { $0 + "\n\n✅ Delivery limit saved to pump." }
                 case let .failure(error):
                     self.importMessage = self.importMessage
-                        .map { $0 + "\nDelivery limit not saved to pump: \(error.localizedDescription)." }
+                        .map { $0 + "\n\n❌ Delivery limit not saved to pump: \(error.localizedDescription)." }
                 }
                 promise(.success(()))
             }
