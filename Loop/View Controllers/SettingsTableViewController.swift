@@ -184,13 +184,13 @@ final class SettingsTableViewController: UITableViewController {
                 let settings = dataManager.loopManager.settings
                 cell.detailTextLabel?.text = {
                     guard settings.dosingEnabled else {
-                        return "Disabled"
+                        return NSLocalizedString("Disabled", comment: "")
                     }
                     switch (settings.microbolusSettings.enabledWithoutCarbs, settings.microbolusSettings.enabled) {
-                    case (true, true): return "Always"
-                    case (false, true): return "With Carbs"
-                    case (true, false): return "Without Carbs"
-                    default: return "Disabled"
+                    case (true, true): return NSLocalizedString("Always", comment: "")
+                    case (false, true): return NSLocalizedString("With Carbs", comment: "")
+                    case (true, false): return NSLocalizedString("Without Carbs", comment: "")
+                    default: return NSLocalizedString("Disabled", comment: "")
                     }
                 }()
                 cell.accessoryType = .disclosureIndicator
