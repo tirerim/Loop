@@ -32,6 +32,7 @@
 		38BE6D8D236C8A110074CF11 /* MicrobolusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BE6D8C236C8A110074CF11 /* MicrobolusViewController.swift */; };
 		38CE2218236B134F00DFE990 /* MicrobolusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CE2217236B134F00DFE990 /* MicrobolusView.swift */; };
 		38DAF6F223D7203500A3E9E3 /* MicrobolusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DAF6F123D7203500A3E9E3 /* MicrobolusViewModel.swift */; };
+		38DB1DC2240147BD00AA9A02 /* ImportExportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DB1DC1240147BD00AA9A02 /* ImportExportManager.swift */; };
 		43027F0F1DFE0EC900C51989 /* HKUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F526D5E1DF2459000A04910 /* HKUnit.swift */; };
 		4302F4E11D4E9C8900F0FCAF /* TextFieldTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4302F4E01D4E9C8900F0FCAF /* TextFieldTableViewController.swift */; };
 		4302F4E31D4EA54200F0FCAF /* InsulinDeliveryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4302F4E21D4EA54200F0FCAF /* InsulinDeliveryTableViewController.swift */; };
@@ -590,6 +591,7 @@
 		38BE6D8C236C8A110074CF11 /* MicrobolusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrobolusViewController.swift; sourceTree = "<group>"; };
 		38CE2217236B134F00DFE990 /* MicrobolusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrobolusView.swift; sourceTree = "<group>"; };
 		38DAF6F123D7203500A3E9E3 /* MicrobolusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrobolusViewModel.swift; sourceTree = "<group>"; };
+		38DB1DC1240147BD00AA9A02 /* ImportExportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportExportManager.swift; sourceTree = "<group>"; };
 		4302F4E01D4E9C8900F0FCAF /* TextFieldTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewController.swift; sourceTree = "<group>"; };
 		4302F4E21D4EA54200F0FCAF /* InsulinDeliveryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsulinDeliveryTableViewController.swift; sourceTree = "<group>"; };
 		430B29892041F54A00BA9F93 /* NSUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSUserDefaults.swift; sourceTree = "<group>"; };
@@ -1566,7 +1568,6 @@
 			isa = PBXGroup;
 			children = (
 				C1F8B1D122375E4200DD66CF /* BolusProgressTableViewCell.swift */,
-				C1F8B1DB223862D500DD66CF /* BolusProgressTableViewCell.xib */,
 				43B260481ED248FB008CAA77 /* CarbEntryTableViewCell.swift */,
 				4346D1E61C77F5FE00ABAFE3 /* ChartTableViewCell.swift */,
 				431A8C3F1EC6E8AB00823B9C /* CircleMaskView.swift */,
@@ -1578,7 +1579,7 @@
 				4311FB9A1F37FE1B00D4C0A7 /* TitleSubtitleTextFieldTableViewCell.swift */,
 				89D6953D23B6DF8A002B3066 /* PotentialCarbEntryTableViewCell.swift */,
 				439706E522D2E84900C81566 /* PredictionSettingTableViewCell.swift */,
-                38B66F6A23C4A1F2009594BB /* TempBasalView.swift */,
+				38B66F6A23C4A1F2009594BB /* TempBasalView.swift */,
 				C1F8B1DB223862D500DD66CF /* BolusProgressTableViewCell.xib */,
 				38DAF6F023D71FFE00A3E9E3 /* Microboluses */,
 			);
@@ -1605,6 +1606,7 @@
 				89ADE13A226BFA0F0067222B /* TestingScenariosManager.swift */,
 				4328E0341CFC0AE100E199AA /* WatchDataManager.swift */,
 				E9BB27AA23B85C3500FB4987 /* SleepStore.swift */,
+				38DB1DC1240147BD00AA9A02 /* ImportExportManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -2570,6 +2572,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38DB1DC2240147BD00AA9A02 /* ImportExportManager.swift in Sources */,
 				C17824A51E1AD4D100D9D25C /* BolusRecommendation.swift in Sources */,
 				4F70C2131DE90339006380B7 /* StatusExtensionContext.swift in Sources */,
 				43441A9C1EDB34810087958C /* StatusExtensionContext+LoopKit.swift in Sources */,
