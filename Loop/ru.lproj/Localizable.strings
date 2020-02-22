@@ -436,3 +436,15 @@
 "Export Settings" = "Сохранить настройки";
 
 "Import Settings" = "Загрузить настройки";
+
+"Manual Temp Basal" = "Ручная ВБС";
+
+"Basal rate (U/h)" = "Базальная скорость (Ед/ч)";
+
+"Duration" = "Длительность";
+
+"%.0f h %02.0f min" = "%.0f ч %02.0f мин";
+
+"Cancel Temp Basal" = "Отменить ВБС";
+
+"Set" = "Установить";

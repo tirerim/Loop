@@ -436,3 +436,15 @@
 "Export Settings" = "Export Settings";
 
 "Import Settings" = "Import Settings";
+
+"Manual Temp Basal" = "Manual Temp Basal";
+
+"Basal rate (U/h)" = "Basal rate (U/h)";
+
+"Duration" = "Duration";
+
+"%.0f h %02.0f min" = "%.0f h %02.0f min";
+
+"Cancel Temp Basal" = "Cancel Temp Basal";
+
+"Set" = "Set";

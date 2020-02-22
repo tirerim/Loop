@@ -33,7 +33,7 @@ struct TempBasalView: View {
                         ForEach(0 ..< durationValues.count) { index in
                             Text(
                                 String(
-                                    format: "%.0f h %02.0f min",
+                                    format: NSLocalizedString("%.0f h %02.0f min", comment: ""),
                                     self.durationValues[index] / 60 - 0.1,
                                     self.durationValues[index].truncatingRemainder(dividingBy: 60)
                                 )
@@ -59,7 +59,7 @@ struct TempBasalView: View {
                     }
                     let duration = self.durationValues[self.durationIndex]
                     self.recommendation.send(.init(unitsPerHour: amount, duration: duration * 60))
-                }
+                }.disabled(amount.isEmpty)
             )
         }
     }
