@@ -31,7 +31,7 @@ extension MicrobolusView {
         let partialApplicationValues = stride(from: 0.1, to: 1.01, by: 0.05).map { $0 }
         let basalRateMultiplierValues = stride(from: 1, to: 5.01, by: 0.1).map { $0 } + [0]
 
-        private var cancellable: AnyCancellable!
+        private var lifetime = Set<AnyCancellable>()
         let formatter: NumberFormatter = {
             let formatter = NumberFormatter()
             formatter.numberStyle = .decimal
@@ -56,30 +56,27 @@ extension MicrobolusView {
             partialApplicationIndex = partialApplicationValues.firstIndex(of: settings.partialApplication) ?? 0
             basalRateMultiplierIndex = basalRateMultiplierValues.firstIndex(of: settings.basalRateMultiplier) ?? 0
 
-            let microbolusesMinimumBolusSizeCancellable = $pickerMinimumBolusSizeIndex
+            $pickerMinimumBolusSizeIndex
                 .map { Double(self.minimumBolusSizeValues[$0]) }
                 .sink { self.microbolusesMinimumBolusSize = $0 }
+                .store(in: &lifetime)
 
-            let partialApplicationCancellable = $partialApplicationIndex
+            $partialApplicationIndex
                 .map { Double(self.partialApplicationValues[$0]) }
                 .sink { self.partialApplication = $0 }
+                .store(in: &lifetime)
 
-            let basalRateMultiplierCancellable = $basalRateMultiplierIndex
-            .map { Double(self.basalRateMultiplierValues[$0]) }
-            .sink { self.basalRateMultiplier = $0 }
+            $basalRateMultiplierIndex
+                .map { Double(self.basalRateMultiplierValues[$0]) }
+                .sink { self.basalRateMultiplier = $0 }
+                .store(in: &lifetime)
 
-            let lastEventCancellable = eventPublisher?
+            eventPublisher?
                 .map { $0?.description }
                 .receive(on: DispatchQueue.main)
                 .sink { self.event = $0 }
+                .store(in: &lifetime)
 
-
-            cancellable = AnyCancellable {
-                microbolusesMinimumBolusSizeCancellable.cancel()
-                partialApplicationCancellable.cancel()
-                basalRateMultiplierCancellable.cancel()
-                lastEventCancellable?.cancel()
-            }
         }
 
         func changes() -> AnyPublisher<Microbolus.Settings, Never> {
