@@ -1348,7 +1348,12 @@ extension LoopDataManager {
         let glucoseBelowRange = predictedGlucose.first { $0.quantity.doubleValue(for: unit) < glucoseTargetRange.value(at: $0.startDate).minValue }
 
         guard glucoseBelowRange == nil else {
-            completion(.canceled(date: startDate, recommended: insulinReq, reason: "Glucose is below target at \(glucoseBelowRange!.startDate)"), nil)
+            let timeFormatter = DateFormatter()
+            timeFormatter.timeStyle = .short
+            completion(.canceled(
+                date: startDate,
+                recommended: insulinReq,
+                reason: "Glucose \(glucoseBelowRange!.quantity) is below target at \(timeFormatter.string(from: glucoseBelowRange!.startDate))"), nil)
             return
         }
 
