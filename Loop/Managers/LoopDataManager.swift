@@ -1437,6 +1437,11 @@ extension LoopDataManager {
             return
         }
 
+        if case .suspended = basalDeliveryState {
+            completion(LoopError.pumpSuspended)
+            return
+        }
+
         guard abs(recommendedTempBasal.date.timeIntervalSinceNow) < TimeInterval(minutes: 5) else {
             completion(LoopError.recommendationExpired(date: recommendedTempBasal.date))
             return
