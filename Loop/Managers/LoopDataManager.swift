@@ -1385,28 +1385,31 @@ extension LoopDataManager {
         case .none: break
         }
 
+        let rawBolusUnits = insulinReq * settings.microbolusSettings.partialApplication
+
         let volumeRounder = { (_ units: Double) in
             self.delegate?.loopDataManager(self, roundBolusVolume: units) ?? units
         }
 
-        let microBolus = volumeRounder(insulinReq * settings.microbolusSettings.partialApplication)
-        guard microBolus > 0 else {
+        let microBolusUnits = volumeRounder(rawBolusUnits)
+        
+        guard microBolusUnits > 0 else {
             completion(.canceled(date: startDate, recommended: insulinReq, reason: "Microbolus < then supported volume."), nil)
             return
         }
-        guard microBolus >= settings.microbolusSettings.minimumBolusSize else {
+        guard microBolusUnits >= settings.microbolusSettings.minimumBolusSize else {
             completion(.canceled(date: startDate, recommended: insulinReq, reason: "Microbolus < then minimum bolus size."), nil)
             return
         }
 
-        let recommendation = (amount: microBolus, date: startDate)
-        logger.debug("Enact microbolus: \(String(describing: microBolus))")
+        let recommendation = (amount: microBolusUnits, date: startDate)
+        logger.debug("Enact microbolus: \(String(describing: microBolusUnits))")
 
         self.delegate?.loopDataManager(self, didRecommendMicroBolus: recommendation) { error in
             if let error = error {
                 completion(.failed(date: startDate, recommended: insulinReq, error: error), error)
             } else {
-                completion(.succeeded(date: startDate, recommended: insulinReq, amount: microBolus), nil)
+                completion(.succeeded(date: startDate, recommended: insulinReq, amount: microBolusUnits, roundedUp: microBolusUnits > rawBolusUnits), nil)
             }
         }
     }
