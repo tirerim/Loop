@@ -119,7 +119,7 @@ public extension Microbolus {
             percentFormatter.maximumFractionDigits = 2
             percentFormatter.numberStyle = .percent
             let percent = amount/recommendedAmount
-            return "At \(timeFormatter.string(from: date)): enacted \(amount) (\(percentFormatter.string(for: percent) ?? "0 %")) of recommended \(recommendedAmount).\(roundedUp ? " Rounded up to nearest value": "")"
+            return "At \(timeFormatter.string(from: date)): enacted \(amount) (\(percentFormatter.string(for: percent) ?? "0 %")) of recommended \(recommendedAmount). \(roundedUp ? "Rounded up to nearest value": "")"
             + (reason ?? "")
         }
 

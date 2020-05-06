@@ -642,7 +642,7 @@ extension DeviceDataManager: LoopDataManagerDelegate {
     }
 
     func loopDataManager(_ manager: LoopDataManager, roundBolusVolume units: Double) -> Double {
-        guard let pumpManager = pumpManager else {
+        guard let pumpManager = pumpManager, units > 0 else {
             return units
         }
 
