@@ -11,6 +11,7 @@ import HealthKit
 import LoopKit
 import LoopCore
 import Combine
+import Accelerate
 
 
 final class LoopDataManager {
