@@ -38,7 +38,7 @@ final class LoopDataManager {
 
     private var latestGlucoseSamples: [StoredGlucoseSample]?
 
-    let lastMicrobolusEvent = CurrentValueSubject<Microbolus.Event?, Never>(nil)
+    let lastMicrobolusEvent = CurrentValueSubject<[Microbolus.Event], Never>([])
 
     // References to registered notification center observers
     private var notificationObservers: [Any] = []
@@ -755,7 +755,7 @@ extension LoopDataManager {
                 },
                 receiveValue: { [weak self] event in
                     guard let event = event, let self = self else { return }
-                    self.lastMicrobolusEvent.send(event)
+                    self.lastMicrobolusEvent.send(self.lastMicrobolusEvent.value + [event])
                     self.logger.debug("Microbolus event. \(event.description)")
                 }
             )

@@ -24,7 +24,7 @@ extension MicrobolusView {
         @Published var partialApplicationIndex: Int
         @Published var basalRateMultiplier: Double
         @Published var basalRateMultiplierIndex: Int
-        @Published var event: String? = nil
+        @Published var events: [Microbolus.Event] = []
 
         // @ToDo: Should be able to get the to limit from the settings but for now defult to a low value
         let minimumBolusSizeValues = stride(from: 0.0, to: 0.51, by: 0.05).map { $0 }
@@ -41,7 +41,7 @@ extension MicrobolusView {
 
         let unit: HKUnit
 
-        init(settings: Microbolus.Settings, glucoseUnit: HKUnit, eventPublisher: AnyPublisher<Microbolus.Event?, Never>? = nil) {
+        init(settings: Microbolus.Settings, glucoseUnit: HKUnit, eventPublisher: AnyPublisher<[Microbolus.Event], Never>? = nil) {
             self.microbolusesWithCOB = settings.enabled
             self.microbolusesWithoutCOB = settings.enabledWithoutCarbs
             self.partialApplication = settings.partialApplication
@@ -72,9 +72,8 @@ extension MicrobolusView {
                 .store(in: &lifetime)
 
             eventPublisher?
-                .map { $0?.description }
                 .receive(on: DispatchQueue.main)
-                .sink { self.event = $0 }
+                .assign(to: \.events, on: self)
                 .store(in: &lifetime)
 
         }

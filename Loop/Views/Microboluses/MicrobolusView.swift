@@ -25,7 +25,7 @@ struct MicrobolusView: View {
             basalRateSection
             temporaryOverridesSection
             otherOptionsSection
-            if viewModel.event != nil {
+            if !viewModel.events.isEmpty {
                 lastEventSection
             }
         }
@@ -124,7 +124,14 @@ struct MicrobolusView: View {
 
     private var lastEventSection: some View {
         Section(header: Text("Last Event").font(.headline)) {
-            Text(viewModel.event ?? "No event")
+            NavigationLink(
+                destination: List(viewModel.events.reversed()) {
+                    Text($0.description)
+                }
+            ) {
+                Text(viewModel.events.last?.description ?? "No event")
+            }
+
         }
     }
 }

@@ -93,7 +93,8 @@ public enum Microbolus {
 }
 
 public extension Microbolus {
-    struct Event {
+    struct Event: Identifiable {
+        public let id = UUID()
         public let date: Date
         public let recommendedAmount: Double
         public let amount: Double
