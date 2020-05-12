@@ -36,6 +36,8 @@ final class LoopDataManager {
 
     private var loopSubscription: AnyCancellable?
 
+    private var latestGlucoseSamples: [StoredGlucoseSample]?
+
     let lastMicrobolusEvent = CurrentValueSubject<Microbolus.Event?, Never>(nil)
 
     // References to registered notification center observers
@@ -737,26 +739,26 @@ extension LoopDataManager {
             .flatMap { _ in setBasalPublisher }
             .flatMap { _ in enactBolusPublisher }
             .receive(on: dataAccessQueue)
-        .sink(
-            receiveCompletion: { [weak self] completion in
-                guard let self = self else { return }
-                switch completion {
-                case .finished:
-                    self.lastLoopError = nil
-                    self.loopDidComplete(date: Date(), duration: -startDate.timeIntervalSinceNow)
-                    self.notify(forChange: .bolus)
-                case let .failure(error):
-                    self.lastLoopError = error
-                    self.logger.error(error)
+            .sink(
+                receiveCompletion: { [weak self] completion in
+                    guard let self = self else { return }
+                    switch completion {
+                    case .finished:
+                        self.lastLoopError = nil
+                        self.loopDidComplete(date: Date(), duration: -startDate.timeIntervalSinceNow)
+                        self.notify(forChange: .bolus)
+                    case let .failure(error):
+                        self.lastLoopError = error
+                        self.logger.error(error)
+                    }
+                    self.logger.default("Loop ended")
+                },
+                receiveValue: { [weak self] event in
+                    guard let event = event, let self = self else { return }
+                    self.lastMicrobolusEvent.send(event)
+                    self.logger.debug("Microbolus event. \(event.description)")
                 }
-                self.logger.default("Loop ended")
-            },
-            receiveValue: { [weak self] event in
-                guard let event = event, let self = self else { return }
-                self.lastMicrobolusEvent.send(event)
-                self.logger.debug("Microbolus event. \(event.description)")
-            }
-        )
+            )
     }
 
     /// - Throws:
@@ -773,6 +775,7 @@ extension LoopDataManager {
         updateGroup.enter()
         glucoseStore.getCachedGlucoseSamples(start: Date(timeIntervalSinceNow: -settings.inputDataRecencyInterval)) { (values) in
             latestGlucoseDate = values.last?.startDate
+            self.latestGlucoseSamples = values
             updateGroup.leave()
         }
         _ = updateGroup.wait(timeout: .distantFuture)
@@ -1337,11 +1340,19 @@ extension LoopDataManager {
             return
         }
 
-        guard let glucose = self.glucoseStore.latestGlucose,
+        guard let glucose = glucoseStore.latestGlucose,
             let predictedGlucose = predictedGlucose,
             let unit = glucoseStore.preferredUnit,
             let glucoseTargetRange = settings.glucoseTargetRangeScheduleApplyingOverrideIfActive else {
             completion(.canceled(date: startDate, recommended: insulinReq, reason: "Glucose data not found."), nil)
+            return
+        }
+
+        let glucoseValue = glucose.quantity.doubleValue(for: unit)
+        let previousGlucoseValue = latestGlucoseSamples?.suffix(2).first?.quantity.doubleValue(for: unit) ?? glucoseValue
+
+        guard glucoseValue - previousGlucoseValue <= glucoseValue * 0.2 else {
+            completion(.canceled(date: startDate, recommended: insulinReq, reason: "Glucose delta > 20%. Possible sensor noise or calibration."), nil)
             return
         }
 
