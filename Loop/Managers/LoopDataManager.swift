@@ -1349,12 +1349,8 @@ extension LoopDataManager {
             return
         }
 
-        let glucoseValue = glucose.quantity.doubleValue(for: unit)
-        let previousGlucoseValue = latestGlucoseSamples?.suffix(2).first?.quantity.doubleValue(for: unit) ?? glucoseValue
-        let cutoff = HKQuantity(unit: .millimolesPerLiter, doubleValue: 2.5).doubleValue(for: unit)
-
-        guard glucoseValue - previousGlucoseValue <= min(glucoseValue * 0.2, cutoff) else {
-            completion(.canceled(date: startDate, recommended: insulinReq, reason: "Glucose delta is too big. Possible sensor noise or calibration."), nil)
+        guard let sensorState = delegate?.sensorState, sensorState.isStateValid else {
+            completion(.canceled(date: startDate, recommended: insulinReq, reason: "Possible sensor noise or calibration."), nil)
             return
         }
 
@@ -1794,6 +1790,9 @@ protocol LoopDataManagerDelegate: class {
 
     /// Current bolus state
     var bolusState: PumpManagerStatus.BolusState? { get }
+
+    /// Current sensor state
+    var sensorState: SensorDisplayable? { get }
 }
 
 private extension TemporaryScheduleOverride {
