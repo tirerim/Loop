@@ -1344,12 +1344,15 @@ extension LoopDataManager {
         guard let glucose = glucoseStore.latestGlucose,
             let predictedGlucose = predictedGlucose,
             let unit = glucoseStore.preferredUnit,
-            let glucoseTargetRange = settings.glucoseTargetRangeScheduleApplyingOverrideIfActive else {
+            let glucoseTargetRange = settings.glucoseTargetRangeScheduleApplyingOverrideIfActive
+        else {
             completion(.canceled(date: startDate, recommended: insulinReq, reason: "Glucose data not found."), nil)
             return
         }
 
-        guard let sensorState = delegate?.sensorState, sensorState.isStateValid else {
+        guard let sensorState = delegate?.sensorState,
+            sensorState.isStateValid || settings.microbolusSettings.enabledWhenSensorStateIsInvalid
+        else {
             completion(.canceled(date: startDate, recommended: insulinReq, reason: "Possible sensor noise or calibration."), nil)
             return
         }
@@ -1376,8 +1379,13 @@ extension LoopDataManager {
             return
         }
 
-        guard let bolusState = delegate?.bolusState, case .none = bolusState else {
+        guard let bolusState = delegate?.pumpStatus?.bolusState, case .none = bolusState else {
             completion(.canceled(date: startDate, recommended: insulinReq, reason: "Already bolusing."), nil)
+            return
+        }
+
+        guard let basalState = delegate?.pumpStatus?.basalDeliveryState, case .suspended = basalState else {
+            completion(.canceled(date: startDate, recommended: insulinReq, reason: "Pump suspended."), nil)
             return
         }
 
@@ -1693,7 +1701,7 @@ extension LoopDataManager {
 
                 "predictedGlucose: [",
                 "* PredictedGlucoseValue(start, mg/dL)",
-                (state.predictedGlucose ?? []).reduce(into: "", { (entries, entry) in
+                (state.predictedGlucoseIncludingPendingInsulin ?? []).reduce(into: "", { (entries, entry) in
                     entries.append("* \(entry.startDate), \(entry.quantity.doubleValue(for: .milligramsPerDeciliter))\n")
                 }),
                 "]",
@@ -1788,8 +1796,8 @@ protocol LoopDataManagerDelegate: class {
     ///   - completion: A closure called once on completion
     func loopDataManager(_ manager: LoopDataManager, didRecommendMicroBolus bolus: (amount: Double, date: Date), completion: @escaping (_ error: Error?) -> Void) -> Void
 
-    /// Current bolus state
-    var bolusState: PumpManagerStatus.BolusState? { get }
+    /// Current pump state
+    var pumpStatus: PumpManagerStatus? { get }
 
     /// Current sensor state
     var sensorState: SensorDisplayable? { get }
