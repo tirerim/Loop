@@ -94,11 +94,11 @@ struct MicrobolusView: View {
     }
 
     private var sensorSection: some View {
-        Section(header: Text("Safity").font(.headline), footer:
+        Section(header: Text("Safety").font(.headline), footer:
             Text("Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings.")
         ) {
             Toggle (isOn: $viewModel.enabledWhenSensorStateIsInvalid) {
-                Text("Enabled when the sensor value is invalid")
+                Text("Allow MBs when the sensor value is invalid")
             }
         }
     }
