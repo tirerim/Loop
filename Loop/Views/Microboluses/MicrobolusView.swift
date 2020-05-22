@@ -24,6 +24,7 @@ struct MicrobolusView: View {
             partialApplicationSection
             basalRateSection
             temporaryOverridesSection
+            sensorSection
             otherOptionsSection
             if !viewModel.events.isEmpty {
                 lastEventSection
@@ -31,20 +32,6 @@ struct MicrobolusView: View {
         }
         .navigationBarTitle("Microboluses")
         .modifier(AdaptsToSoftwareKeyboard())
-    }
-
-    private var topSection: some View {
-        Section {
-            HStack {
-                Image(systemName: "exclamationmark.triangle.fill")
-                    .foregroundColor(.orange)
-                    .padding(.trailing)
-
-                Text("Caution! Microboluses have potential to reduce the safety effects of other mitigations like max temp basal rate. Please be careful!\nThe actual size of a microbolus is always limited to the partial application of recommended bolus.")
-                    .font(.caption)
-            }
-
-        }
     }
 
     private var switchSection: some View {
@@ -102,6 +89,16 @@ struct MicrobolusView: View {
             Picker(selection: $viewModel.pickerMinimumBolusSizeIndex, label: Text("Minimum Bolus Size")) {
                 ForEach(0 ..< viewModel.minimumBolusSizeValues.count) { index in Text(String(format: "%.2f U", self.viewModel.minimumBolusSizeValues[index])).tag(index)
                 }
+            }
+        }
+    }
+
+    private var sensorSection: some View {
+        Section(header: Text("Safity").font(.headline), footer:
+            Text("Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings.")
+        ) {
+            Toggle (isOn: $viewModel.enabledWhenSensorStateIsInvalid) {
+                Text("Enabled when the sensor value is invalid")
             }
         }
     }

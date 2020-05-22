@@ -448,3 +448,9 @@
 "Cancel Temp Basal" = "Отменить ВБС";
 
 "Set" = "Установить";
+
+"Safity" = "Безопасность";
+
+"Enabled when the sensor value is invalid" = "Включены, когда значение сенсора  невалидно";
+
+"Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings." = "Иногда вы можете видеть восклицательный знак рядом со значением глюкозы. В таких случаях микроболюсы подаваться не будут. Включите эту настройку, если хотите игнорировать предупреждения.";

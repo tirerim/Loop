@@ -24,6 +24,7 @@ extension MicrobolusView {
         @Published var partialApplicationIndex: Int
         @Published var basalRateMultiplier: Double
         @Published var basalRateMultiplierIndex: Int
+        @Published var enabledWhenSensorStateIsInvalid: Bool
         @Published var events: [Microbolus.Event] = []
 
         // @ToDo: Should be able to get the to limit from the settings but for now defult to a low value
@@ -51,6 +52,7 @@ extension MicrobolusView {
             self.basalRateMultiplier = settings.basalRateMultiplier
             self.lowerBound = formatter.string(from: settings.overrideLowerBound) ?? ""
             self.unit = glucoseUnit
+            self.enabledWhenSensorStateIsInvalid = settings.enabledWhenSensorStateIsInvalid
 
             pickerMinimumBolusSizeIndex = minimumBolusSizeValues.firstIndex(of: settings.minimumBolusSize) ?? 0
             partialApplicationIndex = partialApplicationValues.firstIndex(of: settings.partialApplication) ?? 0
@@ -82,7 +84,7 @@ extension MicrobolusView {
             let lowerBoundPublisher = $lowerBound
                 .map { value -> Double in self.formatter.number(from: value)?.doubleValue ?? 0 }
 
-            return Publishers.CombineLatest(
+            return Publishers.CombineLatest3(
                 Publishers.CombineLatest4(
                     $microbolusesWithCOB,
                     $microbolusesWithoutCOB,
@@ -94,7 +96,8 @@ extension MicrobolusView {
                     $disableByOverride,
                     lowerBoundPublisher,
                     $basalRateMultiplier
-                )
+                ),
+                $enabledWhenSensorStateIsInvalid
             )
                 .map {
                     Microbolus.Settings(
@@ -105,7 +108,8 @@ extension MicrobolusView {
                         shouldOpenBolusScreenOnWatch: $0.1.0,
                         disableByOverride: $0.1.1,
                         overrideLowerBound: $0.1.2,
-                        basalRateMultiplier: $0.1.3
+                        basalRateMultiplier: $0.1.3,
+                        enabledWhenSensorStateIsInvalid: $0.2
                     )
                 }
                 .eraseToAnyPublisher()

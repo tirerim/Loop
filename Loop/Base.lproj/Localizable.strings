@@ -448,3 +448,9 @@
 "Cancel Temp Basal" = "Cancel Temp Basal";
 
 "Set" = "Set";
+
+"Safity" = "Safity";
+
+"Enabled when the sensor value is invalid" = "Enabled when the sensor value is invalid";
+
+"Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings." = "Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings.";

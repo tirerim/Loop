@@ -1344,12 +1344,15 @@ extension LoopDataManager {
         guard let glucose = glucoseStore.latestGlucose,
             let predictedGlucose = predictedGlucose,
             let unit = glucoseStore.preferredUnit,
-            let glucoseTargetRange = settings.glucoseTargetRangeScheduleApplyingOverrideIfActive else {
+            let glucoseTargetRange = settings.glucoseTargetRangeScheduleApplyingOverrideIfActive
+        else {
             completion(.canceled(date: startDate, recommended: insulinReq, reason: "Glucose data not found."), nil)
             return
         }
 
-        guard let sensorState = delegate?.sensorState, sensorState.isStateValid else {
+        guard let sensorState = delegate?.sensorState,
+            sensorState.isStateValid || settings.microbolusSettings.enabledWhenSensorStateIsInvalid
+        else {
             completion(.canceled(date: startDate, recommended: insulinReq, reason: "Possible sensor noise or calibration."), nil)
             return
         }

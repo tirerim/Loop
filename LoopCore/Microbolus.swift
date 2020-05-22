@@ -20,6 +20,7 @@ public enum Microbolus {
         public var disableByOverride: Bool
         public var overrideLowerBound: Double
         public var basalRateMultiplier: Double
+        public var enabledWhenSensorStateIsInvalid: Bool
 
         public init(
             enabled: Bool = false,
@@ -29,7 +30,8 @@ public enum Microbolus {
             shouldOpenBolusScreenOnWatch: Bool = false,
             disableByOverride: Bool = false,
             overrideLowerBound: Double = 0,
-            basalRateMultiplier: Double = 0 // 0 means MaximumBasalRatePerHour
+            basalRateMultiplier: Double = 0, // 0 means MaximumBasalRatePerHour
+            enabledWhenSensorStateIsInvalid: Bool = false
         ) {
             self.enabled = enabled
             self.enabledWithoutCarbs = enabledWithoutCarbs
@@ -39,6 +41,7 @@ public enum Microbolus {
             self.disableByOverride = disableByOverride
             self.overrideLowerBound = overrideLowerBound
             self.basalRateMultiplier = basalRateMultiplier
+            self.enabledWhenSensorStateIsInvalid = enabledWhenSensorStateIsInvalid
         }
 
         public init?(rawValue: [String : Any]) {
@@ -75,6 +78,10 @@ public enum Microbolus {
             if let basalRateMultiplier = rawValue["basalRateMultiplier"] as? Double {
                 self.basalRateMultiplier = basalRateMultiplier
             }
+
+            if let enabledWhenSensorStateIsInvalid = rawValue["enabledWhenSensorStateIsInvalid"] as? Bool {
+                self.enabledWhenSensorStateIsInvalid = enabledWhenSensorStateIsInvalid
+            }
         }
 
         public var rawValue: [String : Any] {
@@ -86,7 +93,8 @@ public enum Microbolus {
                 "shouldOpenBolusScreenOnWatch": shouldOpenBolusScreenOnWatch,
                 "disableByOverride": disableByOverride,
                 "overrideLowerBound": overrideLowerBound,
-                "basalRateMultiplier": basalRateMultiplier
+                "basalRateMultiplier": basalRateMultiplier,
+                "enabledWhenSensorStateIsInvalid": enabledWhenSensorStateIsInvalid
             ]
         }
     }
