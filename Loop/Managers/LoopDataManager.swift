@@ -1384,8 +1384,15 @@ extension LoopDataManager {
             return
         }
 
-        guard let basalState = delegate?.pumpStatus?.basalDeliveryState, case .suspended = basalState else {
-            completion(.canceled(date: startDate, recommended: insulinReq, reason: "Pump suspended."), nil)
+        let pumpIsActive: Bool = {
+            switch delegate?.pumpStatus?.basalDeliveryState {
+            case .active, .tempBasal: return true
+            default: return false
+            }
+        }()
+
+        guard pumpIsActive else {
+            completion(.canceled(date: startDate, recommended: insulinReq, reason: "Pump suspended or busy."), nil)
             return
         }
 
