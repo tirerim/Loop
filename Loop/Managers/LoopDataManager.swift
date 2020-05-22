@@ -1376,8 +1376,13 @@ extension LoopDataManager {
             return
         }
 
-        guard let bolusState = delegate?.bolusState, case .none = bolusState else {
+        guard let bolusState = delegate?.pumpStatus?.bolusState, case .none = bolusState else {
             completion(.canceled(date: startDate, recommended: insulinReq, reason: "Already bolusing."), nil)
+            return
+        }
+
+        guard let basalState = delegate?.pumpStatus?.basalDeliveryState, case .suspended = basalState else {
+            completion(.canceled(date: startDate, recommended: insulinReq, reason: "Pump suspended."), nil)
             return
         }
 
@@ -1788,8 +1793,8 @@ protocol LoopDataManagerDelegate: class {
     ///   - completion: A closure called once on completion
     func loopDataManager(_ manager: LoopDataManager, didRecommendMicroBolus bolus: (amount: Double, date: Date), completion: @escaping (_ error: Error?) -> Void) -> Void
 
-    /// Current bolus state
-    var bolusState: PumpManagerStatus.BolusState? { get }
+    /// Current pump state
+    var pumpStatus: PumpManagerStatus? { get }
 
     /// Current sensor state
     var sensorState: SensorDisplayable? { get }

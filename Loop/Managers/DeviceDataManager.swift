@@ -687,7 +687,7 @@ extension DeviceDataManager: LoopDataManagerDelegate {
             completion: completion)
     }
 
-    var bolusState: PumpManagerStatus.BolusState? { pumpManager?.status.bolusState }
+    var pumpStatus: PumpManagerStatus? { pumpManager?.status }
 }
 
 extension Notification.Name {
