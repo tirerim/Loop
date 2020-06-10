@@ -1373,11 +1373,16 @@ extension LoopDataManager {
             return
         }
 
-        guard let sensorState = delegate?.sensorState,
-            sensorState.isStateValid || settings.microbolusSettings.enabledWhenSensorStateIsInvalid
-        else {
-            completion(.canceled(date: startDate, recommended: insulinReq, reason: "Possible sensor noise or calibration."), nil)
-            return
+        if let sensorState = delegate?.sensorState {
+            guard sensorState.isStateValid || settings.microbolusSettings.enabledWhenSensorStateIsInvalid else {
+                completion(.canceled(date: startDate, recommended: insulinReq, reason: "Possible sensor noise or calibration."), nil)
+                return
+            }
+        } else {
+            guard settings.microbolusSettings.enabledWhenSensorStateIsInvalid else {
+                completion(.canceled(date: startDate, recommended: insulinReq, reason: "No sensor state found."), nil)
+                return
+            }
         }
 
         let glucoseBelowRange = predictedGlucose.first { $0.quantity.doubleValue(for: unit) < glucoseTargetRange.value(at: $0.startDate).minValue }
