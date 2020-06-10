@@ -221,6 +221,11 @@ extension LoopSettings: RawRepresentable {
             self.microbolusSettings = microbolusSettings
         }
 
+        if let freeAPSSettingsRaw = rawValue["freeAPSSettings"] as? FreeAPSSettings.RawValue,
+            let freeAPSSettings = FreeAPSSettings(rawValue: freeAPSSettingsRaw) {
+            self.freeAPSSettings = freeAPSSettings
+        }
+
         if let glucoseRangeScheduleRawValue = rawValue["glucoseTargetRangeSchedule"] as? GlucoseRangeSchedule.RawValue {
             self.glucoseTargetRangeSchedule = GlucoseRangeSchedule(rawValue: glucoseRangeScheduleRawValue)
 
@@ -265,7 +270,8 @@ extension LoopSettings: RawRepresentable {
             "version": LoopSettings.version,
             "dosingEnabled": dosingEnabled,
             "overridePresets": overridePresets.map { $0.rawValue },
-            "microbolusSettings": microbolusSettings.rawValue
+            "microbolusSettings": microbolusSettings.rawValue,
+            "freeAPSSettings": freeAPSSettings.rawValue
         ]
 
         raw["glucoseTargetRangeSchedule"] = glucoseTargetRangeSchedule?.rawValue
