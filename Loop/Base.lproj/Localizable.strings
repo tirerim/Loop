@@ -454,3 +454,8 @@
 "Allow MBs when the sensor value is invalid" = "Allow MBs when the sensor value is invalid";
 
 "Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings." = "Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings.";
+
+"Other FreeAPS settings" = "Other FreeAPS settings";
+
+"Show required carbs on the app badge" = "Show required carbs on the app badge";
+

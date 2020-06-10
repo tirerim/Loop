@@ -23,7 +23,7 @@ struct FreeAPSSettingsView: View {
                 }
             }
         }
-        .navigationBarTitle("FreeAPS Settings")
+        .navigationBarTitle("Other FreeAPS settings")
         .modifier(AdaptsToSoftwareKeyboard())
     }
 }
