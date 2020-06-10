@@ -13,6 +13,8 @@ public struct LoopSettings: Equatable {
 
     public var microbolusSettings = Microbolus.Settings()
 
+    public var freeAPSSettings = FreeAPSSettings()
+
     public let dynamicCarbAbsorptionEnabled = true
 
     public static let defaultCarbAbsorptionTimes: CarbStore.DefaultAbsorptionTimes = (fast: .hours(2), medium: .hours(3), slow: .hours(4))

@@ -31,6 +31,11 @@
 		38B66F6D23C4A6D1009594BB /* TempBasalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B66F6C23C4A6D1009594BB /* TempBasalViewController.swift */; };
 		38BE6D8D236C8A110074CF11 /* MicrobolusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BE6D8C236C8A110074CF11 /* MicrobolusViewController.swift */; };
 		38CE2218236B134F00DFE990 /* MicrobolusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CE2217236B134F00DFE990 /* MicrobolusView.swift */; };
+		38D82E0B2490F37600B4A509 /* FreeAPSSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D82E0A2490F37600B4A509 /* FreeAPSSettingsView.swift */; };
+		38D82E0D2490F3A600B4A509 /* FreeAPSSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D82E0C2490F3A600B4A509 /* FreeAPSSettingsViewModel.swift */; };
+		38D82E0F2490F45C00B4A509 /* FreeAPSSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D82E0E2490F45C00B4A509 /* FreeAPSSettings.swift */; };
+		38D82E102490F5B400B4A509 /* FreeAPSSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D82E0E2490F45C00B4A509 /* FreeAPSSettings.swift */; };
+		38D82E122491002E00B4A509 /* FreeAPSSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D82E112491002E00B4A509 /* FreeAPSSettingsViewController.swift */; };
 		38DAF6F223D7203500A3E9E3 /* MicrobolusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DAF6F123D7203500A3E9E3 /* MicrobolusViewModel.swift */; };
 		38DB1DC2240147BD00AA9A02 /* ImportExportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DB1DC1240147BD00AA9A02 /* ImportExportManager.swift */; };
 		43027F0F1DFE0EC900C51989 /* HKUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F526D5E1DF2459000A04910 /* HKUnit.swift */; };
@@ -592,6 +597,10 @@
 		38B66F6C23C4A6D1009594BB /* TempBasalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempBasalViewController.swift; sourceTree = "<group>"; };
 		38BE6D8C236C8A110074CF11 /* MicrobolusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrobolusViewController.swift; sourceTree = "<group>"; };
 		38CE2217236B134F00DFE990 /* MicrobolusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrobolusView.swift; sourceTree = "<group>"; };
+		38D82E0A2490F37600B4A509 /* FreeAPSSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeAPSSettingsView.swift; sourceTree = "<group>"; };
+		38D82E0C2490F3A600B4A509 /* FreeAPSSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeAPSSettingsViewModel.swift; sourceTree = "<group>"; };
+		38D82E0E2490F45C00B4A509 /* FreeAPSSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeAPSSettings.swift; sourceTree = "<group>"; };
+		38D82E112491002E00B4A509 /* FreeAPSSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeAPSSettingsViewController.swift; sourceTree = "<group>"; };
 		38DAF6F123D7203500A3E9E3 /* MicrobolusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrobolusViewModel.swift; sourceTree = "<group>"; };
 		38DB1DC1240147BD00AA9A02 /* ImportExportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportExportManager.swift; sourceTree = "<group>"; };
 		4302F4E01D4E9C8900F0FCAF /* TextFieldTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewController.swift; sourceTree = "<group>"; };
@@ -1151,6 +1160,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38D82E092490F2DF00B4A509 /* FreeAPS */ = {
+			isa = PBXGroup;
+			children = (
+				38D82E0A2490F37600B4A509 /* FreeAPSSettingsView.swift */,
+				38D82E0C2490F3A600B4A509 /* FreeAPSSettingsViewModel.swift */,
+			);
+			path = FreeAPS;
+			sourceTree = "<group>";
+		};
 		38DAF6F023D71FFE00A3E9E3 /* Microboluses */ = {
 			isa = PBXGroup;
 			children = (
@@ -1467,6 +1485,7 @@
 				43D9FFD121EAE05D00AF44BF /* LoopCore.h */,
 				43D9FFD221EAE05D00AF44BF /* Info.plist */,
 				3804343C23747354004BAB52 /* Microbolus.swift */,
+				38D82E0E2490F45C00B4A509 /* FreeAPSSettings.swift */,
 			);
 			path = LoopCore;
 			sourceTree = "<group>";
@@ -1555,6 +1574,7 @@
 				89CA2B31226C18B8004D9350 /* TestingScenariosTableViewController.swift */,
 				38BE6D8C236C8A110074CF11 /* MicrobolusViewController.swift */,
 				38B66F6C23C4A6D1009594BB /* TempBasalViewController.swift */,
+				38D82E112491002E00B4A509 /* FreeAPSSettingsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -1577,6 +1597,7 @@
 				38B66F6A23C4A1F2009594BB /* TempBasalView.swift */,
 				C1F8B1DB223862D500DD66CF /* BolusProgressTableViewCell.xib */,
 				38DAF6F023D71FFE00A3E9E3 /* Microboluses */,
+				38D82E092490F2DF00B4A509 /* FreeAPS */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2618,6 +2639,7 @@
 				43C0944A1CACCC73001F6403 /* NotificationManager.swift in Sources */,
 				43D9003321EB258C00AF44BF /* InsulinModelSettings+Loop.swift in Sources */,
 				434FF1EE1CF27EEF000DB779 /* UITableViewCell.swift in Sources */,
+				38D82E0D2490F3A600B4A509 /* FreeAPSSettingsViewModel.swift in Sources */,
 				439BED2A1E76093C00B0AED5 /* CGMManager.swift in Sources */,
 				38DAF6F223D7203500A3E9E3 /* MicrobolusViewModel.swift in Sources */,
 				C18C8C511D5A351900E043FB /* NightscoutDataManager.swift in Sources */,
@@ -2630,6 +2652,7 @@
 				4FB76FBB1E8C42CF00B39636 /* UIColor.swift in Sources */,
 				38B66F6D23C4A6D1009594BB /* TempBasalViewController.swift in Sources */,
 				4374B5EF209D84BF00D17AA8 /* OSLog.swift in Sources */,
+				38D82E0B2490F37600B4A509 /* FreeAPSSettingsView.swift in Sources */,
 				4F6663941E905FD2009E74FC /* ChartColorPalette+Loop.swift in Sources */,
 				4328E0351CFC0AE100E199AA /* WatchDataManager.swift in Sources */,
 				4345E3FC21F04911009E00E5 /* UIColor+HIG.swift in Sources */,
@@ -2653,6 +2676,7 @@
 				C16DA84222E8E112008624C2 /* LoopPlugins.swift in Sources */,
 				430B29952041F5CB00BA9F93 /* LoopSettings+Loop.swift in Sources */,
 				43785E932120A01B0057DED1 /* NewCarbEntryIntent+Loop.swift in Sources */,
+				38D82E122491002E00B4A509 /* FreeAPSSettingsViewController.swift in Sources */,
 				43CEE6E61E56AFD400CB9116 /* NightscoutUploader.swift in Sources */,
 				439A7944211FE22F0041B75F /* NSUserActivity.swift in Sources */,
 				4328E0331CFC091100E199AA /* WatchContext+LoopKit.swift in Sources */,
@@ -2764,6 +2788,7 @@
 				431EA87021EB29120076EC1A /* ExponentialInsulinModelPreset.swift in Sources */,
 				43C05CC721EC2ABC006FB252 /* IdentifiableClass.swift in Sources */,
 				43C05CAE21EB2BBF006FB252 /* NSUserDefaults.swift in Sources */,
+				38D82E102490F5B400B4A509 /* FreeAPSSettings.swift in Sources */,
 				4345E40221F67300009E00E5 /* CarbEntryUserInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2818,6 +2843,7 @@
 				431EA87121EB29120076EC1A /* ExponentialInsulinModelPreset.swift in Sources */,
 				43C05CC821EC2ABC006FB252 /* IdentifiableClass.swift in Sources */,
 				43C05CAD21EB2BBF006FB252 /* NSUserDefaults.swift in Sources */,
+				38D82E0F2490F45C00B4A509 /* FreeAPSSettings.swift in Sources */,
 				4345E40121F67300009E00E5 /* CarbEntryUserInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

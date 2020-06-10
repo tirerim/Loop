@@ -60,17 +60,17 @@ extension MicrobolusView {
 
             $pickerMinimumBolusSizeIndex
                 .map { Double(self.minimumBolusSizeValues[$0]) }
-                .sink { self.microbolusesMinimumBolusSize = $0 }
+                .assign(to: \.microbolusesMinimumBolusSize, on: self)
                 .store(in: &lifetime)
 
             $partialApplicationIndex
                 .map { Double(self.partialApplicationValues[$0]) }
-                .sink { self.partialApplication = $0 }
+                .assign(to: \.partialApplication, on: self)
                 .store(in: &lifetime)
 
             $basalRateMultiplierIndex
                 .map { Double(self.basalRateMultiplierValues[$0]) }
-                .sink { self.basalRateMultiplier = $0 }
+                .assign(to: \.basalRateMultiplier, on: self)
                 .store(in: &lifetime)
 
             eventPublisher?

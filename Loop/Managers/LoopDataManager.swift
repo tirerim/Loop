@@ -236,7 +236,8 @@ final class LoopDataManager {
 
     fileprivate var requiredCarbs: HKQuantity? {
         didSet {
-            let number = requiredCarbs?.doubleValue(for: .gram()) ?? 0
+            let number = settings.freeAPSSettings.showRequiredCarbsOnAppBadge
+                ? requiredCarbs?.doubleValue(for: .gram()) ?? 0 : 0
             DispatchQueue.main.async {
                 UIApplication.shared.applicationIconBadgeNumber = Int(number)
             }

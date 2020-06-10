@@ -60,6 +60,7 @@ final class SettingsTableViewController: UITableViewController {
         case dosing = 0
         case microbolus
         case diagnostic
+        case freeAPSSettings
     }
 
     fileprivate enum PumpRow: Int, CaseCountable {
@@ -102,6 +103,7 @@ final class SettingsTableViewController: UITableViewController {
     }()
 
     private var microbolusCancellable: AnyCancellable?
+    private var freeAPSSettingsCancellable: AnyCancellable?
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.destination {
@@ -204,6 +206,13 @@ final class SettingsTableViewController: UITableViewController {
 
                 cell.textLabel?.text = NSLocalizedString("Issue Report", comment: "The title text for the issue report cell")
                 cell.detailTextLabel?.text = nil
+                cell.accessoryType = .disclosureIndicator
+
+                return cell
+            case .freeAPSSettings:
+                let cell = tableView.dequeueReusableCell(withIdentifier: SettingsTableViewCell.className, for: indexPath)
+
+                cell.textLabel?.text = NSLocalizedString("Other FreeAPS settings", comment: "The title text for the Microboluses cell")
                 cell.accessoryType = .disclosureIndicator
 
                 return cell
@@ -617,6 +626,7 @@ final class SettingsTableViewController: UITableViewController {
                 )
 
                 microbolusCancellable = viewModel.changes()
+                    .receive(on: DispatchQueue.main)
                     .sink { [weak self] result in
                         guard let self = self else { return }
                         settings.microbolusSettings = result
@@ -627,6 +637,26 @@ final class SettingsTableViewController: UITableViewController {
                 let vc = MicrobolusViewController(viewModel: viewModel)
                 vc.onDeinit = {
                     self.microbolusCancellable?.cancel()
+                }
+
+                show(vc, sender: sender)
+            case .freeAPSSettings:
+                var settings = dataManager.loopManager.settings
+
+                let viewModel = FreeAPSSettingsView.ViewModel(settings: settings.freeAPSSettings)
+
+                freeAPSSettingsCancellable = viewModel.changes()
+                    .receive(on: DispatchQueue.main)
+                    .sink { [weak self] result in
+                        guard let self = self else { return }
+                        settings.freeAPSSettings = result
+                        self.dataManager.loopManager.settings = settings
+                        self.tableView.reloadRows(at: [indexPath], with: .none)
+                }
+
+                let vc = FreeAPSSettingsViewController(viewModel: viewModel)
+                vc.onDeinit = {
+                    self.freeAPSSettingsCancellable?.cancel()
                 }
 
                 show(vc, sender: sender)
