@@ -1388,7 +1388,9 @@ extension LoopDataManager {
 
         let glucoseBelowRange = predictedGlucose.first { $0.quantity.doubleValue(for: unit) < glucoseTargetRange.value(at: $0.startDate).minValue }
 
-        guard glucoseBelowRange == nil else {
+        let belowTargetCheck = !settings.microbolusSettings.allowWhenGlucoseBelowTarget && glucoseBelowRange != nil
+
+        guard !belowTargetCheck else {
             let timeFormatter = DateFormatter()
             timeFormatter.timeStyle = .short
             completion(.canceled(

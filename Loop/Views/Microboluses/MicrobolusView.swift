@@ -24,7 +24,7 @@ struct MicrobolusView: View {
             partialApplicationSection
             basalRateSection
             temporaryOverridesSection
-            sensorSection
+            safetySection
             otherOptionsSection
             if !viewModel.events.isEmpty {
                 lastEventSection
@@ -93,10 +93,13 @@ struct MicrobolusView: View {
         }
     }
 
-    private var sensorSection: some View {
+    private var safetySection: some View {
         Section(header: Text("Safety").font(.headline), footer:
             Text("Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings.")
         ) {
+            Toggle (isOn: $viewModel.allowWhenGlucoseBelowTarget) {
+                Text("Allow MBs when glucose is below target range")
+            }
             Toggle (isOn: $viewModel.enabledWhenSensorStateIsInvalid) {
                 Text("Allow MBs when the sensor value is invalid")
             }

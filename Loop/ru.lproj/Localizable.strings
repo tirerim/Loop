@@ -458,3 +458,5 @@
 "Other FreeAPS settings" = "Другие настройки FreeAPS";
 
 "Show required carbs on the app badge" = "Показывать необходимые углеводы на иконке приложения";
+
+"Allow MBs when glucose is below target range" = "Разрешить микроболюсы, когда глюкоза ниже целевого диапазона";

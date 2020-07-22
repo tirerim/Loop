@@ -25,6 +25,7 @@ extension MicrobolusView {
         @Published var basalRateMultiplier: Double
         @Published var basalRateMultiplierIndex: Int
         @Published var enabledWhenSensorStateIsInvalid: Bool
+        @Published var allowWhenGlucoseBelowTarget: Bool
         @Published var events: [Microbolus.Event] = []
 
         // @ToDo: Should be able to get the to limit from the settings but for now defult to a low value
@@ -53,6 +54,7 @@ extension MicrobolusView {
             self.lowerBound = formatter.string(from: settings.overrideLowerBound) ?? ""
             self.unit = glucoseUnit
             self.enabledWhenSensorStateIsInvalid = settings.enabledWhenSensorStateIsInvalid
+            self.allowWhenGlucoseBelowTarget = settings.allowWhenGlucoseBelowTarget
 
             pickerMinimumBolusSizeIndex = minimumBolusSizeValues.firstIndex(of: settings.minimumBolusSize) ?? 0
             partialApplicationIndex = partialApplicationValues.firstIndex(of: settings.partialApplication) ?? 0
@@ -84,7 +86,7 @@ extension MicrobolusView {
             let lowerBoundPublisher = $lowerBound
                 .map { value -> Double in self.formatter.number(from: value)?.doubleValue ?? 0 }
 
-            return Publishers.CombineLatest3(
+            return Publishers.CombineLatest4(
                 Publishers.CombineLatest4(
                     $microbolusesWithCOB,
                     $microbolusesWithoutCOB,
@@ -97,7 +99,8 @@ extension MicrobolusView {
                     lowerBoundPublisher,
                     $basalRateMultiplier
                 ),
-                $enabledWhenSensorStateIsInvalid
+                $enabledWhenSensorStateIsInvalid,
+                $allowWhenGlucoseBelowTarget
             )
                 .map {
                     Microbolus.Settings(
@@ -109,7 +112,8 @@ extension MicrobolusView {
                         disableByOverride: $0.1.1,
                         overrideLowerBound: $0.1.2,
                         basalRateMultiplier: $0.1.3,
-                        enabledWhenSensorStateIsInvalid: $0.2
+                        enabledWhenSensorStateIsInvalid: $0.2,
+                        allowWhenGlucoseBelowTarget: $0.3
                     )
                 }
                 .eraseToAnyPublisher()

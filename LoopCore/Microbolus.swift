@@ -21,6 +21,7 @@ public enum Microbolus {
         public var overrideLowerBound: Double
         public var basalRateMultiplier: Double
         public var enabledWhenSensorStateIsInvalid: Bool
+        public var allowWhenGlucoseBelowTarget: Bool
 
         public init(
             enabled: Bool = false,
@@ -31,7 +32,8 @@ public enum Microbolus {
             disableByOverride: Bool = false,
             overrideLowerBound: Double = 0,
             basalRateMultiplier: Double = 0, // 0 means MaximumBasalRatePerHour
-            enabledWhenSensorStateIsInvalid: Bool = false
+            enabledWhenSensorStateIsInvalid: Bool = false,
+            allowWhenGlucoseBelowTarget: Bool = false
         ) {
             self.enabled = enabled
             self.enabledWithoutCarbs = enabledWithoutCarbs
@@ -42,6 +44,7 @@ public enum Microbolus {
             self.overrideLowerBound = overrideLowerBound
             self.basalRateMultiplier = basalRateMultiplier
             self.enabledWhenSensorStateIsInvalid = enabledWhenSensorStateIsInvalid
+            self.allowWhenGlucoseBelowTarget = allowWhenGlucoseBelowTarget
         }
 
         public init?(rawValue: [String : Any]) {
@@ -82,6 +85,10 @@ public enum Microbolus {
             if let enabledWhenSensorStateIsInvalid = rawValue["enabledWhenSensorStateIsInvalid"] as? Bool {
                 self.enabledWhenSensorStateIsInvalid = enabledWhenSensorStateIsInvalid
             }
+
+            if let allowWhenGlucoseBelowTarget = rawValue["allowWhenGlucoseBelowTarget"] as? Bool {
+                self.allowWhenGlucoseBelowTarget = allowWhenGlucoseBelowTarget
+            }
         }
 
         public var rawValue: [String : Any] {
@@ -94,7 +101,8 @@ public enum Microbolus {
                 "disableByOverride": disableByOverride,
                 "overrideLowerBound": overrideLowerBound,
                 "basalRateMultiplier": basalRateMultiplier,
-                "enabledWhenSensorStateIsInvalid": enabledWhenSensorStateIsInvalid
+                "enabledWhenSensorStateIsInvalid": enabledWhenSensorStateIsInvalid,
+                "allowWhenGlucoseBelowTarget": allowWhenGlucoseBelowTarget
             ]
         }
     }
