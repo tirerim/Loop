@@ -1365,11 +1365,7 @@ extension LoopDataManager {
             return
         }
 
-        guard let glucose = glucoseStore.latestGlucose,
-            let predictedGlucose = predictedGlucose,
-            let unit = glucoseStore.preferredUnit,
-            let glucoseTargetRange = settings.glucoseTargetRangeScheduleApplyingOverrideIfActive
-        else {
+        guard let glucose = glucoseStore.latestGlucose else {
             completion(.canceled(date: startDate, recommended: insulinReq, reason: "Glucose data not found."), nil)
             return
         }
@@ -1384,20 +1380,6 @@ extension LoopDataManager {
                 completion(.canceled(date: startDate, recommended: insulinReq, reason: "No sensor state found."), nil)
                 return
             }
-        }
-
-        let glucoseBelowRange = predictedGlucose.first { $0.quantity.doubleValue(for: unit) < glucoseTargetRange.value(at: $0.startDate).minValue }
-
-        let belowTargetCheck = !settings.microbolusSettings.allowWhenGlucoseBelowTarget && glucoseBelowRange != nil
-
-        guard !belowTargetCheck else {
-            let timeFormatter = DateFormatter()
-            timeFormatter.timeStyle = .short
-            completion(.canceled(
-                date: startDate,
-                recommended: insulinReq,
-                reason: "Glucose \(glucoseBelowRange!.quantity) is below target at \(timeFormatter.string(from: glucoseBelowRange!.startDate))"), nil)
-            return
         }
 
         guard checkCOBforMicrobolus() else {
@@ -1433,11 +1415,14 @@ extension LoopDataManager {
         }
 
         switch recommendedBolus.recommendation.notice {
-        case let .some(notice):
-            let notice = "Microbolus canceled by recommendation notice: \(notice.description(using: unit))"
-            completion(.canceled(date: startDate, recommended: insulinReq, reason: notice), nil)
+        case .glucoseBelowSuspendThreshold?:
+            completion(.canceled(date: startDate, recommended: insulinReq, reason: "Glucose below suspend threshold"), nil)
             return
-        case .none: break
+        case .currentGlucoseBelowTarget? where !settings.microbolusSettings.allowWhenGlucoseBelowTarget,
+             .predictedGlucoseBelowTarget? where !settings.microbolusSettings.allowWhenGlucoseBelowTarget:
+            completion(.canceled(date: startDate, recommended: insulinReq, reason: "Glucose below tagret range"), nil)
+            return
+        default: break
         }
 
         let rawBolusUnits = insulinReq * settings.microbolusSettings.partialApplication
