@@ -1365,8 +1365,20 @@ extension LoopDataManager {
             return
         }
 
-        guard let glucose = glucoseStore.latestGlucose else {
+        guard let glucose = glucoseStore.latestGlucose,
+            let unit = glucoseStore.preferredUnit else {
             completion(.canceled(date: startDate, recommended: insulinReq, reason: "Glucose data not found."), nil)
+            return
+        }
+
+        let glucoseValue = glucose.quantity.doubleValue(for: unit)
+        let previousGlucoseValue = latestGlucoseSamples?.suffix(2).first?.quantity.doubleValue(for: unit) ?? glucoseValue
+        let cutoff = HKQuantity(unit: .millimolesPerLiter, doubleValue: 2.5).doubleValue(for: unit)
+
+        let delta = glucoseValue - previousGlucoseValue
+
+        guard delta <= min(glucoseValue * 0.2, cutoff) else {
+            completion(.canceled(date: startDate, recommended: insulinReq, reason: "Glucose delta is too big. Possible sensor noise or calibration."), nil)
             return
         }
 
