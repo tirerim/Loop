@@ -21,6 +21,11 @@ struct FreeAPSSettingsView: View {
                 Toggle (isOn: $viewModel.showRequiredCarbsOnAppBadge) {
                     Text("Show required carbs on the app badge")
                 }
+                Picker(selection: $viewModel.retrospectiveIndex, label: Text("Retrospective Correction interval")) {
+                    ForEach(0 ..< viewModel.retrospectiveValues.count) { index in
+                        Text("\(Int(self.viewModel.retrospectiveValues[index])) min").tag(index)
+                    }
+                }
             }
         }
         .navigationBarTitle("Other FreeAPS settings")

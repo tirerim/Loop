@@ -38,7 +38,7 @@ public struct LoopSettings: Equatable {
     public let retrospectiveCorrectionEnabled = true
 
     /// The interval over which to aggregate changes in glucose for retrospective correction
-    public let retrospectiveCorrectionGroupingInterval = TimeInterval(minutes: 30)
+    public var retrospectiveCorrectionGroupingInterval: TimeInterval { freeAPSSettings.retrospectiveCorrectionGroupingInterval }
 
     /// The amount of time since a given date that input data should be considered valid
     public let inputDataRecencyInterval = TimeInterval(minutes: 15)

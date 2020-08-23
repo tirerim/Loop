@@ -13,8 +13,11 @@ public struct FreeAPSSettings: Equatable, RawRepresentable {
 
     public var showRequiredCarbsOnAppBadge: Bool
 
-    public init(showRequiredCarbsOnAppBadge: Bool = false) {
+    public var retrospectiveCorrectionGroupingInterval: TimeInterval
+
+    public init(showRequiredCarbsOnAppBadge: Bool = false, retrospectiveCorrectionGroupingInterval: TimeInterval = TimeInterval(minutes: 30)) {
         self.showRequiredCarbsOnAppBadge = showRequiredCarbsOnAppBadge
+        self.retrospectiveCorrectionGroupingInterval = retrospectiveCorrectionGroupingInterval
     }
 
     public init?(rawValue: [String : Any]) {
@@ -23,11 +26,16 @@ public struct FreeAPSSettings: Equatable, RawRepresentable {
         if let showRequiredCarbsOnAppBadge = rawValue["showRequiredCarbsOnAppBadge"] as? Bool {
             self.showRequiredCarbsOnAppBadge = showRequiredCarbsOnAppBadge
         }
+
+        if let retrospectiveCorrectionGroupingInterval = rawValue["retrospectiveCorrectionGroupingInterval"] as? TimeInterval {
+            self.retrospectiveCorrectionGroupingInterval = retrospectiveCorrectionGroupingInterval
+        }
     }
 
     public var rawValue: [String : Any] {
         [
-            "showRequiredCarbsOnAppBadge": showRequiredCarbsOnAppBadge
+            "showRequiredCarbsOnAppBadge": showRequiredCarbsOnAppBadge,
+            "retrospectiveCorrectionGroupingInterval": retrospectiveCorrectionGroupingInterval
         ]
     }
 }
