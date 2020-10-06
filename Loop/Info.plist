@@ -54,6 +54,8 @@
 	<false/>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>diabox</string>
+		<string>spikeapp</string>
 		<string>dexcomg6</string>
 		<string>dexcomcgm</string>
 		<string>dexcomshare</string>
