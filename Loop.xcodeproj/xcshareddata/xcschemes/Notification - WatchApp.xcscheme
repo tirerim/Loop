@@ -92,7 +92,7 @@
       <RemoteRunnable
          runnableDebuggingMode = "2"
          BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/$(MAIN_APP_DISPLAY_NAME)">
+         RemotePath = "/Loop">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "43A943711B926B7B0051FA24"
@@ -113,7 +113,7 @@
       <RemoteRunnable
          runnableDebuggingMode = "2"
          BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/$(MAIN_APP_DISPLAY_NAME)">
+         RemotePath = "/Loop">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "43A943711B926B7B0051FA24"
