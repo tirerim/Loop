@@ -26,8 +26,6 @@
 		3804343D23747354004BAB52 /* Microbolus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3804343C23747354004BAB52 /* Microbolus.swift */; };
 		3804343E237474AE004BAB52 /* Microbolus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3804343C23747354004BAB52 /* Microbolus.swift */; };
 		3809602323AA759600F98EE6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3809602223AA759600F98EE6 /* Settings.bundle */; };
-		385228E924B3428C00077319 /* BubbleClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385228E724B3428C00077319 /* BubbleClient.framework */; };
-		385228EB24B3428C00077319 /* BubbleClientUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385228E824B3428C00077319 /* BubbleClientUI.framework */; };
 		3858986B235E0DE200919FD4 /* NightscoutAPIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38589861235E0A4200919FD4 /* NightscoutAPIClient.framework */; };
 		3858986D235E0DEA00919FD4 /* NightscoutAPIClientUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38589864235E0A4C00919FD4 /* NightscoutAPIClientUI.framework */; };
 		38B66F6B23C4A1F2009594BB /* TempBasalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B66F6A23C4A1F2009594BB /* TempBasalView.swift */; };
@@ -1047,7 +1045,7 @@
 		C19E96DD23D2733F003F79B0 /* LoopCompletionFreshness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopCompletionFreshness.swift; sourceTree = "<group>"; };
 		C1A3EED1235233E1007672E3 /* DerivedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DerivedAssets.xcassets; sourceTree = "<group>"; };
 		C1A3EED323523551007672E3 /* DerivedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DerivedAssets.xcassets; sourceTree = "<group>"; };
-               C1BFEC2125B754C20017CEA8 /* carthage.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = carthage.sh; sourceTree = "<group>"; };
+		C1BFEC2125B754C20017CEA8 /* carthage.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = carthage.sh; sourceTree = "<group>"; };
 		C1C6591B1E1B1FDA0025CC58 /* recommend_temp_basal_dropping_then_rising.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recommend_temp_basal_dropping_then_rising.json; sourceTree = "<group>"; };
 		C1D197FE232CF92D0096D646 /* capture-build-details.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "capture-build-details.sh"; sourceTree = "<group>"; };
 		C1D289B422F90A52003FFBD9 /* BasalDeliveryState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasalDeliveryState.swift; sourceTree = "<group>"; };
@@ -1083,8 +1081,6 @@
 				43F5C2C91B929C09003EB13D /* HealthKit.framework in Frameworks */,
 				43D9FFD621EAE05D00AF44BF /* LoopCore.framework in Frameworks */,
 				43F78D4F1C914197002152D1 /* LoopKit.framework in Frameworks */,
-				385228EB24B3428C00077319 /* BubbleClientUI.framework in Frameworks */,
-				385228E924B3428C00077319 /* BubbleClient.framework in Frameworks */,
 				892A5D5B222F0D7C008961AB /* LoopTestingKit.framework in Frameworks */,
 				4F7528941DFE1E9500C322D6 /* LoopUI.framework in Frameworks */,
 				C1E2774822433D7A00354103 /* MKRingProgressView.framework in Frameworks */,
@@ -1885,7 +1881,7 @@
 			isa = PBXGroup;
 			children = (
 				C1BFEC2125B754C20017CEA8 /* carthage.sh */,
-                               C1D197FE232CF92D0096D646 /* capture-build-details.sh */,
+				C1D197FE232CF92D0096D646 /* capture-build-details.sh */,
 				C125F31A22FE7CE200FD0545 /* copy-frameworks.sh */,
 				C18A491222FCC22800FDA733 /* build-derived-assets.sh */,
 				C18A491422FCC22900FDA733 /* build-derived-watch-assets.sh */,
@@ -2462,8 +2458,6 @@
 				"$(BUILT_PRODUCTS_DIR)/MKRingProgressView.framework/MKRingProgressView",
 				"$(BUILT_PRODUCTS_DIR)/NightscoutAPIClient.framework/NightscoutAPIClient",
 				"$(BUILT_PRODUCTS_DIR)/NightscoutAPIClientUI.framework/NightscoutAPIClientUI",
-				"$(BUILT_PRODUCTS_DIR)/BubbleClient.framework/BubbleClient",
-				"$(BUILT_PRODUCTS_DIR)/BubbleClientUI.framework/BubbleClientUI",
 				"$(BUILT_PRODUCTS_DIR)/xDripClient.framework/xDripClient",
 				"$(BUILT_PRODUCTS_DIR)/xDripClientUI.framework/xDripClientUI",
 			);
@@ -2486,8 +2480,6 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/MKRingProgressView.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/NightscoutAPIClient.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/NightscoutAPIClientUI.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/BubbleClient.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/BubbleClientUI.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/xDripClient.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/xDripClientUI.framework",
 			);
