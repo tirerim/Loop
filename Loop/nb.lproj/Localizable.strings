@@ -1,21 +1,6 @@
 /* The string format appended to active insulin that describes pending insulin. (1: pending insulin) */
 " (pending: %@)" = " (Gjenstår: %@)";
 
-/* The format for an active override preset. (1: preset symbol)(2: preset name) */
-"%@ %@" = "%1$@ %2$@";
-
-/* Formats absorbed carb value */
-"%@ absorbed" = "%@ absorbert";
-
-/* The subtitle format describing total insulin. (1: localized insulin total) */
-"%@ U Total" = "%@ E totalt";
-
-/* Appends a full-stop to a statement */
-"%@." = "%@.";
-
-/* Format string for glucose target range. (1: Min target)(2: Max target)(3: glucose unit) */
-"%1$@ – %2$@ %3$@" = "%1$@ – %2$@ %3$@";
-
 /* Format string for carb ratio average. (1: value)(2: carb unit) */
 "%1$@ %2$@/U" = "%1$@ %2$@/E";
 
@@ -34,8 +19,23 @@
 /* The format string for the app name and version number. (1: bundle name)(2: bundle version) */
 "%1$@ v%2$@" = "%1$@ v%2$@";
 
+/* Format string for glucose target range. (1: Min target)(2: Max target)(3: glucose unit) */
+"%1$@ – %2$@ %3$@" = "%1$@ – %2$@ %3$@";
+
 /* Formats (1: carb value) and (2: food type) */
 "%1$@: %2$@" = "%1$@: %2$@";
+
+/* The format for an active override preset. (1: preset symbol)(2: preset name) */
+"%@ %@" = "%1$@ %2$@";
+
+/* Formats absorbed carb value */
+"%@ absorbed" = "%@ absorbert";
+
+/* The subtitle format describing total insulin. (1: localized insulin total) */
+"%@ U Total" = "%@ E totalt";
+
+/* Appends a full-stop to a statement */
+"%@." = "%@.";
 
 /* Description of the prediction input effect for glucose momentum */
 "15 min glucose regression coefficient (b₁), continued with decay over 30 min" = "15 minutters glukose-regresjonskoeffisient (b1), fortsatt med henfall over 30 minutter.";
@@ -48,6 +48,9 @@
 
 /* Subtitle of Rapid-Acting – Adult preset */
 "A model based on the published absorption of Humalog, Novolog, and Apidra insulin in adults." = "En modell basert på publiserte data for absorpsjon av Humalog, Novolog og Apidra insulin hos voksne.";
+
+/* Subtitle of Lyumjev preset */
+"A model based on the published absorption of Lyumjev insulin." = "A model based on the published absorption of Lyumjev insulin.";
 
 /* Action to copy the recommended Bolus value to the actual Bolus Field */
 "AcceptRecommendedBolus" = "AksepterAnbefaltBolus";
@@ -71,7 +74,7 @@
    Title text for button to set up a CGM */
 "Add CGM" = "Legg til CGM";
 
-/* The label of the carb entry button */
+/* The label of the meal button */
 "Add Meal" = "Legg til måltid";
 
 /* Action sheet title selecting Pump
@@ -99,6 +102,9 @@
 /* The message displayed during a device authentication prompt for bolus specification */
 "Authenticate to Bolus %@ Units" = "Autentiser for å gi bolus %@ E";
 
+/* (No Comment) */
+"Basal rate (U/h)" = "Basalrate (E/t)";
+
 /* Details for configuration error when basal rate schedule is missing */
 "Basal Rate Schedule" = "Basalrate program";
 
@@ -118,6 +124,9 @@
 
 /* The title of the cancel action in an action sheet */
 "Cancel" = "Avbryt";
+
+/* (No Comment) */
+"Cancel Temp Basal" = "Avbryt midlertidig basal";
 
 /* The title of the cell indicating a bolus is being canceled */
 "Canceling Bolus" = "Avbryter bolus";
@@ -183,6 +192,9 @@
 
 /* Title text for delivery limits */
 "Delivery Limits" = "Leveringsgrense";
+
+/* (No Comment) */
+"Disabled" = "Deaktivert";
 
 /* The action hint of the workout mode toggle button when enabled */
 "Disables" = "Deaktiver";
@@ -270,6 +282,12 @@
 /* The notification alert describing a long-lasting loop failure. The substitution parameter is the time interval since the last loop */
 "Loop has not completed successfully in %@" = "Loop har ikke kjørt vellykket på %@";
 
+/* (No Comment) */
+"Manual Temp Basal" = "Manuell midlertidig basal";
+
+/* (No Comment) */
+"Max basal limit" = "Maks basalgrense";
+
 /* The error message for missing data. (1: missing data details) */
 "Missing data: %1$@" = "Mangler data: %1$@";
 
@@ -345,6 +363,9 @@
 /* The title of the services section in settings */
 "Services" = "Tjenester";
 
+/* (No Comment) */
+"Set" = "Angi";
+
 /* The label of the settings button */
 "Settings" = "Innstillinger";
 
@@ -393,6 +414,7 @@
 /* The label of the workout mode toggle button */
 "Workout Targets" = "Treningsmål";
 
+/*-----------------------------------------------------------------------------*/
 // FreeAPS strings
 
 "Microboluses" = "Mikrobolus";
@@ -409,7 +431,7 @@
 
 "Basal Rate Multiplier" = "Basalrate multiplikator";
 
-"Max basal limit" = "Maks basalgrense";
+"Max basal limit" = "Max basal limit";
 
 "Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting.\nThis setting is ignored if microboluses are disabled." = "Begrenser maksimal midlertidig basalrate til et multiplum av programmert basalrate. Verdien kan ikke overstige innstillingen for maksimal basalgrense\nDenne innstillingen ignoreres hvis mikroboluser er deaktivert.";
 
@@ -429,7 +451,7 @@
 
 "This is the minimum microbolus size in units that will be delivered. Only if the microbolus calculated is equal to or greater than this number of units will a bolus be delivered." = "Dette er den minste mikrobolusen som vil bli levert. Mikrobolus vil bare bli gitt om beregnet bolus er større enn eller lik denne verdien.";
 
-"Disabled" = "Deaktivert";
+"Disabled" = "Disabled";
 
 "Always" = "Alltid";
 
@@ -441,17 +463,17 @@
 
 "Import Settings" = "Importer innstillinger";
 
-"Manual Temp Basal" = "Manuell midlertidig basal";
+"Manual Temp Basal" = "Manual Temp Basal";
 
-"Basal rate (U/h)" = "Basalrate (E/t)";
+"Basal rate (U/h)" = "Basal rate (U/h)";
 
 "Duration" = "Varighet";
 
 "%.0f h %02.0f min" = "%.0f t %02.0f min";
 
-"Cancel Temp Basal" = "Avbryt midlertidig basal";
+"Cancel Temp Basal" = "Cancel Temp Basal";
 
-"Set" = "Angi";
+"Set" = "Set";
 
 "Safety" = "Sikkerhet";
 
