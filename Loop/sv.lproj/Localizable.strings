@@ -199,10 +199,6 @@
 /* The action hint of the workout mode toggle button when enabled */
 "Disables" = "Stänger av";
 
-/* (No Comment) */
-"Duration" = "Duration";
-
-
 /* The action hint of the workout mode toggle button when disabled */
 "Enables" = "Sätter på";
 
