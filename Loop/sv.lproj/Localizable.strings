@@ -88,10 +88,10 @@
 "An adjustment to the adult model based on empirical effects in children." = "En justering av vuxenmodellen baserad på empirisk effekt på barn.";
 
 /* The title of the amplitude API key credential */
-"API Key" = "API Key";
+"API Key" = "API-nyckel";
 
 /* The title of the nightscout API secret credential */
-"API Secret" = "API Secret";
+"API Secret" = "API-lösenord";
 
 /* Confirmation message for deleting a CGM */
 "Are you sure you want to delete this CGM?" = "Säkert att du vill radera denna CGM?";
@@ -469,7 +469,7 @@
 
 "Duration" = "Duration";
 
-"%.0f h %02.0f min" = "%.Av h %02.Av min";
+"%.0f h %02.0f min" = "%.av h %02.av min";
 
 "Cancel Temp Basal" = "Avbryt temporär basal";
 
