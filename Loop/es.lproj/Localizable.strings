@@ -417,13 +417,13 @@
 /*-----------------------------------------------------------------------------*/
 // FreeAPS strings
 
-"Microboluses" = "Microboluses";
+"Microboluses" = "Micro-bolos";
 
-"Caution! Microboluses have potential to reduce the safety effects of other mitigations like max temp basal rate. Please be careful!\nThe actual size of a microbolus is always limited to the partial application of recommended bolus." = "Caution! Microboluses have potential to reduce the safety effects of other mitigations like max temp basal rate. Please be careful!\nThe actual size of a microbolus is always limited to the partial application of recommended bolus.";
+"Caution! Microboluses have potential to reduce the safety effects of other mitigations like max temp basal rate. Please be careful!\nThe actual size of a microbolus is always limited to the partial application of recommended bolus." = "¡Cuidado! Los micro-bolos tienen el potencial de reducir los efectos de seguridad de otras mitigaciones como la tasa de basal temporal máxima. ¡Ten cuidado!\n El tamaño real de un micro-bolo está siempre limitado a la aplicación parcial del bolo recomendado.";
 
-"Enable With Carbs" = "Enable With Carbs";
+"Enable With Carbs" = "Habilitar con carbohidratos";
 
-"Enable Without Carbs" = "Enable Without Carbs";
+"Enable Without Carbs" = "Activar sin carbohidratos";
 
 "Partial Bolus Application" = "Partial Bolus Application";
 
@@ -471,13 +471,13 @@
 
 "%.0f h %02.0f min" = "%.0f h %02.0f min";
 
-"Cancel Temp Basal" = "Cancel Temp Basal";
+"Cancel Temp Basal" = "Cancelar Basal Temporal";
 
-"Set" = "Set";
+"Set" = "Definir";
 
-"Safety" = "Safety";
+"Safety" = "Seguridad";
 
-"Allow MBs when the sensor value is invalid" = "Allow MBs when the sensor value is invalid";
+"Allow MBs when the sensor value is invalid" = "Permitir MBs cuando el valor del sensor es inválido";
 
 "Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings." = "Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings.";
 

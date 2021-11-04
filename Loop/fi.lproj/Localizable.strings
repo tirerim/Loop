@@ -49,8 +49,8 @@
 /* Subtitle of Rapid-Acting – Adult preset */
 "A model based on the published absorption of Humalog, Novolog, and Apidra insulin in adults." = "Perustuu Humalog-, Novorapid- ja Apidra-insuliinien julkaistuun imeytymismalliin aikuisilla.";
 
-/* Title of the carb entry absorption time cell */
-"Absorption Time" = "Imeytymisaika";
+/* Subtitle of Lyumjev preset */
+"A model based on the published absorption of Lyumjev insulin." = "A model based on the published absorption of Lyumjev insulin.";
 
 /* Action to copy the recommended Bolus value to the actual Bolus Field */
 "AcceptRecommendedBolus" = "HyväksySuositeltuBolus";
@@ -74,7 +74,7 @@
    Title text for button to set up a CGM */
 "Add CGM" = "Lisää CGM";
 
-/* The label of the carb entry button */
+/* The label of the meal button */
 "Add Meal" = "Lisää ateria";
 
 /* Action sheet title selecting Pump
@@ -116,9 +116,6 @@
    The notification title for a bolus failure */
 "Bolus" = "Bolus";
 
-/* Alert title for an updated bolus recommendation */
-"Bolus Recommendation Updated" = "Bolussuositus päivitetty";
-
 /* The format string for bolus progress. (1: delivered volume)(2: total volume) */
 "Bolused %1$@ of %2$@" = "Bolus %1$@ / %2$@";
 
@@ -130,6 +127,9 @@
 
 /* (No Comment) */
 "Cancel Temp Basal" = "Cancel Temp Basal";
+
+/* The title of the cell indicating a bolus is being canceled */
+"Canceling Bolus" = "Canceling Bolus";
 
 /* Details for missing data error when carb effects are missing */
 "Carb effects" = "Hiilihydraattivaikutus";

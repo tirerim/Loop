@@ -194,7 +194,7 @@
 "Delivery Limits" = "Limiti Erogazione";
 
 /* (No Comment) */
-"Disabled" = "Disabled";
+"Disabled" = "Disattivato";
 
 /* The action hint of the workout mode toggle button when enabled */
 "Disables" = "Disabilitato";
@@ -441,17 +441,17 @@
 
 "If the override's target range starts at the given value or more" = "If the override's target range starts at the given value or more";
 
-"Other Options" = "Other Options";
+"Other Options" = "Altre Opzioni";
 
 "Open bolus screen after carbs on watch" = "Open bolus screen after carbs on watch";
 
 "Minimum Bolus Size" = "Minimum Bolus Size";
 
-"Last Event" = "Last Event";
+"Last Event" = "Ultimo Evento";
 
 "This is the minimum microbolus size in units that will be delivered. Only if the microbolus calculated is equal to or greater than this number of units will a bolus be delivered." = "This is the minimum microbolus size in units that will be delivered. Only if the microbolus calculated is equal to or greater than this number of units will a bolus be delivered.";
 
-"Disabled" = "Disabled";
+"Disabled" = "Disattivato";
 
 "Always" = "Always";
 
@@ -459,27 +459,27 @@
 
 "Without Carbs" = "Without Carbs";
 
-"Export Settings" = "Export Settings";
+"Export Settings" = "Esporta le impostazioni";
 
-"Import Settings" = "Import Settings";
+"Import Settings" = "Importa le impostazioni";
 
 "Manual Temp Basal" = "Manual Temp Basal";
 
 "Basal rate (U/h)" = "Basal rate (U/h)";
 
-"Duration" = "Duration";
+"Duration" = "Durata";
 
 "%.0f h %02.0f min" = "%.0f h %02.0f min";
 
 "Cancel Temp Basal" = "Cancel Temp Basal";
 
-"Set" = "Set";
+"Set" = "Imposta";
 
-"Safety" = "Safety";
+"Safety" = "Sicurezza";
 
-"Allow MBs when the sensor value is invalid" = "Allow MBs when the sensor value is invalid";
+"Allow MBs when the sensor value is invalid" = "Consenti MB quando il valore del sensore non è valido";
 
-"Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings." = "Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings.";
+"Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings." = "A volte potresti vedere un segno esclamativo accanto al valore del glucosio. In questi casi i microboli non verranno applicati. Attiva questa impostazione se vuoi ignorare gli avvisi.";
 
 "Other FreeAPS settings" = "Other FreeAPS settings";
 
