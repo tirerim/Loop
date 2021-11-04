@@ -394,7 +394,7 @@
 "The legacy model used by Loop, allowing customization of action duration." = "Äldre modell använd av Loop, som tillåter anpassing av effektduration.";
 
 /* Body of the alert describing a maximum bolus validation error. (1: The localized max bolus value) */
-"The maximum bolus amount is %@ Units" = "Maximala bolusdos är %@ Eheter";
+"The maximum bolus amount is %@ Units" = "Maximala bolusdos är %@ Enheter";
 
 /* The short unit display string for international units of insulin */
 "U" = "E";
