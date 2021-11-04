@@ -70,6 +70,21 @@
 /* Title of the user activity for adding carbs */
 "Add Carb Entry" = "Legg til karbohydrater";
 
+/* */
+"Edit Carb Entry" = "Edit Carb Entry";
+
+/* Back button text for bolus screen to return to carb entry screen */
+"Carb Entry" = "Carb Entry";
+
+/* Title of the carb entry date picker cell */
+"Date" = "Date";
+
+/* Title of the carb entry absorption time cell */
+"Absorption Time" = "Absorption Time";
+
+/* Carb entry section footer text explaining absorption time */
+"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact.";
+
 /* Action sheet title selecting CGM
    Title text for button to set up a CGM */
 "Add CGM" = "Legg til CGM";
