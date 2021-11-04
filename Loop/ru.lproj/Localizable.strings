@@ -1,21 +1,6 @@
 /* The string format appended to active insulin that describes pending insulin. (1: pending insulin) */
 " (pending: %@)" = " (В ожидании: %@)";
 
-/* The format for an active override preset. (1: preset symbol)(2: preset name) */
-"%@ %@" = "%1$@ %2$@";
-
-/* Formats absorbed carb value */
-"%@ absorbed" = "%@ усвоено";
-
-/* The subtitle format describing total insulin. (1: localized insulin total) */
-"%@ U Total" = "%@ всего ед";
-
-/* Appends a full-stop to a statement */
-"%@." = "%@.";
-
-/* Format string for glucose target range. (1: Min target)(2: Max target)(3: glucose unit) */
-"%1$@ – %2$@ %3$@" = "%1$@ – %2$@ %3$@";
-
 /* Format string for carb ratio average. (1: value)(2: carb unit) */
 "%1$@ %2$@/U" = "%1$@ %2$@/ед";
 
@@ -31,8 +16,26 @@
 /* The format for recommended temp basal rate and time. (1: localized rate number)(2: localized time) */
 "%1$@ U/hour @ %2$@" = "%1$@ ед/час @ %2$@";
 
+/* The format string for the app name and version number. (1: bundle name)(2: bundle version) */
+"%1$@ v%2$@" = "%1$@ v%2$@";
+
+/* Format string for glucose target range. (1: Min target)(2: Max target)(3: glucose unit) */
+"%1$@ – %2$@ %3$@" = "%1$@ – %2$@ %3$@";
+
 /* Formats (1: carb value) and (2: food type) */
 "%1$@: %2$@" = "%1$@: %2$@";
+
+/* The format for an active override preset. (1: preset symbol)(2: preset name) */
+"%@ %@" = "%1$@ %2$@";
+
+/* Formats absorbed carb value */
+"%@ absorbed" = "%@ усвоено";
+
+/* The subtitle format describing total insulin. (1: localized insulin total) */
+"%@ U Total" = "%@ всего ед";
+
+/* Appends a full-stop to a statement */
+"%@." = "%@.";
 
 /* Description of the prediction input effect for glucose momentum */
 "15 min glucose regression coefficient (b₁), continued with decay over 30 min" = "15-мин коэффициент регрессии гликемии (b1), продолжен с угасанием 30 мин";
@@ -45,6 +48,9 @@
 
 /* Subtitle of Rapid-Acting – Adult preset */
 "A model based on the published absorption of Humalog, Novolog, and Apidra insulin in adults." = "модель, основанная на опубликованных данных усвоения Humalog, Novolog и Apidra у взрослых.";
+
+/* Subtitle of Lyumjev preset */
+"A model based on the published absorption of Lyumjev insulin." = "A model based on the published absorption of Lyumjev insulin.";
 
 /* Action to copy the recommended Bolus value to the actual Bolus Field */
 "AcceptRecommendedBolus" = "Принятьрекомендуемыйболюс";
@@ -68,7 +74,7 @@
    Title text for button to set up a CGM */
 "Add CGM" = "добавить мониторинг";
 
-/* The label of the carb entry button */
+/* The label of the meal button */
 "Add Meal" = "Добавить продукт";
 
 /* Action sheet title selecting Pump
@@ -96,6 +102,9 @@
 /* The message displayed during a device authentication prompt for bolus specification */
 "Authenticate to Bolus %@ Units" = "Подтверждение болюса %@ ед";
 
+/* (No Comment) */
+"Basal rate (U/h)" = "Базальная скорость (Ед/ч)";
+
 /* Details for configuration error when basal rate schedule is missing */
 "Basal Rate Schedule" = "Скорости базала";
 
@@ -115,6 +124,9 @@
 
 /* The title of the cancel action in an action sheet */
 "Cancel" = "Отмена";
+
+/* (No Comment) */
+"Cancel Temp Basal" = "Отменить ВБС";
 
 /* The title of the cell indicating a bolus is being canceled */
 "Canceling Bolus" = "Отмена болюса";
@@ -180,6 +192,9 @@
 
 /* Title text for delivery limits */
 "Delivery Limits" = "Предел подачи";
+
+/* (No Comment) */
+"Disabled" = "Отключены";
 
 /* The action hint of the workout mode toggle button when enabled */
 "Disables" = "Деактивирует";
@@ -267,6 +282,12 @@
 /* The notification alert describing a long-lasting loop failure. The substitution parameter is the time interval since the last loop */
 "Loop has not completed successfully in %@" = "Не удалось успешно  замкнуть цикл/контур в %@";
 
+/* (No Comment) */
+"Manual Temp Basal" = "Ручная ВБС";
+
+/* (No Comment) */
+"Max basal limit" = "Максимальная базальная скорость";
+
 /* The error message for missing data. (1: missing data details) */
 "Missing data: %1$@" = "Пропущены данные: %1$@";
 
@@ -342,6 +363,9 @@
 /* The title of the services section in settings */
 "Services" = "Службы";
 
+/* (No Comment) */
+"Set" = "Установить";
+
 /* The label of the settings button */
 "Settings" = "Настройки";
 
@@ -390,7 +414,7 @@
 /* The label of the workout mode toggle button */
 "Workout Targets" = "Целевые значения при физической нагрузке";
 
-
+/*-----------------------------------------------------------------------------*/
 // FreeAPS strings
 
 "Microboluses" = "Микроболюсы";
@@ -407,9 +431,9 @@
 
 "Basal Rate Multiplier" = "Коэффициент базальной скорости";
 
-"Max basal limit" = "Максимальная базальная скорость";
+"Max basal limit" = "Max basal limit";
 
-"Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting. This setting is ignored if microboluses are disabled." = "Ограничивает максимальную базальную скорость текущей базальной скоростью, уноженной на коэфициент. Полученное значение не будет превышать выставленную максимальную базальную скорость. Настройка игнорируется, если микроболюсы отключены.";
+"Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting.\nThis setting is ignored if microboluses are disabled." = "Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting.\nThis setting is ignored if microboluses are disabled.";
 
 "Temporary overrides" = "Временные цели";
 
@@ -423,9 +447,11 @@
 
 "Minimum Bolus Size" = "Минимальный размер болюса";
 
+"Last Event" = "Last Event";
+
 "This is the minimum microbolus size in units that will be delivered. Only if the microbolus calculated is equal to or greater than this number of units will a bolus be delivered." = "Минимальный размер вводимого микроболюса (в единицах). Микроболюс будет введен только в том случае, если его рассчитанная величина будет равна или больше указанного значения минимального болюса.";
 
-"Disabled" = "Отключены";
+"Disabled" = "Disabled";
 
 "Always" = "Всегда";
 
@@ -437,17 +463,17 @@
 
 "Import Settings" = "Загрузить настройки";
 
-"Manual Temp Basal" = "Ручная ВБС";
+"Manual Temp Basal" = "Manual Temp Basal";
 
-"Basal rate (U/h)" = "Базальная скорость (Ед/ч)";
+"Basal rate (U/h)" = "Basal rate (U/h)";
 
 "Duration" = "Длительность";
 
 "%.0f h %02.0f min" = "%.0f ч %02.0f мин";
 
-"Cancel Temp Basal" = "Отменить ВБС";
+"Cancel Temp Basal" = "Cancel Temp Basal";
 
-"Set" = "Установить";
+"Set" = "Set";
 
 "Safety" = "Безопасность";
 
