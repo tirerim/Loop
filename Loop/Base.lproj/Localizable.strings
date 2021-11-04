@@ -393,7 +393,7 @@
 /* The label of the workout mode toggle button */
 "Workout Targets" = "Workout Targets";
 
-
+/*-----------------------------------------------------------------------------*/
 // FreeAPS strings
 
 "Microboluses" = "Microboluses";
@@ -425,6 +425,8 @@
 "Open bolus screen after carbs on watch" = "Open bolus screen after carbs on watch";
 
 "Minimum Bolus Size" = "Minimum Bolus Size";
+
+"Last Event" = "Last Event";
 
 "This is the minimum microbolus size in units that will be delivered. Only if the microbolus calculated is equal to or greater than this number of units will a bolus be delivered." = "This is the minimum microbolus size in units that will be delivered. Only if the microbolus calculated is equal to or greater than this number of units will a bolus be delivered.";
 
