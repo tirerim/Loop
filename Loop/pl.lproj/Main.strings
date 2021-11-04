@@ -1,3 +1,5 @@
+/* Class = "UILabel"; text = "g"; ObjectID = "0RV-d5-muE"; */
+"0RV-d5-muE.text" = "g";
 
 /* Class = "UINavigationItem"; title = "Status"; ObjectID = "3kU-n2-fha"; */
 "3kU-n2-fha.title" = "Status";
@@ -20,9 +22,6 @@
 /* Class = "UILabel"; text = "Predicted"; ObjectID = "87H-N1-0vJ"; */
 "87H-N1-0vJ.text" = "Przewidywany";
 
-/* Class = "UILabel"; text = "Title"; ObjectID = "B9F-K3-7RI"; */
-"B9F-K3-7RI.text" = "Tytuł";
-
 /* Class = "UILabel"; accessibilityLabel = "Units"; ObjectID = "BR0-dr-Fj2"; */
 "BR0-dr-Fj2.accessibilityLabel" = "Jednostki";
 
@@ -40,6 +39,15 @@
 
 /* Class = "UILabel"; text = "Observed"; ObjectID = "EAn-Ja-S1d"; */
 "EAn-Ja-S1d.text" = "Obserwowany";
+
+/* Class = "UIButton"; normalTitle = "🍭"; ObjectID = "Fal-Vf-lfh"; */
+"Fal-Vf-lfh.normalTitle" = "🍭";
+
+/* Class = "UILabel"; text = "Eventually 92 mg/dL"; ObjectID = "G51-pt-pmi"; */
+"G51-pt-pmi.text" = "Eventually 92 mg/dL";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "IRb-Yj-AQH"; */
+"IRb-Yj-AQH.text" = "Label";
 
 /* Class = "UILabel"; text = "Observed changes in glucose, subtracting changes modeled from insulin delivery, can be used to estimate carbohydrate absorption."; ObjectID = "IxU-As-glo"; */
 "IxU-As-glo.text" = "Obserwowane zmiany w poziomie glukozy i uwzględnianie zmian podaży insuliny mogą być użyte do oszacowania czasu absorpcji węglowodanów.";
@@ -59,11 +67,20 @@
 /* Class = "UILabel"; text = "An insulin activity model is used to estimate effects of insulin on glucose levels. An accurate model can help prevent insulin stacking and safely recommend corrective treatments."; ObjectID = "PJv-p9-cFe"; */
 "PJv-p9-cFe.text" = "Model aktywności insuliny jest używany do oszacowania wpływu insuliny na poziom glukozy. Dokładny model może uchronić przed chaotycznym/nadmiernym podawaniem insuliny i pozwala na zarekomendowanie prawidłowych dawek.";
 
+/* Class = "UIButton"; normalTitle = "🍽"; ObjectID = "Qe9-uc-vPR"; */
+"Qe9-uc-vPR.normalTitle" = "🍽";
+
+/* Class = "UIButton"; normalTitle = "🌮"; ObjectID = "QhO-Yi-AqQ"; */
+"QhO-Yi-AqQ.normalTitle" = "🌮";
+
 /* Class = "UILabel"; text = "eventually 92 mg/dL"; ObjectID = "Rse-x8-amW"; */
 "Rse-x8-amW.text" = "docelowo 92 mg/dL";
 
 /* Class = "UILabel"; text = "g COB"; ObjectID = "SQx-au-ZcM"; */
 "SQx-au-ZcM.text" = "g COB";
+
+/* Class = "UINavigationItem"; title = "Add/Edit Carb Entry"; ObjectID = "Tz7-80-bJ7"; */
+"Tz7-80-bJ7.title" = "Add/Edit Carb Entry";
 
 /* Class = "UINavigationItem"; title = "Carbohydrates"; ObjectID = "Vpi-5b-bY5"; */
 "Vpi-5b-bY5.title" = "Węglowodany";
@@ -71,14 +88,20 @@
 /* Class = "UITextField"; text = "4 hour"; ObjectID = "Wk3-xv-IM5"; */
 "Wk3-xv-IM5.text" = "4 godziny";
 
-/* Class = "UIButton"; normalTitle = "Deliver"; ObjectID = "Ya0-9b-ZAS"; */
-"Ya0-9b-ZAS.normalTitle" = "Podaj";
+/* Class = "UILabel"; text = "Amount Consumed"; ObjectID = "Wx8-Tf-FnG"; */
+"Wx8-Tf-FnG.text" = "Amount Consumed";
+
+/* Class = "UITextField"; placeholder = "0"; ObjectID = "Yf6-fw-Gex"; */
+"Yf6-fw-Gex.placeholder" = "0";
 
 /* Class = "UILabel"; text = "Detail"; ObjectID = "aCb-Qs-bpu"; */
 "aCb-Qs-bpu.text" = "Szczegóły";
 
 /* Class = "UINavigationItem"; title = "Bolus"; ObjectID = "aiu-ZA-zVa"; */
 "aiu-ZA-zVa.title" = "Bolusa";
+
+/* Class = "UILabel"; text = "Food Type"; ObjectID = "ap1-M6-naG"; */
+"ap1-M6-naG.text" = "Food Type";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "bIL-Ub-qYp"; */
 "bIL-Ub-qYp.text" = "Etykieta";
@@ -98,11 +121,11 @@
 /* Class = "UINavigationItem"; title = "Settings"; ObjectID = "dmB-PQ-B44"; */
 "dmB-PQ-B44.title" = "Ustawienia";
 
-/* Class = "UILabel"; text = "Active Carbohydrates: 40g"; ObjectID = "hHZ-uY-aKw"; */
-"hHZ-uY-aKw.text" = "Aktywne węglowodany: 40g";
-
 /* Class = "UITableViewController"; title = "Carbohydrate Effects"; ObjectID = "hZZ-2S-lrd"; */
 "hZZ-2S-lrd.title" = "Efekty wywołane przez węglowodany";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "jQv-xb-gwu"; */
+"jQv-xb-gwu.text" = "Detail";
 
 /* Class = "UILabel"; text = "⚠ Glucose Predicted Below Range"; ObjectID = "k0g-P7-OVN"; */
 "k0g-P7-OVN.text" = "⚠ Przewidywana glukoza poniżej zakresu";
@@ -125,14 +148,17 @@
 /* Class = "UITableViewController"; title = "Insulin Model"; ObjectID = "pi6-Dh-72V"; */
 "pi6-Dh-72V.title" = "Typ insuliny";
 
+/* Class = "UILabel"; text = "Food Type"; ObjectID = "qPH-vU-xlu"; */
+"qPH-vU-xlu.text" = "Food Type";
+
 /* Class = "UILabel"; text = "Glucose"; ObjectID = "tuw-av-A3x"; */
 "tuw-av-A3x.text" = "Glukoza";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "ufi-Kj-33k"; */
 "ufi-Kj-33k.text" = "Etykieta";
 
-/* Class = "UILabel"; text = "Active Insulin: 1.5U"; ObjectID = "viU-7a-kbI"; */
-"viU-7a-kbI.text" = "Aktywna insulina: 1.5J";
+/* Class = "UIButton"; normalTitle = "🍕"; ObjectID = "xl9-Wc-Pdu"; */
+"xl9-Wc-Pdu.normalTitle" = "🍕";
 
 /* Class = "UILabel"; text = "0"; ObjectID = "yn7-2M-jZz"; */
 "yn7-2M-jZz.text" = "0";
