@@ -144,9 +144,9 @@ final class CarbEntryViewController: ChartsTableViewController, IdentifiableClas
         tableView.register(DateAndDurationTableViewCell.nib(), forCellReuseIdentifier: DateAndDurationTableViewCell.className)
 
         if originalCarbEntry != nil {
-            title = NSLocalizedString("carb-entry-title-edit", value: "Edit Carb Entry", comment: "The title of the view controller to edit an existing carb entry")
+            title = NSLocalizedString("Edit Carb Entry", comment: "The title of the view controller to edit an existing carb entry")
         } else {
-            title = NSLocalizedString("carb-entry-title-add", value: "Add Carb Entry", comment: "The title of the view controller to create a new carb entry")
+            title = NSLocalizedString("Add Carb Entry", comment: "The title of the view controller to create a new carb entry")
         }
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: footerView.primaryButton.titleLabel?.text, style: .plain, target: self, action: #selector(continueButtonPressed))
