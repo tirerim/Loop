@@ -1,21 +1,6 @@
 /* The string format appended to active insulin that describes pending insulin. (1: pending insulin) */
 " (pending: %@)" = " (en suspens: %@)";
 
-/* The format for an active override preset. (1: preset symbol)(2: preset name) */
-"%@ %@" = "%1$@ %2$@";
-
-/* Formats absorbed carb value */
-"%@ absorbed" = "%@ absorbé";
-
-/* The subtitle format describing total insulin. (1: localized insulin total) */
-"%@ U Total" = "%@ U Totaux";
-
-/* Appends a full-stop to a statement */
-"%@." = "%@.";
-
-/* Format string for glucose target range. (1: Min target)(2: Max target)(3: glucose unit) */
-"%1$@ – %2$@ %3$@" = "%1$@ – %2$@ %3$@";
-
 /* Format string for carb ratio average. (1: value)(2: carb unit) */
 "%1$@ %2$@/U" = "%1$@ %2$@/U";
 
@@ -31,8 +16,26 @@
 /* The format for recommended temp basal rate and time. (1: localized rate number)(2: localized time) */
 "%1$@ U/hour @ %2$@" = "%1$@ U/heure @ %2$@";
 
+/* The format string for the app name and version number. (1: bundle name)(2: bundle version) */
+"%1$@ v%2$@" = "%1$@ v%2$@";
+
+/* Format string for glucose target range. (1: Min target)(2: Max target)(3: glucose unit) */
+"%1$@ – %2$@ %3$@" = "%1$@ – %2$@ %3$@";
+
 /* Formats (1: carb value) and (2: food type) */
 "%1$@: %2$@" = "%1$@: %2$@";
+
+/* The format for an active override preset. (1: preset symbol)(2: preset name) */
+"%@ %@" = "%1$@ %2$@";
+
+/* Formats absorbed carb value */
+"%@ absorbed" = "%@ absorbé";
+
+/* The subtitle format describing total insulin. (1: localized insulin total) */
+"%@ U Total" = "%@ U Totaux";
+
+/* Appends a full-stop to a statement */
+"%@." = "%@.";
 
 /* Description of the prediction input effect for glucose momentum */
 "15 min glucose regression coefficient (b₁), continued with decay over 30 min" = "Coefficient de régression du glucose de 15 minutes (b1), désintégration poursuivi au delà de 30 min.";
@@ -46,8 +49,8 @@
 /* Subtitle of Rapid-Acting – Adult preset */
 "A model based on the published absorption of Humalog, Novolog, and Apidra insulin in adults." = "Un modèle basé sur l’absorption publiée de l’Hunalog, Novolog, et Apidra chez l’adulte.";
 
-/* Title of the carb entry absorption time cell */
-"Absorption Time" = "Durée d'absorption";
+/* Subtitle of Lyumjev preset */
+"A model based on the published absorption of Lyumjev insulin." = "A model based on the published absorption of Lyumjev insulin.";
 
 /* Action to copy the recommended Bolus value to the actual Bolus Field */
 "AcceptRecommendedBolus" = "AcceptRecommendedBolus";
@@ -71,7 +74,7 @@
    Title text for button to set up a CGM */
 "Add CGM" = "Ajouter CGM";
 
-/* The label of the carb entry button */
+/* The label of the meal button */
 "Add Meal" = "Entrer un repas";
 
 /* Action sheet title selecting Pump
@@ -99,6 +102,9 @@
 /* The message displayed during a device authentication prompt for bolus specification */
 "Authenticate to Bolus %@ Units" = "Authentifier pour effectuer un Bolus %@ Unités";
 
+/* (No Comment) */
+"Basal rate (U/h)" = "Débit Basal (U/h)";
+
 /* Details for configuration error when basal rate schedule is missing */
 "Basal Rate Schedule" = "Horaire de taux basal";
 
@@ -110,9 +116,6 @@
    The notification title for a bolus failure */
 "Bolus" = "Bolus";
 
-/* Alert title for an updated bolus recommendation */
-"Bolus Recommendation Updated" = "Recommandation de Bolus modifiée";
-
 /* The format string for bolus progress. (1: delivered volume)(2: total volume) */
 "Bolused %1$@ of %2$@" = "Bolus délivré  %1$@ sur %2$@";
 
@@ -122,24 +125,18 @@
 /* The title of the cancel action in an action sheet */
 "Cancel" = "Annuler";
 
+/* (No Comment) */
+"Cancel Temp Basal" = "Annuler le Basal Temporaire";
+
 /* The title of the cell indicating a bolus is being canceled */
 "Canceling Bolus" = "Annulation du Bolus en cours";
 
 /* Details for missing data error when carb effects are missing */
 "Carb effects" = "Effets des glucides";
 
-/* Back button text for bolus screen to return to carb entry screen */
-"Carb Entry" = "Entrée de glucides";
-
 /* The title of the carb ratios schedule screen
    The title text for the carb ratio schedule */
 "Carb Ratios" = "Ratios Glucides";
-
-/* The title of the view controller to create a new carb entry */
-"carb-entry-title-add" = "Ajouter des glucides";
-
-/* The title of the view controller to edit an existing carb entry */
-"carb-entry-title-edit" = "Editer les glucides";
 
 /* Title of the prediction input effect for carbohydrates */
 "Carbohydrates" = "Glucides";
@@ -168,9 +165,6 @@
 /* The title of the action used to dismiss an error alert */
 "com.loudnate.LoopKit.errorAlertActionTitle" = "OK";
 
-/* Carb entry section footer text explaining absorption time */
-"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Choisissez un temps d'absorption plus long pour les repas plus gros ou ceux contenant des graisses et des protéines. Ceci n'est qu'un guide pour l'algorithme et n'a pas besoin d'être exact.";
-
 /* The title of the configuration section in settings */
 "Configuration" = "Configuration";
 
@@ -193,17 +187,14 @@
 /* The title of the Loggly customer token credential */
 "Customer Token" = "Token client";
 
-/* Title of the carb entry date picker cell */
-"Date" = "Date";
-
 /* Button title to delete CGM */
 "Delete CGM" = "Supprimer CGM";
 
-/* The button text to initiate a bolus */
-"Deliver" = "Administrer";
-
 /* Title text for delivery limits */
 "Delivery Limits" = "Limites de Administration";
+
+/* (No Comment) */
+"Disabled" = "Désactivé";
 
 /* The action hint of the workout mode toggle button when enabled */
 "Disables" = "Désactive";
@@ -291,8 +282,11 @@
 /* The notification alert describing a long-lasting loop failure. The substitution parameter is the time interval since the last loop */
 "Loop has not completed successfully in %@" = "Loop ne s'est pas complété avec succès depuis %@";
 
-/* Title text for bolus screen following a carb entry */
-"Meal Bolus" = "Bolus de repas";
+/* (No Comment) */
+"Manual Temp Basal" = "Manual Temp Basal";
+
+/* (No Comment) */
+"Max basal limit" = "Limite maximale de basal";
 
 /* The error message for missing data. (1: missing data details) */
 "Missing data: %1$@" = "Données manquantes: %1$@";
@@ -308,12 +302,6 @@
 
 /* The title text for the override presets */
 "Override Presets" = "Préréglages de surcharges";
-
-/* Alert message for attempting to change basal rates before pump was configured. */
-"Please configure a pump to view or edit scheduled basal rates." = "Veuillez configurer une pompe pour afficher ou modifier les différents débits Basale.";
-
-/* Name of pre-meal workout override */
-"Pre-Meal" = "Pré-Repas";
 
 /* The label of the pre-meal mode toggle button */
 "Pre-Meal Targets" = "Objectif de Pré-Repas";
@@ -372,11 +360,11 @@
 /* The title of the notification action to retry a bolus command */
 "Retry" = "Nouvel essai";
 
-/* The button text to save a carb entry without bolusing */
-"Save without Bolusing" = "Enregister sans Bolus";
-
 /* The title of the services section in settings */
 "Services" = "Services";
+
+/* (No Comment) */
+"Set" = "Définir";
 
 /* The label of the settings button */
 "Settings" = "Options";
@@ -402,9 +390,6 @@
 /* The subtitle of the cell displaying an action to resume insulin delivery */
 "Tap to Resume" = "Taper pour reprendre";
 
-/* Alert message for an updated bolus recommendation */
-"The bolus recommendation has updated. Please reconfirm the bolus amount." = "La recommandation du bolus a changé. Veuillez reconfirmer la quantité du bolus";
-
 /* Subtitle description of Walsh insulin model setting */
 "The legacy model used by Loop, allowing customization of action duration." = "Le modèle hérité utilisé par Loop, permettant de personnaliser la durée de l’action.";
 
@@ -413,9 +398,6 @@
 
 /* The short unit display string for international units of insulin */
 "U" = "U";
-
-/* Alert title for unconfigured pump */
-"Unconfigured Pump" = "Pompe non configurée";
 
 /* The format for the description of a temporary override end date */
 "until %@" = "jusqu’à %@";
@@ -429,10 +411,80 @@
 /* Explanation of suspend threshold */
 "When current or forecasted glucose is below the suspend threshold, Loop will not recommend a bolus, and will always recommend a temporary basal rate of 0 units per hour." = "Lorsque le glucose actuel ou prévu est inférieur au seuil de suspension, Loop ne recommandera pas de bolus et recommandera toujours un débit basal temporaire de 0 unité par heure.";
 
-/* Name of legacy workout override */
-"Workout" = "Entraînement";
-
 /* The label of the workout mode toggle button */
 "Workout Targets" = "Objectifs d'entraînement";
 
+/*-----------------------------------------------------------------------------*/
+// FreeAPS strings
 
+"Microboluses" = "Microbolus";
+
+"Caution! Microboluses have potential to reduce the safety effects of other mitigations like max temp basal rate. Please be careful!\nThe actual size of a microbolus is always limited to the partial application of recommended bolus." = "Attention ! Les microbolus ont le potentiel de réduire les effets de sécurité d'autres paramètres comme le taux de basal temporaire maximale. Attention !\nLa taille réelle d'un microbolus est toujours limitée à l'application partielle du bolus recommandé.";
+
+"Enable With Carbs" = "Activer avec glucides";
+
+"Enable Without Carbs" = "Activer sans glucides";
+
+"Partial Bolus Application" = "Partial Bolus Application";
+
+"What part of the recommended bolus will be applied automatically." = "What part of the recommended bolus will be applied automatically.";
+
+"Basal Rate Multiplier" = "Multiplicateur de débit Basal";
+
+"Max basal limit" = "Max basal limit";
+
+"Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting.\nThis setting is ignored if microboluses are disabled." = "Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting.\nThis setting is ignored if microboluses are disabled.";
+
+"Temporary overrides" = "Dépassement temporaire";
+
+"Disable MB by enabling temporary override" = "Disable MB by enabling temporary override";
+
+"If the override's target range starts at the given value or more" = "If the override's target range starts at the given value or more";
+
+"Other Options" = "Autres options";
+
+"Open bolus screen after carbs on watch" = "Open bolus screen after carbs on watch";
+
+"Minimum Bolus Size" = "Taille minimale du Bolus";
+
+"Last Event" = "Dernier événement";
+
+"This is the minimum microbolus size in units that will be delivered. Only if the microbolus calculated is equal to or greater than this number of units will a bolus be delivered." = "This is the minimum microbolus size in units that will be delivered. Only if the microbolus calculated is equal to or greater than this number of units will a bolus be delivered.";
+
+"Disabled" = "Disabled";
+
+"Always" = "Toujours";
+
+"With Carbs" = "Avec Glucides";
+
+"Without Carbs" = "Sans glucides";
+
+"Export Settings" = "Exporter les Paramètres";
+
+"Import Settings" = "Importer les Paramètres";
+
+"Manual Temp Basal" = "Manual Temp Basal";
+
+"Basal rate (U/h)" = "Basal rate (U/h)";
+
+"Duration" = "Durée";
+
+"%.0f h %02.0f min" = "%.0f h %02.0f min";
+
+"Cancel Temp Basal" = "Cancel Temp Basal";
+
+"Set" = "Set";
+
+"Safety" = "Sécurité";
+
+"Allow MBs when the sensor value is invalid" = "Allow MBs when the sensor value is invalid";
+
+"Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings." = "Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings.";
+
+"Other FreeAPS settings" = "Other FreeAPS settings";
+
+"Show required carbs on the app badge" = "Show required carbs on the app badge";
+
+"Allow MBs when glucose is below target range" = "Allow MBs when glucose is below target range";
+
+"Retrospective Correction interval" = "Retrospective Correction interval";
