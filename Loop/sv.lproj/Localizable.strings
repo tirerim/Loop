@@ -124,7 +124,7 @@
 "Authenticate to Bolus %@ Units" = "Godkänn bolus på %@ Enheter";
 
 /* (No Comment) */
-"Basal rate (U/h)" = "Basaldos (Е/h)";
+"Basal rate (U/h)" = "Basaldos (IЕ/h)";
 
 /* Details for configuration error when basal rate schedule is missing */
 "Basal Rate Schedule" = "Basaldosschema";
