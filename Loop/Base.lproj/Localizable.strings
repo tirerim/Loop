@@ -67,6 +67,9 @@
 /* The string format describing active insulin. (1: localized insulin value description) */
 "Active Insulin: %@" = "Active Insulin: %@";
 
+/* Title of the user activity for adding carbs */
+"Add Carb Entry" = "Add Carb Entry";
+
 /* Action sheet title selecting CGM
    Title text for button to set up a CGM */
 "Add CGM" = "Add CGM";
@@ -99,6 +102,9 @@
 /* The message displayed during a device authentication prompt for bolus specification */
 "Authenticate to Bolus %@ Units" = "Authenticate to Bolus %@ Units";
 
+/* (No Comment) */
+"Basal rate (U/h)" = "Basal rate (U/h)";
+
 /* Details for configuration error when basal rate schedule is missing */
 "Basal Rate Schedule" = "Basal Rate Schedule";
 
@@ -118,6 +124,9 @@
 
 /* The title of the cancel action in an action sheet */
 "Cancel" = "Cancel";
+
+/* (No Comment) */
+"Cancel Temp Basal" = "Cancel Temp Basal";
 
 /* The title of the cell indicating a bolus is being canceled */
 "Canceling Bolus" = "Canceling Bolus";
@@ -183,6 +192,9 @@
 
 /* Title text for delivery limits */
 "Delivery Limits" = "Delivery Limits";
+
+/* (No Comment) */
+"Disabled" = "Disabled";
 
 /* The action hint of the workout mode toggle button when enabled */
 "Disables" = "Disables";
@@ -270,6 +282,12 @@
 /* The notification alert describing a long-lasting loop failure. The substitution parameter is the time interval since the last loop */
 "Loop has not completed successfully in %@" = "Loop has not completed successfully in %@";
 
+/* (No Comment) */
+"Manual Temp Basal" = "Manual Temp Basal";
+
+/* (No Comment) */
+"Max basal limit" = "Max basal limit";
+
 /* The error message for missing data. (1: missing data details) */
 "Missing data: %1$@" = "Missing data: %1$@";
 
@@ -344,6 +362,9 @@
 
 /* The title of the services section in settings */
 "Services" = "Services";
+
+/* (No Comment) */
+"Set" = "Set";
 
 /* The label of the settings button */
 "Settings" = "Settings";
@@ -467,4 +488,3 @@
 "Allow MBs when glucose is below target range" = "Allow MBs when glucose is below target range";
 
 "Retrospective Correction interval" = "Retrospective Correction interval";
-
