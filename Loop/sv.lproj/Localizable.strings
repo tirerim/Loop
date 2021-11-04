@@ -50,7 +50,7 @@
 "A model based on the published absorption of Humalog, Novolog, and Apidra insulin in adults." = "Insulinmodell baserad på publicerade studier av absorption av Humalog, Novolog, and Apidra-insulin hos vuxna.";
 
 /* Subtitle of Lyumjev preset */
-"A model based on the published absorption of Lyumjev insulin." = "A model based on the published absorption of Lyumjev insulin.";
+"A model based on the published absorption of Lyumjev insulin." = "Insulinmodell baserad på publicerade studier av absorption av Lyumjev.";
 
 /* Action to copy the recommended Bolus value to the actual Bolus Field */
 "AcceptRecommendedBolus" = "AcceptRecommendedBolus";
@@ -325,7 +325,7 @@
 "Pump data is %1$@ old" = "Pumpvärden är %1$@ gamla";
 
 /* Details for configuration error when pump manager is missing */
-"Pump Manager" = "Pump Manager";
+"Pump Manager" = "Pumphanterare";
 
 /* The notification title for an empty pump reservoir */
 "Pump Reservoir Empty" = "Pumpreservoar är tom";
@@ -394,7 +394,7 @@
 "The legacy model used by Loop, allowing customization of action duration." = "Äldre modell använd av Loop, som tillåter anpassing av effektduration.";
 
 /* Body of the alert describing a maximum bolus validation error. (1: The localized max bolus value) */
-"The maximum bolus amount is %@ Units" = "Maximala bolusdos är %@ Enheter";
+"The maximum bolus amount is %@ Units" = "Maximala bolusdos är %@ Eheter";
 
 /* The short unit display string for international units of insulin */
 "U" = "E";
@@ -431,9 +431,9 @@
 
 "Basal Rate Multiplier" = "Basaldosmultiplikator";
 
-"Max basal limit" = "Max basal limit";
+"Max basal limit" = "Max basaldos";
 
-"Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting.\nThis setting is ignored if microboluses are disabled." = "Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting.\nThis setting is ignored if microboluses are disabled.";
+"Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting.\nThis setting is ignored if microboluses are disabled." = "Bestämmer andel maximal temporär basal som kan användas, till en multipel av den normala basaldosen. Värdet kan inte överskrida din inställda maximala basaldos. Denna inställning används endast när reglaget för automatiska bolusar är på.";
 
 "Temporary overrides" = "Tillfälliga undantag";
 
@@ -451,7 +451,7 @@
 
 "This is the minimum microbolus size in units that will be delivered. Only if the microbolus calculated is equal to or greater than this number of units will a bolus be delivered." = "Detta är den minsta mängd automatisk bolus som kan ges.";
 
-"Disabled" = "Disabled";
+"Disabled" = "Av";
 
 "Always" = "Alltid";
 
@@ -463,17 +463,17 @@
 
 "Import Settings" = "Importera inställningar";
 
-"Manual Temp Basal" = "Manual Temp Basal";
+"Manual Temp Basal" = "Manuell temporär basal";
 
-"Basal rate (U/h)" = "Basal rate (U/h)";
+"Basal rate (U/h)" = "Basaldos (IЕ/h)";
 
 "Duration" = "Duration";
 
-"%.0f h %02.0f min" = "%.0f h %02.0f min";
+"%.0f h %02.0f min" = "%.Av h %02.Av min";
 
-"Cancel Temp Basal" = "Cancel Temp Basal";
+"Cancel Temp Basal" = "Avbryt temporär basal";
 
-"Set" = "Set";
+"Set" = "Ställ in";
 
 "Safety" = "Säkerhetsinställningar";
 
