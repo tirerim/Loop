@@ -85,6 +85,15 @@
 /* Carb entry section footer text explaining absorption time */
 "Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Välj en längre absorptionstid för måltid med mycket fett eller protein. Ofta är det bäst att dela upp måltiden i snabba och långsamma kolhydrater och mata in dessa var för sig.";
 
+/* The button text to save a carb entry without bolusing*/
+"Save without Bolusing" = "Spara utan att ge bolus";
+
+/* Title text for bolus screen following a carb entry */
+"Meal Bolus" = "Måltidsbolus";
+
+/* The button text to initiate a bolus */
+"Deliver" = "Ge bolus";
+
 /* Action sheet title selecting CGM
    Title text for button to set up a CGM */
 "Add CGM" = "Lägg till CGM";
