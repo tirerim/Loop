@@ -260,7 +260,7 @@
 "Glucose Momentum" = "Glukosemomentum";
 
 /* The placeholder text for the nightscout site URL credential */
-"https://mysite.herokuapp.com" = "https://minNightscout.herokuapp.com";
+"https://mysite.herokuapp.com" = "https://minNS.herokuapp.com";
 
 /* The title of a target alert action specifying an indefinitely long workout targets duration */
 "Indefinitely" = "Uendelig";
@@ -400,7 +400,7 @@
 "since %@" = "siden %@";
 
 /* The title of the nightscout site URL credential */
-"Site URL" = "Nettsted (URL)";
+"Site URL" = "Adresse";
 
 /* The format for the description of a temporary override start date */
 "starting at %@" = "starter %@";
