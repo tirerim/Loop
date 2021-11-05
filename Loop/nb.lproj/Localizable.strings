@@ -1,21 +1,6 @@
 /* The string format appended to active insulin that describes pending insulin. (1: pending insulin) */
 " (pending: %@)" = " (Gjenstår: %@)";
 
-/* The format for an active override preset. (1: preset symbol)(2: preset name) */
-"%@ %@" = "%1$@ %2$@";
-
-/* Formats absorbed carb value */
-"%@ absorbed" = "%@ absorbert";
-
-/* The subtitle format describing total insulin. (1: localized insulin total) */
-"%@ U Total" = "%@ E totalt";
-
-/* Appends a full-stop to a statement */
-"%@." = "%@.";
-
-/* Format string for glucose target range. (1: Min target)(2: Max target)(3: glucose unit) */
-"%1$@ – %2$@ %3$@" = "%1$@ – %2$@ %3$@";
-
 /* Format string for carb ratio average. (1: value)(2: carb unit) */
 "%1$@ %2$@/U" = "%1$@ %2$@/E";
 
@@ -34,20 +19,38 @@
 /* The format string for the app name and version number. (1: bundle name)(2: bundle version) */
 "%1$@ v%2$@" = "%1$@ v%2$@";
 
+/* Format string for glucose target range. (1: Min target)(2: Max target)(3: glucose unit) */
+"%1$@ – %2$@ %3$@" = "%1$@ – %2$@ %3$@";
+
 /* Formats (1: carb value) and (2: food type) */
 "%1$@: %2$@" = "%1$@: %2$@";
 
+/* The format for an active override preset. (1: preset symbol)(2: preset name) */
+"%@ %@" = "%1$@ %2$@";
+
+/* Formats absorbed carb value */
+"%@ absorbed" = "%@ absorbert";
+
+/* The subtitle format describing total insulin. (1: localized insulin total) */
+"%@ U Total" = "%@ E totalt";
+
+/* Appends a full-stop to a statement */
+"%@." = "%@.";
+
 /* Description of the prediction input effect for glucose momentum */
-"15 min glucose regression coefficient (b₁), continued with decay over 30 min" = "15 minutters glukose-regresjonskoeffisient (b1), fortsatt med henfall over 30 minutter.";
+"15 min glucose regression coefficient (b₁), continued with decay over 30 min" = "15 minutters glukose-regresjonskoeffisient (b₁), fremskrevet med nedtrapping over 30 minutter";
 
 /* Description of the prediction input effect for retrospective correction */
-"30 min comparison of glucose prediction vs actual, continued with decay over 60 min" = "30 min sammenligning av glukose-prediksjon vs faktisk, fortsatt med forfall over 60 min.";
+"30 min comparison of glucose prediction vs actual, continued with decay over 60 min" = "30 min sammenligning av glukose-prediksjon vs faktisk, fremskrevet med nedtrapping over 60 min";
 
 /* Subtitle of Fiasp preset */
 "A model based on the published absorption of Fiasp insulin." = "En modell basert på publiserte data for absorpsjon av Fiasp insulin.";
 
 /* Subtitle of Rapid-Acting – Adult preset */
 "A model based on the published absorption of Humalog, Novolog, and Apidra insulin in adults." = "En modell basert på publiserte data for absorpsjon av Humalog, Novolog og Apidra insulin hos voksne.";
+
+/* Subtitle of Lyumjev preset */
+"A model based on the published absorption of Lyumjev insulin." = "En modell basert på publiserte data for absorpsjon av Lyumjev insulin.";
 
 /* Action to copy the recommended Bolus value to the actual Bolus Field */
 "AcceptRecommendedBolus" = "AksepterAnbefaltBolus";
@@ -65,13 +68,28 @@
 "Active Insulin: %@" = "Aktivt insulin: %@";
 
 /* Title of the user activity for adding carbs */
-"Add Carb Entry" = "Legg til oppføring med karbohydrater";
+"Add Carb Entry" = "Legg til karbohydrater";
+
+/* */
+"Edit Carb Entry" = "Edit Carb Entry";
+
+/* Back button text for bolus screen to return to carb entry screen */
+"Carb Entry" = "Carb Entry";
+
+/* Title of the carb entry date picker cell */
+"Date" = "Date";
+
+/* Title of the carb entry absorption time cell */
+"Absorption Time" = "Absorption Time";
+
+/* Carb entry section footer text explaining absorption time */
+"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact.";
 
 /* Action sheet title selecting CGM
    Title text for button to set up a CGM */
 "Add CGM" = "Legg til CGM";
 
-/* The label of the carb entry button */
+/* The label of the meal button */
 "Add Meal" = "Legg til måltid";
 
 /* Action sheet title selecting Pump
@@ -82,29 +100,32 @@
 "Amplitude" = "Amplitude";
 
 /* Subtitle of Rapid-Acting – Children preset */
-"An adjustment to the adult model based on empirical effects in children." = "En justering til modellen tilpasset voksne, basert på empiriske effekter hos barn.";
+"An adjustment to the adult model based on empirical effects in children." = "En justering av insulinmodell for voksne, basert på empiriske effekter hos barn.";
 
 /* The title of the amplitude API key credential */
-"API Key" = "API Key";
+"API Key" = "API-nøkkel";
 
 /* The title of the nightscout API secret credential */
-"API Secret" = "API Secret";
+"API Secret" = "API-nøkkel";
 
 /* Confirmation message for deleting a CGM */
-"Are you sure you want to delete this CGM?" = "Er du sikker på at du vil slette denne CGM?";
+"Are you sure you want to delete this CGM?" = "Er du sikker på at du vil slette denne CGM-en?";
 
 /* Format fragment for a specific time */
 "at %@" = "kl. %@";
 
 /* The message displayed during a device authentication prompt for bolus specification */
-"Authenticate to Bolus %@ Units" = "Autentiser for å gi bolus %@ E";
+"Authenticate to Bolus %@ Units" = "Autentiser for å gi bolus på %@ E";
+
+/* (No Comment) */
+"Basal rate (U/h)" = "Basalrate (E/t)";
 
 /* Details for configuration error when basal rate schedule is missing */
-"Basal Rate Schedule" = "Basalrate program";
+"Basal Rate Schedule" = "Basal-program";
 
 /* The title of the basal rate profile screen
    The title text for the basal rate schedule */
-"Basal Rates" = "Basaldoser";
+"Basal Rates" = "Basal-program";
 
 /* The label of the bolus entry button
    The notification title for a bolus failure */
@@ -118,6 +139,9 @@
 
 /* The title of the cancel action in an action sheet */
 "Cancel" = "Avbryt";
+
+/* (No Comment) */
+"Cancel Temp Basal" = "Avbryt midlertidig basal";
 
 /* The title of the cell indicating a bolus is being canceled */
 "Canceling Bolus" = "Avbryter bolus";
@@ -176,16 +200,19 @@
 "Custom Override" = "Tilpassede overstyringer";
 
 /* The title of the Loggly customer token credential */
-"Customer Token" = "Customer Token";
+"Customer Token" = "Kunde-nøkkel";
 
 /* Button title to delete CGM */
 "Delete CGM" = "Slett CGM";
 
 /* Title text for delivery limits */
-"Delivery Limits" = "Leveringsgrense";
+"Delivery Limits" = "Leveringsgrenser";
+
+/* (No Comment) */
+"Disabled" = "Deaktivert";
 
 /* The action hint of the workout mode toggle button when enabled */
-"Disables" = "Deaktiver";
+"Disables" = "Deaktiverer";
 
 /* The action hint of the workout mode toggle button when disabled */
 "Enables" = "Aktiverer";
@@ -209,22 +236,22 @@
 "Fiasp" = "Fiasp";
 
 /* The format string used to describe a finite workout targets duration */
-"For %1$@" = "Til %1$@";
+"For %1$@" = "I %1$@";
 
 /* The title of the glucose and prediction graph */
-"Glucose" = "Glukose";
+"Glucose" = "Blodsukker";
 
 /* The error message when glucose data is too old to be used. (1: glucose data age in minutes) */
-"Glucose data is %1$@ old" = "Glukosedata er %1$@ gammel";
+"Glucose data is %1$@ old" = "Blodsukkerdata er %1$@ gammel";
 
 /* Description of error when glucose data is missing */
-"Glucose data not available" = "Glukose data er utilgjengelig";
+"Glucose data not available" = "Blodsukkerdata er utilgjengelig";
 
 /* Title of the prediction input effect for glucose momentum */
 "Glucose Momentum" = "Glukosemomentum";
 
 /* The placeholder text for the nightscout site URL credential */
-"https://mysite.herokuapp.com" = "https://mysite.herokuapp.com";
+"https://mysite.herokuapp.com" = "https://minNightscout.herokuapp.com";
 
 /* The title of a target alert action specifying an indefinitely long workout targets duration */
 "Indefinitely" = "Uendelig";
@@ -236,7 +263,7 @@
 "Insulin Absorbed (U) × Insulin Sensitivity (%1$@/U)" = "Insulin absorbert (E) × Insulinfølsomhet (%1$@/E)";
 
 /* The title of the insulin delivery graph */
-"Insulin Delivery" = "Insulinlevering";
+"Insulin Delivery" = "Insulintilførsel";
 
 /* Details for missing data error when insulin effects are missing */
 "Insulin effects" = "Insulineffekter";
@@ -256,7 +283,7 @@
 "Issue Report" = "Hendelsesrapport";
 
 /* Glucose HUD accessibility hint */
-"Launches CGM app" = "Starter CGM app";
+"Launches CGM app" = "Starter CGM-app";
 
 /* The loading message for the diagnostic report screen */
 "Loading..." = "Laster...";
@@ -269,6 +296,12 @@
 
 /* The notification alert describing a long-lasting loop failure. The substitution parameter is the time interval since the last loop */
 "Loop has not completed successfully in %@" = "Loop har ikke kjørt vellykket på %@";
+
+/* (No Comment) */
+"Manual Temp Basal" = "Manuell midlertidig basal";
+
+/* (No Comment) */
+"Max basal limit" = "Maks basalgrense";
 
 /* The error message for missing data. (1: missing data details) */
 "Missing data: %1$@" = "Mangler data: %1$@";
@@ -286,7 +319,7 @@
 "Override Presets" = "Forhåndslagrede overstyringer";
 
 /* The label of the pre-meal mode toggle button */
-"Pre-Meal Targets" = "Pre-måltids mål";
+"Pre-Meal Targets" = "Før-måltids mål";
 
 /* Message when offering bolus recommendation even though bg is below range and minBG is in future. (1: glucose time)(2: glucose number) */
 "Predicted glucose at %1$@ is %2$@." = "Forventet blodsukker om %1$@ er %2$@.";
@@ -307,7 +340,7 @@
 "Pump data is %1$@ old" = "Pumpedata er %1$@ gammelt";
 
 /* Details for configuration error when pump manager is missing */
-"Pump Manager" = "Pumpeinnstilling";
+"Pump Manager" = "Pumpestyring";
 
 /* The notification title for an empty pump reservoir */
 "Pump Reservoir Empty" = "Pumpereservoar tomt";
@@ -325,7 +358,7 @@
 "Rapid-Acting – Children" = "Hurtigvirkende – barn";
 
 /* The error message when a recommendation has expired. (1: age of recommendation in minutes) */
-"Recommendation expired: %1$@ old" = "Anbefaling utløpt: %1$@ gammelt";
+"Recommendation expired: %1$@ old" = "Anbefaling utløpt: %1$@ gammel";
 
 /* The title of the cell displaying a recommended temp basal value */
 "Recommended Basal" = "Anbefalt basal";
@@ -345,6 +378,9 @@
 /* The title of the services section in settings */
 "Services" = "Tjenester";
 
+/* (No Comment) */
+"Set" = "Angi";
+
 /* The label of the settings button */
 "Settings" = "Innstillinger";
 
@@ -358,7 +394,7 @@
 "Site URL" = "Nettsted (URL)";
 
 /* The format for the description of a temporary override start date */
-"starting at %@" = "startet %@";
+"starting at %@" = "starter %@";
 
 /* The title of the cell indicating a bolus is being sent */
 "Starting Bolus" = "Starter bolus";
@@ -370,7 +406,7 @@
 "Tap to Resume" = "Trykk for å gjenoppta";
 
 /* Subtitle description of Walsh insulin model setting */
-"The legacy model used by Loop, allowing customization of action duration." = "Den gamle modellen brukt av Loop, tillater endring av varighet for handling.";
+"The legacy model used by Loop, allowing customization of action duration." = "Den gamle modellen brukt av Loop, tillater endring av insulinets virkningstid (DIA).";
 
 /* Body of the alert describing a maximum bolus validation error. (1: The localized max bolus value) */
 "The maximum bolus amount is %@ Units" = "Maks bolus er satt til %@ enheter";
@@ -382,7 +418,7 @@
 "until %@" = "frem til %@";
 
 /* The title of the alert controller used to select a duration for workout targets */
-"Use Workout Glucose Targets" = "Bruk treningsmodus for glukosemålområde";
+"Use Workout Glucose Targets" = "Bruk korreksjonsområde for treningsmodus";
 
 /* Title of insulin model setting */
 "Walsh" = "Walsh";
@@ -391,8 +427,9 @@
 "When current or forecasted glucose is below the suspend threshold, Loop will not recommend a bolus, and will always recommend a temporary basal rate of 0 units per hour." = "Når nåværende eller forventet blodsukker er under grensen for insulinstopp, vil ikke Loop anbefale en bolus, og vil alltid anbefale en midlertidig basalrate på 0 enheter per time.";
 
 /* The label of the workout mode toggle button */
-"Workout Targets" = "Treningsmål";
+"Workout Targets" = "Korreksjonsområde for treningsmodus";
 
+/*-----------------------------------------------------------------------------*/
 // FreeAPS strings
 
 "Microboluses" = "Mikrobolus";
@@ -411,7 +448,7 @@
 
 "Max basal limit" = "Maks basalgrense";
 
-"Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting.\nThis setting is ignored if microboluses are disabled." = "Begrenser maksimal midlertidig basalrate til et multiplum av programmert basalrate. Verdien kan ikke overstige innstillingen for maksimal basalgrense\nDenne innstillingen ignoreres hvis mikroboluser er deaktivert.";
+"Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting.\nThis setting is ignored if microboluses are disabled." = "Begrenser maksimal midlertidig basalrate til et multiplum av programmert basalrate. Verdien kan ikke overstige innstillingen for maksimal basalgrense.\nDenne innstillingen ignoreres hvis mikroboluser er deaktivert.";
 
 "Temporary overrides" = "Midlertidig overstyring";
 

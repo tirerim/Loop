@@ -1,21 +1,6 @@
 /* The string format appended to active insulin that describes pending insulin. (1: pending insulin) */
 " (pending: %@)" = " (stehen aus: %@)";
 
-/* The format for an active override preset. (1: preset symbol)(2: preset name) */
-"%@ %@" = "%1$@ %2$@";
-
-/* Formats absorbed carb value */
-"%@ absorbed" = "%@ absorbiert";
-
-/* The subtitle format describing total insulin. (1: localized insulin total) */
-"%@ U Total" = "%@ Gesamt-IE";
-
-/* Appends a full-stop to a statement */
-"%@." = "%@.";
-
-/* Format string for glucose target range. (1: Min target)(2: Max target)(3: glucose unit) */
-"%1$@ – %2$@ %3$@" = "%1$@ – %2$@ %3$@";
-
 /* Format string for carb ratio average. (1: value)(2: carb unit) */
 "%1$@ %2$@/U" = "%1$@ %2$@/IE";
 
@@ -34,8 +19,23 @@
 /* The format string for the app name and version number. (1: bundle name)(2: bundle version) */
 "%1$@ v%2$@" = "%1$@ v%2$@";
 
+/* Format string for glucose target range. (1: Min target)(2: Max target)(3: glucose unit) */
+"%1$@ – %2$@ %3$@" = "%1$@ – %2$@ %3$@";
+
 /* Formats (1: carb value) and (2: food type) */
 "%1$@: %2$@" = "%1$@: %2$@";
+
+/* The format for an active override preset. (1: preset symbol)(2: preset name) */
+"%@ %@" = "%1$@ %2$@";
+
+/* Formats absorbed carb value */
+"%@ absorbed" = "%@ absorbiert";
+
+/* The subtitle format describing total insulin. (1: localized insulin total) */
+"%@ U Total" = "%@ Gesamt-IE";
+
+/* Appends a full-stop to a statement */
+"%@." = "%@.";
 
 /* Description of the prediction input effect for glucose momentum */
 "15 min glucose regression coefficient (b₁), continued with decay over 30 min" = "15 Minuten Blutzucker-Regressionskoeffizient (b1), fortgesetzt mit Abfall über 30 min";
@@ -48,6 +48,9 @@
 
 /* Subtitle of Rapid-Acting – Adult preset */
 "A model based on the published absorption of Humalog, Novolog, and Apidra insulin in adults." = "Ein Modell auf der Grundlage der veröffentlichten Absorption von Humalog, Novolog und Apidra Insulin bei Erwachsenen.";
+
+/* Subtitle of Lyumjev preset */
+"A model based on the published absorption of Lyumjev insulin." = "A model based on the published absorption of Lyumjev insulin.";
 
 /* Action to copy the recommended Bolus value to the actual Bolus Field */
 "AcceptRecommendedBolus" = "Akzeptiere empfohlenen Bolus";
@@ -67,11 +70,26 @@
 /* Title of the user activity for adding carbs */
 "Add Carb Entry" = "KH-Eintrag hinzufügen";
 
+/* */
+"Edit Carb Entry" = "Edit Carb Entry";
+
+/* Back button text for bolus screen to return to carb entry screen */
+"Carb Entry" = "Carb Entry";
+
+/* Title of the carb entry date picker cell */
+"Date" = "Date";
+
+/* Title of the carb entry absorption time cell */
+"Absorption Time" = "Absorption Time";
+
+/* Carb entry section footer text explaining absorption time */
+"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact.";
+
 /* Action sheet title selecting CGM
    Title text for button to set up a CGM */
 "Add CGM" = "CGM hinzufügen";
 
-/* The label of the carb entry button */
+/* The label of the meal button */
 "Add Meal" = "Mahlzeit hinzufügen";
 
 /* Action sheet title selecting Pump
@@ -99,6 +117,9 @@
 /* The message displayed during a device authentication prompt for bolus specification */
 "Authenticate to Bolus %@ Units" = "Bolusabgabe von %@ IE bestätigen";
 
+/* (No Comment) */
+"Basal rate (U/h)" = "Basalrate (IE/h)";
+
 /* Details for configuration error when basal rate schedule is missing */
 "Basal Rate Schedule" = "Basalraten-Zeitplan";
 
@@ -118,6 +139,9 @@
 
 /* The title of the cancel action in an action sheet */
 "Cancel" = "Abbrechen";
+
+/* (No Comment) */
+"Cancel Temp Basal" = "Temporäre Basalrate abbrechen";
 
 /* The title of the cell indicating a bolus is being canceled */
 "Canceling Bolus" = "Bolus abbrechen";
@@ -183,6 +207,9 @@
 
 /* Title text for delivery limits */
 "Delivery Limits" = "Verabreichungslimits";
+
+/* (No Comment) */
+"Disabled" = "Deaktiviert";
 
 /* The action hint of the workout mode toggle button when enabled */
 "Disables" = "Deaktivieren";
@@ -270,6 +297,12 @@
 /* The notification alert describing a long-lasting loop failure. The substitution parameter is the time interval since the last loop */
 "Loop has not completed successfully in %@" = "Loop wurde nicht erfolgreich abgeschlossen seit %@";
 
+/* (No Comment) */
+"Manual Temp Basal" = "Eigene temporäre Basalrate";
+
+/* (No Comment) */
+"Max basal limit" = "Maximales Basallimit";
+
 /* The error message for missing data. (1: missing data details) */
 "Missing data: %1$@" = "Fehlende Daten: %1$@";
 
@@ -345,6 +378,9 @@
 /* The title of the services section in settings */
 "Services" = "Services";
 
+/* (No Comment) */
+"Set" = "Einstellen";
+
 /* The label of the settings button */
 "Settings" = "Einstellungen";
 
@@ -393,6 +429,7 @@
 /* The label of the workout mode toggle button */
 "Workout Targets" = "Zielbereich für Sport";
 
+/*-----------------------------------------------------------------------------*/
 // FreeAPS strings
 
 "Microboluses" = "Mikroboli";
@@ -409,7 +446,7 @@
 
 "Basal Rate Multiplier" = "Basalraten-Multiplikator";
 
-"Max basal limit" = "Maximales Basallimit";
+"Max basal limit" = "Max basal limit";
 
 "Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting.\nThis setting is ignored if microboluses are disabled." = "Begrenzt die Basalrate auf ein Vielfaches der geplanten Basalrate in Loop. Der Wert kann dabei die maximale Basalrate nicht überschreiten.\nDiese Einstellung wird bei deaktiviertem Mikrobolus ignoriert.";
 
@@ -429,7 +466,7 @@
 
 "This is the minimum microbolus size in units that will be delivered. Only if the microbolus calculated is equal to or greater than this number of units will a bolus be delivered." = "Dies ist die untere Grenze in IE ab der erst ein Mikrobolus angewendet wird. Nur wenn der berechnete Mikrobolus gleich groß oder größer ist, werden die Bolus IE verabreicht.";
 
-"Disabled" = "Deaktiviert";
+"Disabled" = "Disabled";
 
 "Always" = "Immer";
 
@@ -441,17 +478,17 @@
 
 "Import Settings" = "Einstellungen importieren";
 
-"Manual Temp Basal" = "Eigene temporäre Basalrate";
+"Manual Temp Basal" = "Manual Temp Basal";
 
-"Basal rate (U/h)" = "Basalrate (IE/h)";
+"Basal rate (U/h)" = "Basal rate (U/h)";
 
 "Duration" = "Dauer";
 
 "%.0f h %02.0f min" = "%.0f h %02.0f min";
 
-"Cancel Temp Basal" = "Temporäre Basalrate abbrechen";
+"Cancel Temp Basal" = "Cancel Temp Basal";
 
-"Set" = "Einstellen";
+"Set" = "Set";
 
 "Safety" = "Sicherheit";
 
@@ -466,5 +503,3 @@
 "Allow MBs when glucose is below target range" = "Erlaube Mikroboli bei Glukose unterhalb des Zielbereichs";
 
 "Retrospective Correction interval" = "Nachträgliches Korrekturintervall";
-
-
