@@ -85,6 +85,15 @@
 /* Carb entry section footer text explaining absorption time */
 "Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Velg en lengre absorpsjonstid for større måltider, eller de som inneholder fett og proteiner. Dette er bare veiledning til algoritmen, og trenger ikke å være nøyaktig.";
 
+/* The button text to save a carb entry without bolusing*/
+"Save without Bolusing" = "Lagre uten å gi bolus";
+
+/* Title text for bolus screen following a carb entry */
+"Meal Bolus" = "Måltidsbolus";
+
+/* The button text to initiate a bolus */
+"Deliver" = "Gi bolus";
+
 /* Action sheet title selecting CGM
    Title text for button to set up a CGM */
 "Add CGM" = "Legg til CGM";
@@ -251,7 +260,7 @@
 "Glucose Momentum" = "Glukosemomentum";
 
 /* The placeholder text for the nightscout site URL credential */
-"https://mysite.herokuapp.com" = "https://minNightscout.herokuapp.com";
+"https://mysite.herokuapp.com" = "https://minNS.herokuapp.com";
 
 /* The title of a target alert action specifying an indefinitely long workout targets duration */
 "Indefinitely" = "Uendelig";
@@ -391,7 +400,7 @@
 "since %@" = "siden %@";
 
 /* The title of the nightscout site URL credential */
-"Site URL" = "Nettsted (URL)";
+"Site URL" = "Adresse";
 
 /* The format for the description of a temporary override start date */
 "starting at %@" = "starter %@";
