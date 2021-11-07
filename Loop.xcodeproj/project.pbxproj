@@ -612,6 +612,16 @@
 		19DDEF33273400A800D53BBE /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		19DECEE127348F0700B2F292 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Main.strings; sourceTree = "<group>"; };
 		19DECEE5273491F400B2F292 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		19DECEFF2737413800B2F292 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		19DECF002737415500B2F292 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		19DECF04273741AD00B2F292 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		19DECF05273741FB00B2F292 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Intents.strings; sourceTree = "<group>"; };
+		19DECF062737420200B2F292 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Intents.strings; sourceTree = "<group>"; };
+		19DECF0A2737430200B2F292 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		19DECF0B2737430800B2F292 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		19DECF0C2737430D00B2F292 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		19DECF11273746EF00B2F292 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Interface.strings; sourceTree = "<group>"; };
+		19DECF12273746F200B2F292 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Interface.strings; sourceTree = "<group>"; };
 		2CBB4B0C2582B6820099DDEF /* xDripClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = xDripClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CBB4B0E2582B6A00099DDEF /* xDripClientUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = xDripClientUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3804343C23747354004BAB52 /* Microbolus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Microbolus.swift; sourceTree = "<group>"; };
@@ -2282,6 +2292,7 @@
 				fi,
 				sv,
 				he,
+				ar,
 			);
 			mainGroup = 43776F831B8022E90074EA36;
 			productRefGroup = 43776F8D1B8022E90074EA36 /* Products */;
@@ -3065,6 +3076,7 @@
 				19094D62273474C8007EC796 /* he */,
 				19DECEE127348F0700B2F292 /* fi */,
 				19DECEE5273491F400B2F292 /* en */,
+				19DECF04273741AD00B2F292 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -3094,6 +3106,8 @@
 				C12CB9B823106A6300F84978 /* pl */,
 				3885096524F284E00054E2A9 /* sv */,
 				19094D60273474C6007EC796 /* he */,
+				19DECF05273741FB00B2F292 /* ar */,
+				19DECF062737420200B2F292 /* fi */,
 			);
 			name = Intents.intentdefinition;
 			sourceTree = "<group>";
@@ -3113,6 +3127,8 @@
 				7D199D95212A067600241026 /* pl */,
 				3885096924F284E10054E2A9 /* sv */,
 				19094D64273474C9007EC796 /* he */,
+				19DECF11273746EF00B2F292 /* ar */,
+				19DECF12273746F200B2F292 /* fi */,
 			);
 			name = Interface.storyboard;
 			sourceTree = "<group>";
@@ -3233,6 +3249,9 @@
 				7D2366DC21250D4B0028B67D /* nb */,
 				7D199D9A212A067600241026 /* pl */,
 				19094D6B273474D0007EC796 /* he */,
+				19DECF0A2737430200B2F292 /* ar */,
+				19DECF0B2737430800B2F292 /* fi */,
+				19DECF0C2737430D00B2F292 /* sv */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -3252,6 +3271,7 @@
 				7D199D97212A067600241026 /* pl */,
 				3885097324F285DD0054E2A9 /* sv */,
 				19094D68273474CD007EC796 /* he */,
+				19DECEFF2737413800B2F292 /* ar */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -3327,6 +3347,7 @@
 				3885097224F284F70054E2A9 /* sv */,
 				19DDEF33273400A800D53BBE /* fi */,
 				19094D67273474CC007EC796 /* he */,
+				19DECF002737415500B2F292 /* ar */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

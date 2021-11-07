@@ -38,19 +38,19 @@
 "%@." = "%@.";
 
 /* Description of the prediction input effect for glucose momentum */
-"15 min glucose regression coefficient (b₁), continued with decay over 30 min" = "15 minuters glukosregressionskoeficient (b₁), fortsatt med 30 minuters avklingande";
+"15 min glucose regression coefficient (b₁), continued with decay over 30 min" = "15 minuters glukosregressionskoefficient (b₁), fortsatt med 30 minuters avklingande";
 
 /* Description of the prediction input effect for retrospective correction */
-"30 min comparison of glucose prediction vs actual, continued with decay over 60 min" = "30 min jämförelse av glukosprediktion och faktiskt värde, fortsatt med 60 miuters avklingande.";
+"30 min comparison of glucose prediction vs actual, continued with decay over 60 min" = "30 min jämförelse av glukosprediktion och faktiskt värde, fortsatt med 60 minuters avklingande";
 
 /* Subtitle of Fiasp preset */
-"A model based on the published absorption of Fiasp insulin." = "Insulinmodell baserad på publicerade studier av absorption av Fiasp insulin.";
+"A model based on the published absorption of Fiasp insulin." = "Insulinmodell baserad på publicerade studier av absorptiontiden med Fiasp-insulin.";
 
 /* Subtitle of Rapid-Acting – Adult preset */
-"A model based on the published absorption of Humalog, Novolog, and Apidra insulin in adults." = "Insulinmodell baserad på publicerade studier av absorption av Humalog, Novolog, and Apidra-insulin hos vuxna.";
+"A model based on the published absorption of Humalog, Novolog, and Apidra insulin in adults." = "Insulinmodell baserad på publicerade studier av absorptionstid hos vuxna med Humalog-, Novolog- samt Apidra-insulin.";
 
 /* Subtitle of Lyumjev preset */
-"A model based on the published absorption of Lyumjev insulin." = "Insulinmodell baserad på publicerade studier av absorption av Lyumjev.";
+"A model based on the published absorption of Lyumjev insulin." = "Insulinmodell baserad på publicerade studier av absorptiontid med Lyumjev-insulin.";
 
 /* Action to copy the recommended Bolus value to the actual Bolus Field */
 "AcceptRecommendedBolus" = "AcceptRecommendedBolus";
@@ -83,7 +83,7 @@
 "Absorption Time" = "Absorptionstid";
 
 /* Carb entry section footer text explaining absorption time */
-"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Välj en längre absorptionstid för måltid med mycket fett eller protein. Ofta är det bäst att dela upp måltiden i snabba och långsamma kolhydrater och mata in dessa var för sig.";
+"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Välj en längre absorptionstid för måltid med mycket fett och/eller protein. Ofta är det bäst att dela upp måltiden i snabba och långsamma kolhydrater och mata in dessa var för sig.";
 
 /* The button text to save a carb entry without bolusing*/
 "Save without Bolusing" = "Spara utan att ge bolus";
@@ -121,10 +121,10 @@
 "Are you sure you want to delete this CGM?" = "Säkert att du vill radera denna CGM?";
 
 /* Format fragment for a specific time */
-"at %@" = "kl %@";
+"at %@" = "kl. %@";
 
 /* The message displayed during a device authentication prompt for bolus specification */
-"Authenticate to Bolus %@ Units" = "Godkänn bolus på %@ Enheter";
+"Authenticate to Bolus %@ Units" = "Godkänn bolus på %@ enheter";
 
 /* (No Comment) */
 "Basal rate (U/h)" = "Basaldos (IЕ/h)";
@@ -178,10 +178,10 @@
 "Check settings" = "Kontrollera inställningar";
 
 /* Recovery suggestion when reservoir data is missing */
-"Check that your pump is in range" = "Kontrollera att pump är inom räckhåll";
+"Check that your pump is in range" = "Kontrollera att pumpen är inom räckhåll";
 
 /* Recovery suggestion when glucose data is missing */
-"Check your CGM data source" = "Kontrollera din CGMs datakälla";
+"Check your CGM data source" = "Kontrollera din CGM: s datakälla";
 
 /* The title text for the looping enabled switch cell */
 "Closed Loop" = "Sluten loop";
@@ -190,10 +190,10 @@
 "com.loudnate.LoopKit.errorAlertActionTitle" = "OK";
 
 /* The title of the configuration section in settings */
-"Configuration" = "Konfiguration";
+"Configuration" = "Inställning";
 
 /* The error message displayed for configuration errors. (1: configuration error details) */
-"Configuration Error: %1$@" = "Konfigurationsfel %1$@";
+"Configuration Error: %1$@" = "Inställningsfel %1$@";
 
 /* The title of the continuous glucose monitor section in settings */
 "Continuous Glucose Monitor" = "Kontinuerlig glukosmätning";
@@ -203,7 +203,7 @@
 "Correction Range" = "Målvärde";
 
 /* Message when offering bolus recommendation even though bg is below range. (1: glucose value) */
-"Current glucose of %1$@ is below correction range." = "Nuvarande glukosvärde %1$@ är under målvärde.";
+"Current glucose of %1$@ is below correction range." = "Nuvarande glukosvärde %1$@ är under inställt målvärde.";
 
 /* The title of the cell indicating a generic temporary override is enabled */
 "Custom Override" = "Anpassat undantag";
@@ -218,7 +218,7 @@
 "Delivery Limits" = "Maxdoser";
 
 /* (No Comment) */
-"Disabled" = "Av";
+"Disabled" = "Inaktiverad";
 
 /* The action hint of the workout mode toggle button when enabled */
 "Disables" = "Stänger av";
@@ -236,7 +236,7 @@
 "Error Resuming" = "Fel vid försök att återgå";
 
 /* The subtitle format describing eventual glucose. (1: localized glucose value description) */
-"Eventually %@" = "Eventuellt %@";
+"Eventually %@" = "Förväntat %@";
 
 /* The title of the alert describing a maximum bolus validation error */
 "Exceeds Maximum Bolus" = "Överstiger maxdos";
@@ -260,7 +260,7 @@
 "Glucose Momentum" = "Glukosförändring";
 
 /* The placeholder text for the nightscout site URL credential */
-"https://mysite.herokuapp.com" = "https://mysite.herokuapp.com";
+"https://mysite.herokuapp.com" = "https://minsida.herokuapp.com";
 
 /* The title of a target alert action specifying an indefinitely long workout targets duration */
 "Indefinitely" = "Oändligt";
@@ -331,28 +331,28 @@
 "Pre-Meal Targets" = "Målvärden före måltid";
 
 /* Message when offering bolus recommendation even though bg is below range and minBG is in future. (1: glucose time)(2: glucose number) */
-"Predicted glucose at %1$@ is %2$@." = "Predikterat glukos at %1$@ är %2$@.";
+"Predicted glucose at %1$@ is %2$@." = "Förväntat glukosvärde vid %1$@ är %2$@.";
 
 /* Notice message when recommending bolus when BG is below the suspend threshold. (1: glucose value) */
-"Predicted glucose of %1$@ is below your suspend threshold setting." = "Predikterat glukos på %1$@ är under ditt tröskelvärde.";
+"Predicted glucose of %1$@ is below your suspend threshold setting." = "Det förväntade slutglukosvärdet %1$@ är under ditt angivna tröskelvärde.";
 
 /* Format string describing retrospective glucose prediction comparison. (1: Predicted glucose)(2: Actual glucose)(3: difference) */
-"Predicted: %1$@\nActual: %2$@ (%3$@)" = "Predikterat: %1$@\nFaktiskt: %2$@ (%3$@)";
+"Predicted: %1$@\nActual: %2$@ (%3$@)" = "Förväntat: %1$@\nFaktiskt: %2$@ (%3$@)";
 
 /* The title of the pump section in settings */
 "Pump" = "Pump";
 
 /* The notification title for a low pump battery */
-"Pump Battery Low" = "Lågt batteri i pump";
+"Pump Battery Low" = "Lågt batteri i pumpen";
 
 /* The error message when pump data is too old to be used. (1: pump data age in minutes) */
-"Pump data is %1$@ old" = "Pumpvärden är %1$@ gamla";
+"Pump data is %1$@ old" = "Pumpvärdena är %1$@ gamla";
 
 /* Details for configuration error when pump manager is missing */
 "Pump Manager" = "Pumphanterare";
 
 /* The notification title for an empty pump reservoir */
-"Pump Reservoir Empty" = "Pumpreservoar är tom";
+"Pump Reservoir Empty" = "Pumpreservoaren är tom";
 
 /* The notification title for a low pump reservoir */
 "Pump Reservoir Low" = "Pumpreservoar är låg";
@@ -367,13 +367,13 @@
 "Rapid-Acting – Children" = "Snabbverkande – Barn";
 
 /* The error message when a recommendation has expired. (1: age of recommendation in minutes) */
-"Recommendation expired: %1$@ old" = "Rekommendation utgått %1$@ gammal";
+"Recommendation expired: %1$@ old" = "Rekommendation ogiltig: %1$@ gammal";
 
 /* The title of the cell displaying a recommended temp basal value */
 "Recommended Basal" = "Rekommenderad basal";
 
 /* Accessibility hint describing recommended bolus units */
-"Recommended Bolus: %@ Units" = "Rekommenderad bolus: %@ Enheter";
+"Recommended Bolus: %@ Units" = "Rekommenderad bolus: %@ enheter";
 
 /* Details for missing data error when reservoir data is missing */
 "Reservoir" = "Reservoar";
@@ -400,10 +400,10 @@
 "since %@" = "sedan %@";
 
 /* The title of the nightscout site URL credential */
-"Site URL" = "Sida URL";
+"Site URL" = "Webbsideadress (URL)";
 
 /* The format for the description of a temporary override start date */
-"starting at %@" = "Börjar kl  %@";
+"starting at %@" = "börjar kl. %@";
 
 /* The title of the cell indicating a bolus is being sent */
 "Starting Bolus" = "Påbörjar bolus";
@@ -418,13 +418,13 @@
 "The legacy model used by Loop, allowing customization of action duration." = "Äldre modell använd av Loop, som tillåter anpassing av effektduration.";
 
 /* Body of the alert describing a maximum bolus validation error. (1: The localized max bolus value) */
-"The maximum bolus amount is %@ Units" = "Maximala bolusdos är %@ Enheter";
+"The maximum bolus amount is %@ Units" = "Maximal bolusdos är %@ enheter";
 
 /* The short unit display string for international units of insulin */
 "U" = "E";
 
 /* The format for the description of a temporary override end date */
-"until %@" = "till %@";
+"until %@" = "fram till %@";
 
 /* The title of the alert controller used to select a duration for workout targets */
 "Use Workout Glucose Targets" = "Avänd målvärden för träning";
@@ -433,7 +433,7 @@
 "Walsh" = "Walsh";
 
 /* Explanation of suspend threshold */
-"When current or forecasted glucose is below the suspend threshold, Loop will not recommend a bolus, and will always recommend a temporary basal rate of 0 units per hour." = "När nuvarande, eller predikterat, glukosvärde är under tröskelvärde, kommer Loop inte att rekommendera en bolus och kommer dessutom alltid att föreslå en temporär basal på 0 eheter per timme.";
+"When current or forecasted glucose is below the suspend threshold, Loop will not recommend a bolus, and will always recommend a temporary basal rate of 0 units per hour." = "När nuvarande eller förväntat glukosvärde är under tröskelvärdet kommer Loop inte att rekommendera en bolus, och kommer dessutom alltid att föreslå en temporär basal på 0 enheter per timme.";
 
 /* The label of the workout mode toggle button */
 "Workout Targets" = "Målvärden för träning";
@@ -461,19 +461,19 @@
 
 "Temporary overrides" = "Tillfälliga undantag";
 
-"Disable MB by enabling temporary override" = "Stäng av automatisk bolus vid tillfälliga undantag";
+"Disable MB by enabling temporary override" = "Stäng av automatisk bolus när ett tillfälligt undantag är aktivt";
 
-"If the override's target range starts at the given value or more" = "Om målvärden börjar på angivet värde eller mer";
+"If the override's target range starts at the given value or more" = "Om målvärdet börjar på angivet värde eller mer";
 
 "Other Options" = "Andra val";
 
-"Open bolus screen after carbs on watch" = "Öppna bolusfönster efter kolhydrater på din klocka";
+"Open bolus screen after carbs on watch" = "Öppna bolusfönster efter kolhydrater via klocka";
 
 "Minimum Bolus Size" = "Minsta bolusmängd";
 
 "Last Event" = "Senaste händelse";
 
-"This is the minimum microbolus size in units that will be delivered. Only if the microbolus calculated is equal to or greater than this number of units will a bolus be delivered." = "Detta är den minsta mängd automatisk bolus som kan ges.";
+"This is the minimum microbolus size in units that will be delivered. Only if the microbolus calculated is equal to or greater than this number of units will a bolus be delivered." = "Detta är den minsta mikrobolusstorleken i enheter som kommer att levereras. Endast om mikrobolusen beräknas är lika med eller större än detta antal enheter kommer en bolus att levereras.";
 
 "Disabled" = "Av";
 
@@ -489,7 +489,7 @@
 
 "Manual Temp Basal" = "Manuell temporär basal";
 
-"Basal rate (U/h)" = "Basaldos (IЕ/h)";
+"Basal rate (U/h)" = "Basaldos (Е/h)";
 
 "Duration" = "Duration";
 
@@ -509,6 +509,6 @@
 
 "Show required carbs on the app badge" = "Visa antal kolhydrater som krävs för att hamna i målområde";
 
-"Allow MBs when glucose is below target range" = "Tillåt automatiska bolusar även när blodglukos är under målvärde";
+"Allow MBs when glucose is below target range" = "Tillåt automatiska bolusar även när blodglukos är under målvärdet";
 
 "Retrospective Correction interval" = "Retrospektivt korrigeringsintervall";

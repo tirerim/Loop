@@ -1,5 +1,5 @@
 /* The string format appended to active insulin that describes pending insulin. (1: pending insulin) */
-" (pending: %@)" = " (Gjenstår: %@)";
+" (pending: %@)" = " (gjenstår: %@)";
 
 /* Format string for carb ratio average. (1: value)(2: carb unit) */
 "%1$@ %2$@/U" = "%1$@ %2$@/E";
@@ -38,10 +38,10 @@
 "%@." = "%@.";
 
 /* Description of the prediction input effect for glucose momentum */
-"15 min glucose regression coefficient (b₁), continued with decay over 30 min" = "15 minutters glukose-regresjonskoeffisient (b₁), fremskrevet med nedtrapping over 30 minutter";
+"15 min glucose regression coefficient (b₁), continued with decay over 30 min" = "15 minutters glukose-regresjonskoeffisient (b₁), fremskrevet med henfall over 30 minutter";
 
 /* Description of the prediction input effect for retrospective correction */
-"30 min comparison of glucose prediction vs actual, continued with decay over 60 min" = "30 min sammenligning av glukose-prediksjon vs faktisk, fremskrevet med nedtrapping over 60 min";
+"30 min comparison of glucose prediction vs actual, continued with decay over 60 min" = "30 min sammenligning av glukose-prediksjon vs faktisk, fremskrevet med henfall over 60 min";
 
 /* Subtitle of Fiasp preset */
 "A model based on the published absorption of Fiasp insulin." = "En modell basert på publiserte data for absorpsjon av Fiasp insulin.";
