@@ -14,7 +14,7 @@
 "%1$@ U left: %2$@" = "יחידות נותרו";
 
 /* The format for recommended temp basal rate and time. (1: localized rate number)(2: localized time) */
-"%1$@ U/hour @ %2$@" = "%1$@ U/hour @ %2$@";
+"%1$@ U/hour @ %2$@" = "יח׳/שעה";
 
 /* The format string for the app name and version number. (1: bundle name)(2: bundle version) */
 "%1$@ v%2$@" = "%1$@ v%2$@";
@@ -29,10 +29,10 @@
 "%@ %@" = "%1$@ %2$@";
 
 /* Formats absorbed carb value */
-"%@ absorbed" = "%@ absorbed";
+"%@ absorbed" = "נספג";
 
 /* The subtitle format describing total insulin. (1: localized insulin total) */
-"%@ U Total" = "%@ U Total";
+"%@ U Total" = "סה״כ יח׳";
 
 /* Appends a full-stop to a statement */
 "%@." = "%@.";
@@ -56,57 +56,57 @@
 "AcceptRecommendedBolus" = "AcceptRecommendedBolus";
 
 /* The title of the Carbs On-Board graph */
-"Active Carbohydrates" = "Active Carbohydrates";
+"Active Carbohydrates" = "פחמימות פעילות";
 
 /* The string format describing active carbohydrates. (1: localized glucose value description) */
-"Active Carbohydrates: %@" = "Active Carbohydrates: %@";
+"Active Carbohydrates: %@" = "פחמימות פעילות";
 
 /* The title of the Insulin On-Board graph */
-"Active Insulin" = "Active Insulin";
+"Active Insulin" = "אינסולין פעיל";
 
 /* The string format describing active insulin. (1: localized insulin value description) */
-"Active Insulin: %@" = "Active Insulin: %@";
+"Active Insulin: %@" = "אינסולין פעיל";
 
 /* Title of the user activity for adding carbs */
-"Add Carb Entry" = "Add Carb Entry";
+"Add Carb Entry" = "הוסף ערך פחמימות";
 
 /* */
-"Edit Carb Entry" = "Edit Carb Entry";
+"Edit Carb Entry" = "ערוך ערך פחמימות";
 
 /* Back button text for bolus screen to return to carb entry screen */
-"Carb Entry" = "Carb Entry";
+"Carb Entry" = "ערך פחמימות";
 
 /* Title of the carb entry date picker cell */
-"Date" = "Date";
+"Date" = "תאריך";
 
 /* Title of the carb entry absorption time cell */
-"Absorption Time" = "Absorption Time";
+"Absorption Time" = "זמן ספיגה";
 
 /* Carb entry section footer text explaining absorption time */
-"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact.";
+"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "בחר זמן ספיגה ממושך יותר עבור ארוחות גדולות, או כאלה שמכילות שומנים וחלבונים. זהו קו מנחה לאלגוריתם בלבד ולא צריך להיות מדויק.";
 
 /* The button text to save a carb entry without bolusing*/
-"Save without Bolusing" = "Save without Bolusing";
+"Save without Bolusing" = "שמור ללא בולוס";
 
 /* Title text for bolus screen following a carb entry */
-"Meal Bolus" = "Meal Bolus";
+"Meal Bolus" = "בולוס לארוחה";
 
 /* The button text to initiate a bolus */
-"Deliver" = "Deliver";
+"Deliver" = "הזרק";
 
 /* Action sheet title selecting CGM
    Title text for button to set up a CGM */
-"Add CGM" = "Add CGM";
+"Add CGM" = "הוסף מד סוכר רציף";
 
 /* The label of the meal button */
-"Add Meal" = "Add Meal";
+"Add Meal" = "הוסף ארוחה";
 
 /* Action sheet title selecting Pump
    Title text for button to set up a new pump */
-"Add Pump" = "Add Pump";
+"Add Pump" = "הוסף משאבת אינסולין";
 
 /* The title of the Amplitude service */
-"Amplitude" = "Amplitude";
+"Amplitude" = "אמפליטודה";
 
 /* Subtitle of Rapid-Acting – Children preset */
 "An adjustment to the adult model based on empirical effects in children." = "An adjustment to the adult model based on empirical effects in children.";
@@ -118,42 +118,42 @@
 "API Secret" = "API Secret";
 
 /* Confirmation message for deleting a CGM */
-"Are you sure you want to delete this CGM?" = "Are you sure you want to delete this CGM?";
+"Are you sure you want to delete this CGM?" = "האם אתה בטוח שברצונך למחוק את המד סוכר רציף הזה?";
 
 /* Format fragment for a specific time */
-"at %@" = "at %@";
+"at %@" = "ב";
 
 /* The message displayed during a device authentication prompt for bolus specification */
-"Authenticate to Bolus %@ Units" = "Authenticate to Bolus %@ Units";
+"Authenticate to Bolus %@ Units" = "הזדהה על מנת להזריק %@ יחידות";
 
 /* (No Comment) */
-"Basal rate (U/h)" = "Basal rate (U/h)";
+"Basal rate (U/h)" = "קצב בזאלי (יח׳/שעה)";
 
 /* Details for configuration error when basal rate schedule is missing */
-"Basal Rate Schedule" = "Basal Rate Schedule";
+"Basal Rate Schedule" = "תזמון קצב בזאלי";
 
 /* The title of the basal rate profile screen
    The title text for the basal rate schedule */
-"Basal Rates" = "Basal Rates";
+"Basal Rates" = "קצבי בזאל";
 
 /* The label of the bolus entry button
    The notification title for a bolus failure */
-"Bolus" = "Bolus";
+"Bolus" = "בולוס";
 
 /* The format string for bolus progress. (1: delivered volume)(2: total volume) */
-"Bolused %1$@ of %2$@" = "Bolused %1$@ of %2$@";
+"Bolused %1$@ of %2$@" = "הוזרקו %1$@ יחידות מתוך %2$@";
 
 /* The format string for bolus in progress showing total volume. (1: total volume) */
-"Bolusing %1$@" = "Bolusing %1$@";
+"Bolusing %1$@" = "מזריק %1$@";
 
 /* The title of the cancel action in an action sheet */
-"Cancel" = "Cancel";
+"Cancel" = "ביטול";
 
 /* (No Comment) */
-"Cancel Temp Basal" = "Cancel Temp Basal";
+"Cancel Temp Basal" = "בטל בזאל זמני";
 
 /* The title of the cell indicating a bolus is being canceled */
-"Canceling Bolus" = "Canceling Bolus";
+"Canceling Bolus" = "ביטול בולוס";
 
 /* Details for missing data error when carb effects are missing */
 "Carb effects" = "Carb effects";

@@ -128,7 +128,7 @@
 "jQv-xb-gwu.text" = "Detail";
 
 /* Class = "UILabel"; text = "⚠ Glucose Predicted Below Range"; ObjectID = "k0g-P7-OVN"; */
-"k0g-P7-OVN.text" = "⚠ Predikterat glukosvärde under målvärde";
+"k0g-P7-OVN.text" = "⚠ Förväntat glukosvärde under målvärdet";
 
 /* Class = "UILabel"; text = "Recommended Basal"; ObjectID = "k3F-Na-7mn"; */
 "k3F-Na-7mn.text" = "Rekommenderad basal";

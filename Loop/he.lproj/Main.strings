@@ -80,16 +80,16 @@
 "SQx-au-ZcM.text" = "g COB";
 
 /* Class = "UINavigationItem"; title = "Add/Edit Carb Entry"; ObjectID = "Tz7-80-bJ7"; */
-"Tz7-80-bJ7.title" = "Add/Edit Carb Entry";
+"Tz7-80-bJ7.title" = "הוסף/ערוך ערך פחמימות";
 
 /* Class = "UINavigationItem"; title = "Carbohydrates"; ObjectID = "Vpi-5b-bY5"; */
-"Vpi-5b-bY5.title" = "Carbohydrates";
+"Vpi-5b-bY5.title" = "פחמימות";
 
 /* Class = "UITextField"; text = "4 hour"; ObjectID = "Wk3-xv-IM5"; */
 "Wk3-xv-IM5.text" = "4 hour";
 
 /* Class = "UILabel"; text = "Amount Consumed"; ObjectID = "Wx8-Tf-FnG"; */
-"Wx8-Tf-FnG.text" = "Amount Consumed";
+"Wx8-Tf-FnG.text" = "כמות שנצרכה";
 
 /* Class = "UITextField"; placeholder = "0"; ObjectID = "Yf6-fw-Gex"; */
 "Yf6-fw-Gex.placeholder" = "0";
@@ -101,7 +101,7 @@
 "aiu-ZA-zVa.title" = "Bolus";
 
 /* Class = "UILabel"; text = "Food Type"; ObjectID = "ap1-M6-naG"; */
-"ap1-M6-naG.text" = "Food Type";
+"ap1-M6-naG.text" = "סוג מזון";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "bIL-Ub-qYp"; */
 "bIL-Ub-qYp.text" = "Label";
@@ -113,7 +113,7 @@
 "cpo-Po-gFM.text" = "Label";
 
 /* Class = "UILabel"; text = "g Total"; ObjectID = "d3X-AN-tA5"; */
-"d3X-AN-tA5.text" = "g Total";
+"d3X-AN-tA5.text" = "סה״כ בגרמים";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "d6m-qV-wWi"; */
 "d6m-qV-wWi.text" = "Label";
@@ -128,7 +128,7 @@
 "jQv-xb-gwu.text" = "Detail";
 
 /* Class = "UILabel"; text = "⚠ Glucose Predicted Below Range"; ObjectID = "k0g-P7-OVN"; */
-"k0g-P7-OVN.text" = "⚠ Glucose Predicted Below Range";
+"k0g-P7-OVN.text" = "רמת סוכר צפויה מתחת לטווח";
 
 /* Class = "UILabel"; text = "Recommended Basal"; ObjectID = "k3F-Na-7mn"; */
 "k3F-Na-7mn.text" = "Recommended Basal";
@@ -149,7 +149,7 @@
 "pi6-Dh-72V.title" = "Insulin Model";
 
 /* Class = "UILabel"; text = "Food Type"; ObjectID = "qPH-vU-xlu"; */
-"qPH-vU-xlu.text" = "Food Type";
+"qPH-vU-xlu.text" = "סוג מזון";
 
 /* Class = "UILabel"; text = "Glucose"; ObjectID = "tuw-av-A3x"; */
 "tuw-av-A3x.text" = "Glucose";

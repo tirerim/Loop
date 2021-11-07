@@ -50,7 +50,7 @@
 "A model based on the published absorption of Humalog, Novolog, and Apidra insulin in adults." = "Un modèle basé sur l’absorption publiée de l’Hunalog, Novolog, et Apidra chez l’adulte.";
 
 /* Subtitle of Lyumjev preset */
-"A model based on the published absorption of Lyumjev insulin." = "A model based on the published absorption of Lyumjev insulin.";
+"A model based on the published absorption of Lyumjev insulin." = "Un modèle basé sur l'absorption publiée de l'insuline Lyumjev.";
 
 /* Action to copy the recommended Bolus value to the actual Bolus Field */
 "AcceptRecommendedBolus" = "AcceptRecommendedBolus";
@@ -71,28 +71,28 @@
 "Add Carb Entry" = "Ajouter des glucides";
 
 /* */
-"Edit Carb Entry" = "Edit Carb Entry";
+"Edit Carb Entry" = "Modifier les glucides";
 
 /* Back button text for bolus screen to return to carb entry screen */
-"Carb Entry" = "Carb Entry";
+"Carb Entry" = "Entrée de glucides";
 
 /* Title of the carb entry date picker cell */
 "Date" = "Date";
 
 /* Title of the carb entry absorption time cell */
-"Absorption Time" = "Absorption Time";
+"Absorption Time" = "Durée d'absorption";
 
 /* Carb entry section footer text explaining absorption time */
-"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact.";
+"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Choisissez un temps d'absorption plus long pour les repas copieux ou ceux contenant des matières grasses et des protéines importants. Ceci n'est qu'un guide pour l'algorithme et n'a pas besoin d'être précis.";
 
 /* The button text to save a carb entry without bolusing*/
-"Save without Bolusing" = "Save without Bolusing";
+"Save without Bolusing" = "Enregistrer sans bolus";
 
 /* Title text for bolus screen following a carb entry */
-"Meal Bolus" = "Meal Bolus";
+"Meal Bolus" = "Bolus de repas";
 
 /* The button text to initiate a bolus */
-"Deliver" = "Deliver";
+"Deliver" = "Administrer";
 
 /* Action sheet title selecting CGM
    Title text for button to set up a CGM */
@@ -121,13 +121,13 @@
 "Are you sure you want to delete this CGM?" = "Voulez-vous vraiment supprimer ce CGM ?";
 
 /* Format fragment for a specific time */
-"at %@" = "at %@";
+"at %@" = "à %@";
 
 /* The message displayed during a device authentication prompt for bolus specification */
 "Authenticate to Bolus %@ Units" = "Authentifier pour effectuer un Bolus %@ Unités";
 
 /* (No Comment) */
-"Basal rate (U/h)" = "Basal rate (U/h)";
+"Basal rate (U/h)" = "Débit de base (U/h)";
 
 /* Details for configuration error when basal rate schedule is missing */
 "Basal Rate Schedule" = "Horaire de taux basal";
@@ -150,7 +150,7 @@
 "Cancel" = "Annuler";
 
 /* (No Comment) */
-"Cancel Temp Basal" = "Cancel Temp Basal";
+"Cancel Temp Basal" = "Annuler le débit temporaire";
 
 /* The title of the cell indicating a bolus is being canceled */
 "Canceling Bolus" = "Annulation du Bolus en cours";
@@ -181,10 +181,10 @@
 "Check that your pump is in range" = "Vérifier que votre pompe est à portée";
 
 /* Recovery suggestion when glucose data is missing */
-"Check your CGM data source" = "Vérifier votre source de données de SGC";
+"Check your CGM data source" = "Vérifier votre source de données de CGM";
 
 /* The title text for the looping enabled switch cell */
-"Closed Loop" = "Loop Fermé";
+"Closed Loop" = "Boucle fermée";
 
 /* The title of the action used to dismiss an error alert */
 "com.loudnate.LoopKit.errorAlertActionTitle" = "OK";
@@ -209,7 +209,7 @@
 "Custom Override" = "Surcharge personnalisée";
 
 /* The title of the Loggly customer token credential */
-"Customer Token" = "Token client";
+"Customer Token" = "Customer Token";
 
 /* Button title to delete CGM */
 "Delete CGM" = "Supprimer CGM";
@@ -218,7 +218,7 @@
 "Delivery Limits" = "Limites de Administration";
 
 /* (No Comment) */
-"Disabled" = "Disabled";
+"Disabled" = "Désactivé";
 
 /* The action hint of the workout mode toggle button when enabled */
 "Disables" = "Désactive";
@@ -236,7 +236,7 @@
 "Error Resuming" = "Erreur lors de la reprise";
 
 /* The subtitle format describing eventual glucose. (1: localized glucose value description) */
-"Eventually %@" = "Éventuellement %@";
+"Eventually %@" = "Prédiction %@";
 
 /* The title of the alert describing a maximum bolus validation error */
 "Exceeds Maximum Bolus" = "Dépasse le bolus maximal";
@@ -251,16 +251,16 @@
 "Glucose" = "Glycémie";
 
 /* The error message when glucose data is too old to be used. (1: glucose data age in minutes) */
-"Glucose data is %1$@ old" = "Données de glucose sont vielles de %1$@";
+"Glucose data is %1$@ old" = "Données de glycémie sont périmées de %1$@";
 
 /* Description of error when glucose data is missing */
-"Glucose data not available" = "Les données de glucose ne sont pas disponibles";
+"Glucose data not available" = "Les données de glycémie ne sont pas disponibles";
 
 /* Title of the prediction input effect for glucose momentum */
-"Glucose Momentum" = "Momentum de glucose";
+"Glucose Momentum" = "L'élan de la glycémie";
 
 /* The placeholder text for the nightscout site URL credential */
-"https://mysite.herokuapp.com" = "https://mysite.herokuapp.com";
+"https://mysite.herokuapp.com" = "https://monsite.herokuapp.com";
 
 /* The title of a target alert action specifying an indefinitely long workout targets duration */
 "Indefinitely" = "Indéfiniment";
@@ -286,13 +286,13 @@
 "Insulin Sensitivities" = "Facteurs de sensibilité à l'insuline";
 
 /* The error message when invalid data was encountered. (1: details of invalid data) */
-"Invalid data: %1$@" = "Données Incorrectes: %1$@";
+"Invalid data: %1$@" = "Données non valides : %1$@";
 
 /* The title text for the issue report cell */
-"Issue Report" = "Editer rapport";
+"Issue Report" = "Générer un rapport";
 
 /* Glucose HUD accessibility hint */
-"Launches CGM app" = "Lance Application CGM";
+"Launches CGM app" = "Lance l'application CGM";
 
 /* The loading message for the diagnostic report screen */
 "Loading..." = "Chargement...";
@@ -301,28 +301,28 @@
 "Loggly" = "Loggly";
 
 /* The notification title for a loop failure */
-"Loop Failure" = "Echec Loop";
+"Loop Failure" = "Echec de Loop";
 
 /* The notification alert describing a long-lasting loop failure. The substitution parameter is the time interval since the last loop */
 "Loop has not completed successfully in %@" = "Loop ne s'est pas complété avec succès depuis %@";
 
 /* (No Comment) */
-"Manual Temp Basal" = "Manual Temp Basal";
+"Manual Temp Basal" = "Débit temporaire manuel";
 
 /* (No Comment) */
-"Max basal limit" = "Max basal limit";
+"Max basal limit" = "Limite maximale du débit de base";
 
 /* The error message for missing data. (1: missing data details) */
 "Missing data: %1$@" = "Données manquantes: %1$@";
 
 /* Details for missing data error when momentum effects are missing */
-"Momentum effects" = "Effets de momentum";
+"Momentum effects" = "Effets de l'élan";
 
 /* The title of the Nightscout service */
 "Nightscout" = "Nightscout";
 
 /* The error message displayed for device connection errors. */
-"No connected devices, or failure during device connection" = "Pas d'appareil connecté, ou échec durant la connectionà l'appareil";
+"No connected devices, or failure during device connection" = "Pas d'appareil connecté, ou échec durant la connection à l'appareil";
 
 /* The title text for the override presets */
 "Override Presets" = "Préréglages de surcharges";
@@ -331,13 +331,13 @@
 "Pre-Meal Targets" = "Objectif de Pré-Repas";
 
 /* Message when offering bolus recommendation even though bg is below range and minBG is in future. (1: glucose time)(2: glucose number) */
-"Predicted glucose at %1$@ is %2$@." = "Glycémie prévue à %1$@ est %2$@.";
+"Predicted glucose at %1$@ is %2$@." = "Glycémie prédite à %1$@ est %2$@.";
 
 /* Notice message when recommending bolus when BG is below the suspend threshold. (1: glucose value) */
 "Predicted glucose of %1$@ is below your suspend threshold setting." = "Prédiction de la glycémie à %1$@ sous le seuil de suspension défini.";
 
 /* Format string describing retrospective glucose prediction comparison. (1: Predicted glucose)(2: Actual glucose)(3: difference) */
-"Predicted: %1$@\nActual: %2$@ (%3$@)" = "Prédit: %1$@\nActuel: %2$@ (%3$@)";
+"Predicted: %1$@\nActual: %2$@ (%3$@)" = "Prédit : %1$@\nActuel : %2$@ (%3$@)";
 
 /* The title of the pump section in settings */
 "Pump" = "Pompe";
@@ -367,13 +367,13 @@
 "Rapid-Acting – Children" = "Action rapide - Enfant";
 
 /* The error message when a recommendation has expired. (1: age of recommendation in minutes) */
-"Recommendation expired: %1$@ old" = "Recommandation expirée: veille de %1$@";
+"Recommendation expired: %1$@ old" = "Recommandation expirée : périmée de %1$@";
 
 /* The title of the cell displaying a recommended temp basal value */
-"Recommended Basal" = "Basale Recommendée";
+"Recommended Basal" = "Débit de base recommandé";
 
 /* Accessibility hint describing recommended bolus units */
-"Recommended Bolus: %@ Units" = "Bolus Recommendé: %@ Unités";
+"Recommended Bolus: %@ Units" = "Bolus recommandé : %@ Unités";
 
 /* Details for missing data error when reservoir data is missing */
 "Reservoir" = "Réservoir";
@@ -388,7 +388,7 @@
 "Services" = "Services";
 
 /* (No Comment) */
-"Set" = "Set";
+"Set" = "Définir";
 
 /* The label of the settings button */
 "Settings" = "Options";
@@ -427,88 +427,88 @@
 "until %@" = "jusqu’à %@";
 
 /* The title of the alert controller used to select a duration for workout targets */
-"Use Workout Glucose Targets" = "Utiliser les objectifs d'entraînement";
+"Use Workout Glucose Targets" = "Utiliser la cible d'entraînement";
 
 /* Title of insulin model setting */
 "Walsh" = "Walsh";
 
 /* Explanation of suspend threshold */
-"When current or forecasted glucose is below the suspend threshold, Loop will not recommend a bolus, and will always recommend a temporary basal rate of 0 units per hour." = "Lorsque le glucose actuel ou prévu est inférieur au seuil de suspension, Loop ne recommandera pas de bolus et recommandera toujours un débit basal temporaire de 0 unité par heure.";
+"When current or forecasted glucose is below the suspend threshold, Loop will not recommend a bolus, and will always recommend a temporary basal rate of 0 units per hour." = "Lorsque la glycémie actuelle ou prédite est inférieure au seuil de suspension, Loop ne recommandera pas de bolus et recommandera toujours un débit temporaire de 0 unité par heure.";
 
 /* The label of the workout mode toggle button */
-"Workout Targets" = "Objectifs d'entraînement";
+"Workout Targets" = "Cible d'entraînement";
 
 /*-----------------------------------------------------------------------------*/
 // FreeAPS strings
 
-"Microboluses" = "Microboluses";
+"Microboluses" = "Microbolus";
 
-"Caution! Microboluses have potential to reduce the safety effects of other mitigations like max temp basal rate. Please be careful!\nThe actual size of a microbolus is always limited to the partial application of recommended bolus." = "Caution! Microboluses have potential to reduce the safety effects of other mitigations like max temp basal rate. Please be careful!\nThe actual size of a microbolus is always limited to the partial application of recommended bolus.";
+"Caution! Microboluses have potential to reduce the safety effects of other mitigations like max temp basal rate. Please be careful!\nThe actual size of a microbolus is always limited to the partial application of recommended bolus." = "Attention ! Les microbolus risquent de diminuer les protections d'autres dispositifs de sécurité comme la limite maximale du débit de base. Soyez vigilent(e) ! \n La quantité réelle d'un microbolus est toujours limitée à l'application partielle du bolus proposé.";
 
-"Enable With Carbs" = "Enable With Carbs";
+"Enable With Carbs" = "Activer en présence de glucides";
 
-"Enable Without Carbs" = "Enable Without Carbs";
+"Enable Without Carbs" = "Activer en l'absence de glucides";
 
-"Partial Bolus Application" = "Partial Bolus Application";
+"Partial Bolus Application" = "Pourcentage du bolus appliqué";
 
-"What part of the recommended bolus will be applied automatically." = "What part of the recommended bolus will be applied automatically.";
+"What part of the recommended bolus will be applied automatically." = "La quantité du bolus recommandé qui sera administrée automatiquement.";
 
-"Basal Rate Multiplier" = "Basal Rate Multiplier";
+"Basal Rate Multiplier" = "Multiplicateur du débit de base";
 
-"Max basal limit" = "Max basal limit";
+"Max basal limit" = "Limite maximale du débit de base";
 
-"Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting. This setting is ignored if microboluses are disabled." = "Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting. This setting is ignored if microboluses are disabled.";
+"Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting. This setting is ignored if microboluses are disabled." = "Limite le débit de base maximal à un multiple du débit programmé dans Loop. La valeur ne peut excéder votre limite maximale du débit de base programmée. Ce paramètre sera écarté si les microbolus sont désactivés.";
 
-"Temporary overrides" = "Temporary overrides";
+"Temporary overrides" = "Surcharges temporaires";
 
-"Disable MB by enabling temporary override" = "Disable MB by enabling temporary override";
+"Disable MB by enabling temporary override" = "Désactiver les MB en activant une surcharge temporaire";
 
-"If the override's target range starts at the given value or more" = "If the override's target range starts at the given value or more";
+"If the override's target range starts at the given value or more" = "Si la cible de la surcharge est supérieure ou égale à";
 
-"Other Options" = "Other Options";
+"Other Options" = "Autres paramètres";
 
-"Open bolus screen after carbs on watch" = "Open bolus screen after carbs on watch";
+"Open bolus screen after carbs on watch" = "Ouvrir l'écran du bolus après avoir entré des glucides via la Watch";
 
-"Minimum Bolus Size" = "Minimum Bolus Size";
+"Minimum Bolus Size" = "Quantité minimale d'un bolus";
 
-"Last Event" = "Last Event";
+"Last Event" = "Dernier évènement";
 
-"This is the minimum microbolus size in units that will be delivered. Only if the microbolus calculated is equal to or greater than this number of units will a bolus be delivered." = "This is the minimum microbolus size in units that will be delivered. Only if the microbolus calculated is equal to or greater than this number of units will a bolus be delivered.";
+"This is the minimum microbolus size in units that will be delivered. Only if the microbolus calculated is equal to or greater than this number of units will a bolus be delivered." = "Ceci est la quantité minimale d'un microbolus en unités qui serait administrée. Le microbolus sera administré si et seulement si sa valeur est supérieure ou égale au chiffre que vous renseignez.";
 
-"Disabled" = "Disabled";
+"Disabled" = "Désactivé";
 
-"Always" = "Always";
+"Always" = "Toujours";
 
-"With Carbs" = "With Carbs";
+"With Carbs" = "En présence de glucides";
 
-"Without Carbs" = "Without Carbs";
+"Without Carbs" = "En absence de glucides";
 
-"Export Settings" = "Export Settings";
+"Export Settings" = "Exporter vos paramètres";
 
-"Import Settings" = "Import Settings";
+"Import Settings" = "Importer vos paramètres";
 
-"Manual Temp Basal" = "Manual Temp Basal";
+"Manual Temp Basal" = "Débit de base manuel";
 
-"Basal rate (U/h)" = "Basal rate (U/h)";
+"Basal rate (U/h)" = "Débit de base (U/h)";
 
-"Duration" = "Duration";
+"Duration" = "Durée";
 
 "%.0f h %02.0f min" = "%.0f h %02.0f min";
 
-"Cancel Temp Basal" = "Cancel Temp Basal";
+"Cancel Temp Basal" = "Annuler le débit temporaire";
 
-"Set" = "Set";
+"Set" = "Définir";
 
-"Safety" = "Safety";
+"Safety" = "Sécurité";
 
-"Allow MBs when the sensor value is invalid" = "Allow MBs when the sensor value is invalid";
+"Allow MBs when the sensor value is invalid" = "Autoriser les MB même lorsque la valeur du capteur n'est pas valide";
 
-"Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings." = "Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings.";
+"Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings." = "Parfois vous pourriez voir un point d'exclamation jaune à côté de votre glycémie. Quand tel est le cas, les microbolus ne seront pas administrés. Activez ce paramètre si vous ne souhaitez pas tenir compte de cet avertissement.";
 
-"Other FreeAPS settings" = "Other FreeAPS settings";
+"Other FreeAPS settings" = "Autres paramètres de FreeAPS";
 
-"Show required carbs on the app badge" = "Show required carbs on the app badge";
+"Show required carbs on the app badge" = "Afficher les glucides suggérés en cas d'hypo comme pastille";
 
-"Allow MBs when glucose is below target range" = "Allow MBs when glucose is below target range";
+"Allow MBs when glucose is below target range" = "Autoriser les MB quand la glycémie est inférieure à la cible";
 
-"Retrospective Correction interval" = "Retrospective Correction interval";
+"Retrospective Correction interval" = "Intervalle de correction rétrospective";
