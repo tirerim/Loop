@@ -22,7 +22,7 @@
 "Net Basal Rate" = "Nettobasaldos";
 
 /* The text for the Watch button for enabling a temporary override */
-"Override" = "Override";
+"Override" = "Undantag";
 
 /* The label and value showing the recommended bolus */
 "Rec: %@ U" = "Rek: %@ E";
@@ -35,11 +35,10 @@
 "Send Failed" = "Sändning misslyckades";
 
 /* The short unit display string for international units of insulin */
-"U" = "E";
+"U" = "IE";
 
 /* The short unit display string for international units of insulin delivery per hour */
-"U/hr" = "E/h";
+"U/hr" = "IE/h";
 
 /* The text for the Watch button for enabling workout mode */
 "Workout" = "Träning";
-

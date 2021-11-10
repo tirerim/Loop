@@ -217,9 +217,6 @@
 /* Title text for delivery limits */
 "Delivery Limits" = "Предел подачи";
 
-/* (No Comment) */
-"Disabled" = "Отключены";
-
 /* The action hint of the workout mode toggle button when enabled */
 "Disables" = "Деактивирует";
 
@@ -475,7 +472,7 @@
 
 "This is the minimum microbolus size in units that will be delivered. Only if the microbolus calculated is equal to or greater than this number of units will a bolus be delivered." = "Минимальный размер вводимого микроболюса (в единицах). Микроболюс будет введен только в том случае, если его рассчитанная величина будет равна или больше указанного значения минимального болюса.";
 
-"Disabled" = "Disabled";
+"Disabled" = "Отключены";
 
 "Always" = "Всегда";
 

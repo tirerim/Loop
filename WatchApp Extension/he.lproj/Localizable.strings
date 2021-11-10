@@ -1,19 +1,22 @@
 /* HUD row title for COB */
-"Active Carbs" = "Active Carbs";
+"Active Carbs" = "פחמימות פעילות";
 
 /* HUD row title for IOB */
-"Active Insulin" = "Active Insulin";
+"Active Insulin" = "אינסולין פעיל";
+
+/* Title of the user activity for adding carbs */
+"Add Carb Entry" = "הוסף ערך פחמימות";
 
 /* The title of the alert controller displayed after a bolus attempt fails */
-"Bolus Failed" = "Bolus Failed";
+"Bolus Failed" = "הבולוס נכשל";
 
 /* The action button title to dismiss an error message */
-"Dismiss" = "Dismiss";
+"Dismiss" = "לבטל";
 
 /* The recovery message displayed after a bolus attempt fails
    The recovery message displayed after a carb entry send attempt fails
    The recovery message displayed after a glucose range override send attempt fails */
-"Make sure your iPhone is nearby and try again" = "Make sure your iPhone is nearby and try again";
+"Make sure your iPhone is nearby and try again" = "ודאו כי האייפון שלכם קרוב ונסו שנית ";
 
 /* HUD row title for Net Basal Rate */
 "Net Basal Rate" = "Net Basal Rate";
@@ -29,10 +32,13 @@
 
 /* The title of the alert controller displayed after a carb entry send attempt fails
    The title of the alert controller displayed after a glucose range override send attempt fails */
-"Send Failed" = "Send Failed";
+"Send Failed" = "השליחה נכשלה";
+
+/* The short unit display string for international units of insulin */
+"U" = "יח'";
 
 /* The short unit display string for international units of insulin delivery per hour */
-"U/hr" = "U/hr";
+"U/hr" = "יח/שעה";
 
 /* The text for the Watch button for enabling workout mode */
-"Workout" = "Workout";
+"Workout" = "אימון";

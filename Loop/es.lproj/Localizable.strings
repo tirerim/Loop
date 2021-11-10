@@ -217,9 +217,6 @@
 /* Title text for delivery limits */
 "Delivery Limits" = "Límites de Dosificación";
 
-/* (No Comment) */
-"Disabled" = "Disabled";
-
 /* The action hint of the workout mode toggle button when enabled */
 "Disables" = "Desactivar";
 

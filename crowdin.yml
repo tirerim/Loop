@@ -3,3 +3,9 @@ files:
     translation: /Loop/%osx_locale%.lproj/Localizable.strings
   - source: /Loop/en.lproj/Main.strings
     translation: /Loop/%osx_locale%.lproj/Main.strings
+  - source: /WatchApp Extension/Base.lproj/Localizable.strings
+    translation: /WatchApp Extension/%osx_locale%.lproj/Localizable.strings
+  - source: /WatchApp/en.lproj/Interface.strings
+    translation: /WatchApp/%osx_locale%.lproj/Interface.strings
+  - source: /Loop/Base.lproj/InfoPlist.strings
+    translation: /Loop/%osx_locale%.lproj/InfoPlist.strings

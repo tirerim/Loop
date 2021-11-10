@@ -4,6 +4,9 @@
 /* HUD row title for IOB */
 "Active Insulin" = "Active Insulin";
 
+/* Title of the user activity for adding carbs */
+"Add Carb Entry" = "Add Carb Entry";
+
 /* The title of the alert controller displayed after a bolus attempt fails */
 "Bolus Failed" = "Bolus Failed";
 
@@ -30,6 +33,9 @@
 /* The title of the alert controller displayed after a carb entry send attempt fails
    The title of the alert controller displayed after a glucose range override send attempt fails */
 "Send Failed" = "Send Failed";
+
+/* The short unit display string for international units of insulin */
+"U" = "U";
 
 /* The short unit display string for international units of insulin delivery per hour */
 "U/hr" = "U/hr";

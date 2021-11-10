@@ -4,6 +4,9 @@
 /* HUD row title for IOB */
 "Active Insulin" = "Active Insulin";
 
+/* Title of the user activity for adding carbs */
+"Add Carb Entry" = "Add Carb Entry";
+
 /* The title of the alert controller displayed after a bolus attempt fails */
 "Bolus Failed" = "Bolus fehlgeschlagen";
 
@@ -39,4 +42,3 @@
 
 /* The text for the Watch button for enabling workout mode */
 "Workout" = "Training";
-

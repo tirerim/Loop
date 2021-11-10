@@ -217,9 +217,6 @@
 /* Title text for delivery limits */
 "Delivery Limits" = "Indgivningsgrænser";
 
-/* (No Comment) */
-"Disabled" = "Deaktiveret";
-
 /* The action hint of the workout mode toggle button when enabled */
 "Disables" = "Deaktiverer";
 
@@ -475,7 +472,7 @@
 
 "This is the minimum microbolus size in units that will be delivered. Only if the microbolus calculated is equal to or greater than this number of units will a bolus be delivered." = "Dette er den mindste mikrobolus dosis, der vil blive leveret. Kun hvis den beregnede mikrobolus er lig med eller større end dette antal enheder, vil en bolus blive leveret.";
 
-"Disabled" = "Disabled";
+"Disabled" = "Deaktiveret";
 
 "Always" = "Altid";
 

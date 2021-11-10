@@ -34,9 +34,11 @@
    The title of the alert controller displayed after a glucose range override send attempt fails */
 "Send Failed" = "Lähetys epäonnistui";
 
+/* The short unit display string for international units of insulin */
+"U" = "U";
+
 /* The short unit display string for international units of insulin delivery per hour */
 "U/hr" = "U/h";
 
 /* The text for the Watch button for enabling workout mode */
 "Workout" = "Liikunta";
-
