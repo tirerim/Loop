@@ -15,4 +15,3 @@
 
 /* Privacy - Health Update Usage Description */
 "NSHealthUpdateUsageDescription" = "I dati sui carboidrati inseriti nell'app e sull'orologio sono memorizzati nel database Salute. I dati relativi al glucosio recuperati dal CGM vengono memorizzati in modo sicuro in Salute.";
-

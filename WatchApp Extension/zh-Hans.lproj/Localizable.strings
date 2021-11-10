@@ -34,6 +34,9 @@
    The title of the alert controller displayed after a glucose range override send attempt fails */
 "Send Failed" = "发送失败";
 
+/* The short unit display string for international units of insulin */
+"U" = "U";
+
 /* The short unit display string for international units of insulin delivery per hour */
 "U/hr" = "U/小时";
 

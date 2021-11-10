@@ -2,17 +2,16 @@
 "CFBundleName" = "$(PRODUCT_NAME)";
 
 /* Privacy - Bluetooth Always Usage Description */
-"NSBluetoothAlwaysUsageDescription" = "Bluetooth brukes til å kommunisere med insulinpumpe og kontinuerlige glukosemonitorer.";
+"NSBluetoothAlwaysUsageDescription" = "Bluetooth brukes til å kommunisere med insulinpumpe og blodsukkersensor.";
 
 /* Privacy - Bluetooth Peripheral Usage Description */
-"NSBluetoothPeripheralUsageDescription" = "Bluetooth brukes til å kommunisere med insulinpumpe og kontinuerlige glukosemonitorer.";
+"NSBluetoothPeripheralUsageDescription" = "Bluetooth brukes til å kommunisere med insulinpumpe og blodsukkersensor.";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Face ID brukes til å autentisere insulin bolus.";
+"NSFaceIDUsageDescription" = "Face ID brukes til å autentisere dosering av insulin.";
 
 /* Privacy - Health Share Usage Description */
-"NSHealthShareUsageDescription" = "Matdata fra Health-databasen brukes til å bestemme blodsukkereffekt. Blodsukkerdata hentes fra HealthKit for opptegning og analyse.";
+"NSHealthShareUsageDescription" = "Matdata fra Helse-databasen brukes til å bestemme blodsukkereffekt. Blodsukkerdata hentes fra HealthKit for opptegning og analyse.";
 
 /* Privacy - Health Update Usage Description */
-"NSHealthUpdateUsageDescription" = "Angitte karbohydrater i matdataene som tastes inn i appen blir lagret i Health-databasen.";
-
+"NSHealthUpdateUsageDescription" = "Angitte karbohydrater i matdataene som tastes inn i appen blir lagret i Helse-databasen.";

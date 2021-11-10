@@ -217,9 +217,6 @@
 /* Title text for delivery limits */
 "Delivery Limits" = "Verabreichungslimits";
 
-/* (No Comment) */
-"Disabled" = "Deaktiviert";
-
 /* The action hint of the workout mode toggle button when enabled */
 "Disables" = "Deaktivieren";
 
@@ -307,10 +304,10 @@
 "Loop has not completed successfully in %@" = "Loop wurde nicht erfolgreich abgeschlossen seit %@";
 
 /* (No Comment) */
-"Manual Temp Basal" = "Eigene temporäre Basalrate";
+"Manual Temp Basal" = "Manuelle Temporäre Basalrate";
 
 /* (No Comment) */
-"Max basal limit" = "Maximales Basallimit";
+"Max basal limit" = "Max. Basallimit";
 
 /* The error message for missing data. (1: missing data details) */
 "Missing data: %1$@" = "Fehlende Daten: %1$@";

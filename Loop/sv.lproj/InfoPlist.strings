@@ -2,13 +2,16 @@
 "CFBundleName" = "$(PRODUCT_NAME)";
 
 /* Privacy - Bluetooth Always Usage Description */
-"NSBluetoothAlwaysUsageDescription" = "Bluetooth används för att kommunicera med insulinpumpen och kontinuerlig glukosmätare.";
+"NSBluetoothAlwaysUsageDescription" = "Bluetooth används för att kommunicera med insulinpumpen och den kontinuerliga glukosmätaren.";
 
 /* Privacy - Bluetooth Peripheral Usage Description */
-"NSBluetoothPeripheralUsageDescription" = "Bluetooth används för att kommunicera med insulinpumpen och kontinuerlig glukosmätare.";
+"NSBluetoothPeripheralUsageDescription" = "Bluetooth används för att kommunicera med insulinpumpen och den kontinuerliga glukosmätaren.";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Face ID avänds för att godkänna bolus.";
+"NSFaceIDUsageDescription" = "Face ID används för att kunna godkänna bolus.";
+
+/* Privacy - Health Share Usage Description */
+"NSHealthShareUsageDescription" = "Kolhydratdata från Apple Health används för att analysera hur kolhydrater påverkar blodglukosvärdet. Glukosvärden från Apple Health används i diagram och för beräkning av blodglukosförändringshastigheten. Sömndata från Apple Health används för att förbättra Apple Watch.";
 
 /* Privacy - Health Update Usage Description */
-"NSHealthUpdateUsageDescription" = "Kolhydratvärden inmatade i appen i klockan lagras i Apple Health-databasen. Glukosvärden mottagna från CGM  lagras krypterat i HealthKit.";
+"NSHealthUpdateUsageDescription" = "Kolhydratvärden inmatade i appen och i klockan lagras i Apple Health. Glukosvärden mottagna från CGM lagras krypterat i Apple Health (via HealthKit).";

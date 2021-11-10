@@ -15,4 +15,3 @@
 
 /* Privacy - Health Update Usage Description */
 "NSHealthUpdateUsageDescription" = "Les données sur les repas glucidiques saisies dans l'application et sur la montre sont stockées dans la base de données Health. Les données de glucose extraites du CGM sont stockées de manière sécurisée dans HealthKit.";
-

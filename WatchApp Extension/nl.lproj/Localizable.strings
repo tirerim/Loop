@@ -35,11 +35,10 @@
 "Send Failed" = "Versturen mislukt";
 
 /* The short unit display string for international units of insulin */
-"U" = "E";
+"U" = "U";
 
 /* The short unit display string for international units of insulin delivery per hour */
 "U/hr" = "E/uur";
 
 /* The text for the Watch button for enabling workout mode */
 "Workout" = "Training";
-

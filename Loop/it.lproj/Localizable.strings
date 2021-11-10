@@ -2,7 +2,7 @@
 " (pending: %@)" = " (prevista l'erogazione di: %@)";
 
 /* Format string for carb ratio average. (1: value)(2: carb unit) */
-"%1$@ %2$@/U" = "%1$@ %2$@/U";
+"%1$@ %2$@/U" = "%1$@%2$@/U";
 
 /* Formats (1: carb start time) and (2: carb absorption duration) */
 "%1$@ + %2$@" = "%1$@ + %2$@";
@@ -71,25 +71,25 @@
 "Add Carb Entry" = "Aggiungi carboidrati assunti";
 
 /* */
-"Edit Carb Entry" = "Edit Carb Entry";
+"Edit Carb Entry" = "Modifica l'Assunzione dei Carboidrati";
 
 /* Back button text for bolus screen to return to carb entry screen */
-"Carb Entry" = "Carb Entry";
+"Carb Entry" = "Assunzione di Carboidrati";
 
 /* Title of the carb entry date picker cell */
-"Date" = "Date";
+"Date" = "Data";
 
 /* Title of the carb entry absorption time cell */
-"Absorption Time" = "Absorption Time";
+"Absorption Time" = "Tempo di assorbimento";
 
 /* Carb entry section footer text explaining absorption time */
-"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact.";
+"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Seleziona un tempo di assunzione più lungo per i pasti più sostanziosi o per quelli contenenti grassi e proteine. Questo è solo un valore indicativa per l'algoritmo e non deve essere necessariamente esatto.";
 
 /* The button text to save a carb entry without bolusing*/
 "Save without Bolusing" = "Save without Bolusing";
 
 /* Title text for bolus screen following a carb entry */
-"Meal Bolus" = "Meal Bolus";
+"Meal Bolus" = "Bolo Pasto";
 
 /* The button text to initiate a bolus */
 "Deliver" = "Deliver";
@@ -127,7 +127,7 @@
 "Authenticate to Bolus %@ Units" = "Autenticati per eseguire il bolo di %@ Unità";
 
 /* (No Comment) */
-"Basal rate (U/h)" = "Basal rate (U/h)";
+"Basal rate (U/h)" = "Tasso del basale (U/h)";
 
 /* Details for configuration error when basal rate schedule is missing */
 "Basal Rate Schedule" = "Impostazione valori della basale";
@@ -216,9 +216,6 @@
 
 /* Title text for delivery limits */
 "Delivery Limits" = "Limiti Erogazione";
-
-/* (No Comment) */
-"Disabled" = "Disattivato";
 
 /* The action hint of the workout mode toggle button when enabled */
 "Disables" = "Disabilitato";
@@ -310,7 +307,7 @@
 "Manual Temp Basal" = "Manual Temp Basal";
 
 /* (No Comment) */
-"Max basal limit" = "Max basal limit";
+"Max basal limit" = "Limite basale massimo";
 
 /* The error message for missing data. (1: missing data details) */
 "Missing data: %1$@" = "Dati mancanti: %1$@";
@@ -445,17 +442,17 @@
 
 "Caution! Microboluses have potential to reduce the safety effects of other mitigations like max temp basal rate. Please be careful!\nThe actual size of a microbolus is always limited to the partial application of recommended bolus." = "Caution! Microboluses have potential to reduce the safety effects of other mitigations like max temp basal rate. Please be careful!\nThe actual size of a microbolus is always limited to the partial application of recommended bolus.";
 
-"Enable With Carbs" = "Enable With Carbs";
+"Enable With Carbs" = "Abilita con Carboidrati";
 
-"Enable Without Carbs" = "Enable Without Carbs";
+"Enable Without Carbs" = "Abilita senza Carboidrati";
 
 "Partial Bolus Application" = "Partial Bolus Application";
 
 "What part of the recommended bolus will be applied automatically." = "What part of the recommended bolus will be applied automatically.";
 
-"Basal Rate Multiplier" = "Basal Rate Multiplier";
+"Basal Rate Multiplier" = "Moltiplicatore del Tasso Basale";
 
-"Max basal limit" = "Max basal limit";
+"Max basal limit" = "Limite basale massimo";
 
 "Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting. This setting is ignored if microboluses are disabled." = "Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting. This setting is ignored if microboluses are disabled.";
 
@@ -477,11 +474,11 @@
 
 "Disabled" = "Disattivato";
 
-"Always" = "Always";
+"Always" = "Sempre";
 
-"With Carbs" = "With Carbs";
+"With Carbs" = "Con Carboidrati";
 
-"Without Carbs" = "Without Carbs";
+"Without Carbs" = "Senza Carboidrati";
 
 "Export Settings" = "Esporta le impostazioni";
 
@@ -489,7 +486,7 @@
 
 "Manual Temp Basal" = "Manual Temp Basal";
 
-"Basal rate (U/h)" = "Basal rate (U/h)";
+"Basal rate (U/h)" = "Tasso del basale (U/h)";
 
 "Duration" = "Durata";
 
@@ -505,10 +502,10 @@
 
 "Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings." = "A volte potresti vedere un segno esclamativo accanto al valore del glucosio. In questi casi i microboli non verranno applicati. Attiva questa impostazione se vuoi ignorare gli avvisi.";
 
-"Other FreeAPS settings" = "Other FreeAPS settings";
+"Other FreeAPS settings" = "Altre impostazioni FreeAPS";
 
 "Show required carbs on the app badge" = "Show required carbs on the app badge";
 
 "Allow MBs when glucose is below target range" = "Allow MBs when glucose is below target range";
 
-"Retrospective Correction interval" = "Retrospective Correction interval";
+"Retrospective Correction interval" = "Intervallo di correzione retrospettiva";

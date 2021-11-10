@@ -1,21 +1,20 @@
-
 /* Class = "WKInterfaceButton"; title = "🌮"; ObjectID = "0fo-Z3-hTi"; */
 "0fo-Z3-hTi.title" = "🌮";
 
-/* Class = "WKInterfaceLabel"; text = "--"; ObjectID = "CWt-7U-cnK"; */
+/* Class = "WKInterfaceLabel"; text = "15"; ObjectID = "CWt-7U-cnK"; */
 "CWt-7U-cnK.text" = "--";
 
 /* Class = "WKInterfaceLabel"; text = "—"; ObjectID = "CsQ-fc-KLC"; */
 "CsQ-fc-KLC.text" = "—";
 
 /* Class = "WKInterfaceButton"; accessibilityLabel = "Add"; ObjectID = "DZc-Gn-RLu"; */
-"DZc-Gn-RLu.accessibilityLabel" = "Add";
+"DZc-Gn-RLu.accessibilityLabel" = "Lägg till";
 
 /* Class = "WKInterfaceButton"; title = "+"; ObjectID = "DZc-Gn-RLu"; */
 "DZc-Gn-RLu.title" = "+";
 
 /* Class = "WKInterfaceButton"; accessibilityLabel = "Subtract"; ObjectID = "Dh9-HV-fXy"; */
-"Dh9-HV-fXy.accessibilityLabel" = "Subtract";
+"Dh9-HV-fXy.accessibilityLabel" = "Minska";
 
 /* Class = "WKInterfaceButton"; title = "−"; ObjectID = "Dh9-HV-fXy"; */
 "Dh9-HV-fXy.title" = "−";
@@ -27,7 +26,7 @@
 "IRi-4t-ESO.text" = "—";
 
 /* Class = "WKInterfaceLabel"; text = "Running"; ObjectID = "JXa-s1-PJx"; */
-"JXa-s1-PJx.text" = "Running";
+"JXa-s1-PJx.text" = "Löpning";
 
 /* Class = "WKInterfaceLabel"; text = "TITLE"; ObjectID = "MZU-QV-PtZ"; */
 "MZU-QV-PtZ.text" = "TITLE";
@@ -48,55 +47,58 @@
 "Ury-of-vQg.text" = "10:09 AM";
 
 /* Class = "WKInterfaceLabel"; text = "Turn Digital Crown to bolus"; ObjectID = "Xcr-jO-0IQ"; */
-"Xcr-jO-0IQ.text" = "Turn Digital Crown to bolus";
+"Xcr-jO-0IQ.text" = "Vrid på krona för att ge bolus";
 
 /* Class = "WKInterfaceLabel"; text = "<body>"; ObjectID = "XkS-y5-khE"; */
 "XkS-y5-khE.text" = "<body>";
 
+/* Class = "WKInterfaceLabel"; text = "Carbs"; ObjectID = "hln-CI-MRP"; */
+"hln-CI-MRP.text" = "Kolh.";
+
 /* Class = "WKInterfaceButton"; title = "Add Carbs"; ObjectID = "b6f-3I-jki"; */
-"b6f-3I-jki.title" = "Add Carbs";
+"b6f-3I-jki.title" = "Lägg till kolh.";
 
 /* Class = "WKInterfaceButton"; title = "🍕"; ObjectID = "dPF-QZ-sh6"; */
 "dPF-QZ-sh6.title" = "🍕";
 
 /* Class = "WKInterfaceMenuItem"; title = "2 hours"; ObjectID = "dPh-7b-Tfv"; */
-"dPh-7b-Tfv.title" = "2 hours";
+"dPh-7b-Tfv.title" = "2 timmar";
 
 /* Class = "WKInterfaceLabel"; text = "TOTAL CARBS"; ObjectID = "dea-qG-va8"; */
-"dea-qG-va8.text" = "TOTAL CARBS";
+"dea-qG-va8.text" = "Kolh. totalt";
 
 /* Class = "WKInterfaceButton"; accessibilityLabel = "Add"; ObjectID = "eu3-pj-GH3"; */
-"eu3-pj-GH3.accessibilityLabel" = "Add";
+"eu3-pj-GH3.accessibilityLabel" = "Lägg till";
 
 /* Class = "WKInterfaceButton"; title = "+"; ObjectID = "eu3-pj-GH3"; */
 "eu3-pj-GH3.title" = "+";
 
 /* Class = "WKInterfaceLabel"; text = "Pre-Meal"; ObjectID = "f5G-bS-9pd"; */
-"f5G-bS-9pd.text" = "Pre-Meal";
+"f5G-bS-9pd.text" = "Före måltid";
 
 /* Class = "WKInterfaceMenuItem"; title = "3 hours"; ObjectID = "fR1-7h-SNe"; */
-"fR1-7h-SNe.title" = "3 hours";
+"fR1-7h-SNe.title" = "3 timmar";
 
 /* Class = "WKInterfaceButton"; title = "🍭"; ObjectID = "gAn-qe-OvX"; */
 "gAn-qe-OvX.title" = "🍭";
 
 /* Class = "WKInterfaceButton"; accessibilityLabel = "Subtract"; ObjectID = "hjF-xr-cwO"; */
-"hjF-xr-cwO.accessibilityLabel" = "Subtract";
+"hjF-xr-cwO.accessibilityLabel" = "Minska";
 
 /* Class = "WKInterfaceButton"; title = "−"; ObjectID = "hjF-xr-cwO"; */
 "hjF-xr-cwO.title" = "−";
 
 /* Class = "WKInterfaceLabel"; text = "Carbs"; ObjectID = "hln-CI-MRP"; */
-"hln-CI-MRP.text" = "Carbs";
+"hln-CI-MRP.text" = "Kolh.";
 
 /* Class = "WKInterfaceLabel"; text = "Bolus Failed"; ObjectID = "jj3-Gq-HBy"; */
-"jj3-Gq-HBy.text" = "Bolus Failed";
+"jj3-Gq-HBy.text" = "Bolus misslyckades";
 
 /* Class = "WKInterfaceLabel"; text = "0.000"; ObjectID = "mpK-zY-UvA"; */
 "mpK-zY-UvA.text" = "0.000";
 
 /* Class = "WKInterfaceLabel"; text = "Override"; ObjectID = "nC0-X3-oFJ"; */
-"nC0-X3-oFJ.text" = "Override";
+"nC0-X3-oFJ.text" = "Undantag";
 
 /* Class = "WKInterfaceController"; title = "Loop"; ObjectID = "rNf-Mh-tID"; */
 "rNf-Mh-tID.title" = "Loop";
@@ -111,10 +113,10 @@
 "v5b-sO-bb8.title" = "Loop";
 
 /* Class = "WKInterfaceMenuItem"; title = "1 hour"; ObjectID = "vL1-NA-WZ1"; */
-"vL1-NA-WZ1.title" = "1 hour";
+"vL1-NA-WZ1.title" = "1 timme";
 
 /* Class = "WKInterfaceLabel"; text = "ACTIVE CARBS"; ObjectID = "ycL-5X-a05"; */
-"ycL-5X-a05.text" = "ACTIVE CARBS";
+"ycL-5X-a05.text" = "AKTIVA KOLH.";
 
 /* Class = "WKInterfaceLabel"; text = "---"; ObjectID = "yl8-ZP-c3l"; */
 "yl8-ZP-c3l.text" = "---";
