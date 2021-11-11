@@ -44,7 +44,7 @@
 "Fal-Vf-lfh.normalTitle" = "🍭";
 
 /* Class = "UILabel"; text = "Eventually 92 mg/dL"; ObjectID = "G51-pt-pmi"; */
-"G51-pt-pmi.text" = "Eventually 92 mg/dL";
+"G51-pt-pmi.text" = "Förväntat 5,1 92 mg/dL";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "IRb-Yj-AQH"; */
 "IRb-Yj-AQH.text" = "Label";
@@ -171,3 +171,12 @@
 
 /* Class = "UILabel"; text = "0"; ObjectID = "zvZ-uf-zMX"; */
 "zvZ-uf-zMX.text" = "0";
+
+/* Class = "UILabel"; text = "Active Insulin: 1.5U"; ObjectID = "viU-7a-kbI"; */
+"viU-7a-kbI.text" = "Aktivt insulin: 1.5U";
+
+/* Class = "UILabel"; text = "Active Carbohydrates: 40g"; ObjectID = "hHZ-uY-aKw"; */
+"hHZ-uY-aKw.text" = "Aktiva kolhydrater: 40g";
+
+/* Class = "UIButton"; normalTitle = "Deliver"; ObjectID = "Ya0-9b-ZAS"; */
+"Ya0-9b-ZAS.normalTitle" = "Ge bolus";

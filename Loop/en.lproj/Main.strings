@@ -172,3 +172,12 @@
 
 /* Class = "UILabel"; text = "0"; ObjectID = "zvZ-uf-zMX"; */
 "zvZ-uf-zMX.text" = "0";
+
+/* Class = "UILabel"; text = "Active Insulin: 1.5U"; ObjectID = "viU-7a-kbI"; */
+"viU-7a-kbI.text" = "Active Insulin: 1.5U";
+
+/* Class = "UILabel"; text = "Active Carbohydrates: 40g"; ObjectID = "hHZ-uY-aKw"; */
+"hHZ-uY-aKw.text" = "Active Carbohydrates: 40g";
+
+/* Class = "UIButton"; normalTitle = "Deliver"; ObjectID = "Ya0-9b-ZAS"; */
+"Ya0-9b-ZAS.normalTitle" = "Deliver";
