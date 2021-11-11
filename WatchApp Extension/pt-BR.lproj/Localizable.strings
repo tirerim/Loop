@@ -4,6 +4,9 @@
 /* HUD row title for IOB */
 "Active Insulin" = "Insulina Ativa";
 
+/* Title of the user activity for adding carbs */
+"Add Carb Entry" = "Add Carb Entry";
+
 /* The title of the alert controller displayed after a bolus attempt fails */
 "Bolus Failed" = "Bolus Falhou";
 
@@ -31,9 +34,11 @@
    The title of the alert controller displayed after a glucose range override send attempt fails */
 "Send Failed" = "Envio falhou";
 
+/* The short unit display string for international units of insulin */
+"U" = "U";
+
 /* The short unit display string for international units of insulin delivery per hour */
 "U/hr" = "U/hr";
 
 /* The text for the Watch button for enabling workout mode */
 "Workout" = "Exercício";
-

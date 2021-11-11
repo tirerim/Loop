@@ -104,7 +104,7 @@
 "rNf-Mh-tID.title" = "Loop";
 
 /* Class = "WKInterfaceLabel"; text = "UNITS"; ObjectID = "rV7-d9-n6u"; */
-"rV7-d9-n6u.text" = "UNITS";
+"rV7-d9-n6u.text" = "ENHETER";
 
 /* Class = "WKInterfaceLabel"; text = "Bolus"; ObjectID = "smL-Rc-IZh"; */
 "smL-Rc-IZh.text" = "Bolus";

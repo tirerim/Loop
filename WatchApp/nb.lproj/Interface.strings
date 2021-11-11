@@ -53,7 +53,7 @@
 "XkS-y5-khE.text" = "<body>";
 
 /* Class = "WKInterfaceLabel"; text = "Carbs"; ObjectID = "hln-CI-MRP"; */
-"hln-CI-MRP.text" = "Karbohydrater";
+"hln-CI-MRP.text" = "Karbo";
 
 /* Class = "WKInterfaceButton"; title = "Add Carbs"; ObjectID = "b6f-3I-jki"; */
 "b6f-3I-jki.title" = "Legg til karbohydrater";
@@ -74,7 +74,7 @@
 "eu3-pj-GH3.title" = "+";
 
 /* Class = "WKInterfaceLabel"; text = "Pre-Meal"; ObjectID = "f5G-bS-9pd"; */
-"f5G-bS-9pd.text" = "Pre-måltid";
+"f5G-bS-9pd.text" = "Før mat";
 
 /* Class = "WKInterfaceMenuItem"; title = "3 hours"; ObjectID = "fR1-7h-SNe"; */
 "fR1-7h-SNe.title" = "3 timer";
