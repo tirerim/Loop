@@ -535,7 +535,7 @@ final class CarbAbsorptionViewController: ChartsTableViewController, Identifiabl
                     case .success:
                         // Enact the user-entered bolus
                         if let bolus = bolusViewController.bolus, bolus > 0 {
-                            self.deviceManager.enactBolus(units: bolus) { _ in }
+                            self.deviceManager.enactBolus(units: bolus, automatic: false) { _ in }
                         }
                     case .failure(let error):
                         // Ignore bolus wizard errors
@@ -546,7 +546,7 @@ final class CarbAbsorptionViewController: ChartsTableViewController, Identifiabl
                 }
             }
         } else if let bolus = bolusViewController.bolus, bolus > 0 {
-            deviceManager.enactBolus(units: bolus) { _ in }
+            deviceManager.enactBolus(units: bolus, automatic: false) { _ in }
         }
     }
 }

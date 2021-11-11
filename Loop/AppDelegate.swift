@@ -171,7 +171,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             {
                 AnalyticsManager.shared.didRetryBolus()
 
-                deviceManager?.enactBolus(units: units, at: startDate) { (_) in
+                deviceManager?.enactBolus(units: units, at: startDate, automatic: false) { (_) in
                     completionHandler()
                 }
                 return

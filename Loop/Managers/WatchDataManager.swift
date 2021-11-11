@@ -288,7 +288,7 @@ extension WatchDataManager: WCSessionDelegate {
         case SetBolusUserInfo.name?:
             // Start the bolus and reply when it's successfully requested
             if let bolus = SetBolusUserInfo(rawValue: message as SetBolusUserInfo.RawValue) {
-                self.deviceManager.enactBolus(units: bolus.value, at: bolus.startDate) { (error) in
+                self.deviceManager.enactBolus(units: bolus.value, at: bolus.startDate, automatic: false) { (error) in
                     if error == nil {
                         AnalyticsManager.shared.didSetBolusFromWatch(bolus.value)
                     }

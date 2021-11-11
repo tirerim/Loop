@@ -1131,7 +1131,7 @@ final class StatusTableViewController: ChartsTableViewController {
                     case .success:
                         // Enact the user-entered bolus
                         if let bolus = bolusViewController.bolus, bolus > 0 {
-                            self.deviceManager.enactBolus(units: bolus) { _ in }
+                            self.deviceManager.enactBolus(units: bolus, automatic: false) { _ in }
                         }
                     case .failure(let error):
                         // Ignore bolus wizard errors
@@ -1144,7 +1144,7 @@ final class StatusTableViewController: ChartsTableViewController {
                 }
             }
         } else if let bolus = bolusViewController.bolus, bolus > 0 {
-            self.deviceManager.enactBolus(units: bolus) { _ in }
+            self.deviceManager.enactBolus(units: bolus, automatic: false) { _ in }
         }
     }
 
