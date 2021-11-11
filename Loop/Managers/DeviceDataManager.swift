@@ -198,7 +198,7 @@ final class DeviceDataManager {
 
     func generateDiagnosticReport(_ completion: @escaping (_ report: String) -> Void) {
         self.loopManager.generateDiagnosticReport { (loopReport) in
-            self.deviceLog.getLogEntries(startDate: Date() - .hours(48)) { (result) in
+            self.deviceLog.getLogEntries(startDate: Date() - .hours(84)) { (result) in
                 let deviceLogReport: String
                 switch result {
                 case .failure(let error):
