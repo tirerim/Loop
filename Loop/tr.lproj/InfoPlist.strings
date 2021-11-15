@@ -1,0 +1,17 @@
+/* Bundle name */
+"CFBundleName" = "$(PRODUCT_NAME)";
+
+/* Privacy - Bluetooth Always Usage Description */
+"NSBluetoothAlwaysUsageDescription" = "Bluetooth, insülin pompası ve sürekli glikoz izleme cihazları ile iletişim kurmak için kullanılır.";
+
+/* Privacy - Bluetooth Peripheral Usage Description */
+"NSBluetoothPeripheralUsageDescription" = "Bluetooth, insülin pompası ve sürekli glikoz izleme cihazları ile iletişim kurmak için kullanılır.";
+
+/* Privacy - Face ID Usage Description */
+"NSFaceIDUsageDescription" = "Face ID, insülin bolusunun kimliğini doğrulamak için kullanılır.";
+
+/* Privacy - Health Share Usage Description */
+"NSHealthShareUsageDescription" = "Sağlık veri tabanından alınan yemek verileri, glikoz etkilerini belirlemek için kullanılır. Sağlık veri tabanından alınan glikoz verileri, grafik ve momentum hesaplaması için kullanılır. Sağlık veritabanındaki uyku verileri, Apple Watch komplikasyonunu iyileştirmek için kullanılır.";
+
+/* Privacy - Health Update Usage Description */
+"NSHealthUpdateUsageDescription" = "Uygulamaya ve saate girilen karbonhidrat yemek verileri Sağlık veritabanında saklanır. CGM'den alınan glikoz verileri HealthKit'te güvenli bir şekilde saklanır.";
