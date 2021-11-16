@@ -47,7 +47,7 @@
 "Ury-of-vQg.text" = "10:09 AM";
 
 /* Class = "WKInterfaceLabel"; text = "Turn Digital Crown to bolus"; ObjectID = "Xcr-jO-0IQ"; */
-"Xcr-jO-0IQ.text" = "Turn Digital Crown to bolus";
+"Xcr-jO-0IQ.text" = "Поверните головку на часах для подачи болюса";
 
 /* Class = "WKInterfaceLabel"; text = "<body>"; ObjectID = "XkS-y5-khE"; */
 "XkS-y5-khE.text" = "<body>";
@@ -89,7 +89,7 @@
 "hjF-xr-cwO.title" = "−";
 
 /* Class = "WKInterfaceLabel"; text = "Carbs"; ObjectID = "hln-CI-MRP"; */
-"hln-CI-MRP.text" = "Carbs";
+"hln-CI-MRP.text" = "Углеводы";
 
 /* Class = "WKInterfaceLabel"; text = "Bolus Failed"; ObjectID = "jj3-Gq-HBy"; */
 "jj3-Gq-HBy.text" = "Болюс не состоялся";

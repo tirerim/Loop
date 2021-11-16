@@ -50,7 +50,7 @@
 "A model based on the published absorption of Humalog, Novolog, and Apidra insulin in adults." = "модель, основанная на опубликованных данных усвоения Humalog, Novolog и Apidra у взрослых.";
 
 /* Subtitle of Lyumjev preset */
-"A model based on the published absorption of Lyumjev insulin." = "A model based on the published absorption of Lyumjev insulin.";
+"A model based on the published absorption of Lyumjev insulin." = "Модель, основанная на опубликованной абсорбции инсулина Lyumjev.";
 
 /* Action to copy the recommended Bolus value to the actual Bolus Field */
 "AcceptRecommendedBolus" = "Принятьрекомендуемыйболюс";
@@ -71,28 +71,28 @@
 "Add Carb Entry" = "Добавить запись углеводов";
 
 /* */
-"Edit Carb Entry" = "Edit Carb Entry";
+"Edit Carb Entry" = "Редактировать запись углеводов";
 
 /* Back button text for bolus screen to return to carb entry screen */
-"Carb Entry" = "Carb Entry";
+"Carb Entry" = "Запись углеводов";
 
 /* Title of the carb entry date picker cell */
-"Date" = "Date";
+"Date" = "Дата";
 
 /* Title of the carb entry absorption time cell */
-"Absorption Time" = "Absorption Time";
+"Absorption Time" = "Длительность усвоения";
 
 /* Carb entry section footer text explaining absorption time */
-"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact.";
+"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Выберите более длительное время усвоения для блюд большого размера, либо блюд, содержащих жиры и белки. Это только руководство для алгоритма, высокая точность ввода данных не требуется.";
 
 /* The button text to save a carb entry without bolusing*/
-"Save without Bolusing" = "Save without Bolusing";
+"Save without Bolusing" = "Сохранить без болюса";
 
 /* Title text for bolus screen following a carb entry */
-"Meal Bolus" = "Meal Bolus";
+"Meal Bolus" = "Болюс на еду";
 
 /* The button text to initiate a bolus */
-"Deliver" = "Deliver";
+"Deliver" = "Подать";
 
 /* Action sheet title selecting CGM
    Title text for button to set up a CGM */
@@ -106,16 +106,16 @@
 "Add Pump" = "Добавить помпу";
 
 /* The title of the Amplitude service */
-"Amplitude" = "Amplitude";
+"Amplitude" = "Амплитуда";
 
 /* Subtitle of Rapid-Acting – Children preset */
 "An adjustment to the adult model based on empirical effects in children." = "Поправка к модели для взрослых основанная на эмпирических данных для детей.";
 
 /* The title of the amplitude API key credential */
-"API Key" = "API Key";
+"API Key" = "Ключ API";
 
 /* The title of the nightscout API secret credential */
-"API Secret" = "API Secret";
+"API Secret" = "API секрет";
 
 /* Confirmation message for deleting a CGM */
 "Are you sure you want to delete this CGM?" = "Стереть этот мониторинг?";
@@ -187,7 +187,7 @@
 "Closed Loop" = "Замкнутый цикл";
 
 /* The title of the action used to dismiss an error alert */
-"com.loudnate.LoopKit.errorAlertActionTitle" = "OK";
+"com.loudnate.LoopKit.errorAlertActionTitle" = "ОК";
 
 /* The title of the configuration section in settings */
 "Configuration" = "Конфигурация";
@@ -257,7 +257,7 @@
 "Glucose Momentum" = "Динамика гликемии";
 
 /* The placeholder text for the nightscout site URL credential */
-"https://mysite.herokuapp.com" = "https://mysite.herokuapp.com";
+"https://mysite.herokuapp.com" = "https://мойсайт.herokuapp.com";
 
 /* The title of a target alert action specifying an indefinitely long workout targets duration */
 "Indefinitely" = "На неопределенное время";
@@ -295,7 +295,7 @@
 "Loading..." = "Загрузка...";
 
 /* The title of the loggly service */
-"Loggly" = "Loggly";
+"Loggly" = "Сервис Loggly";
 
 /* The notification title for a loop failure */
 "Loop Failure" = "Ошибка в работе цикла/контура";
@@ -418,7 +418,7 @@
 "The maximum bolus amount is %@ Units" = "максимальный болюс %@ ед";
 
 /* The short unit display string for international units of insulin */
-"U" = "U";
+"U" = "ед";
 
 /* The format for the description of a temporary override end date */
 "until %@" = "до %@";
@@ -427,7 +427,7 @@
 "Use Workout Glucose Targets" = "Применить цели гликемии как для физической нагрузки";
 
 /* Title of insulin model setting */
-"Walsh" = "Walsh";
+"Walsh" = "Алгоритм Walsh";
 
 /* Explanation of suspend threshold */
 "When current or forecasted glucose is below the suspend threshold, Loop will not recommend a bolus, and will always recommend a temporary basal rate of 0 units per hour." = "Если текущая или предсказываемая гликемия ниже порога приостановки помпы, алгоритм цикла ИПЖ не рекомендует болюс и всегда рекомендует временный базал 0 ед/час";
@@ -452,9 +452,9 @@
 
 "Basal Rate Multiplier" = "Коэффициент базальной скорости";
 
-"Max basal limit" = "Max basal limit";
+"Max basal limit" = "Максимальное значение базала";
 
-"Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting. This setting is ignored if microboluses are disabled." = "Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting. This setting is ignored if microboluses are disabled.";
+"Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting. This setting is ignored if microboluses are disabled." = "Ограничивает максимальную базальную скорость до значения, кратного запланированной базальной скорости в цикле. Значение не может превышать установленную максимальную базальную скорость. Эта настройка игнорируется, если микроболюсы отключены.";
 
 "Temporary overrides" = "Временные цели";
 
@@ -468,7 +468,7 @@
 
 "Minimum Bolus Size" = "Минимальный размер болюса";
 
-"Last Event" = "Last Event";
+"Last Event" = "Последнее событие";
 
 "This is the minimum microbolus size in units that will be delivered. Only if the microbolus calculated is equal to or greater than this number of units will a bolus be delivered." = "Минимальный размер вводимого микроболюса (в единицах). Микроболюс будет введен только в том случае, если его рассчитанная величина будет равна или больше указанного значения минимального болюса.";
 
@@ -484,17 +484,17 @@
 
 "Import Settings" = "Загрузить настройки";
 
-"Manual Temp Basal" = "Manual Temp Basal";
+"Manual Temp Basal" = "Временной базал, задаваемый вручную";
 
-"Basal rate (U/h)" = "Basal rate (U/h)";
+"Basal rate (U/h)" = "Базальная скорость (ед/ч)";
 
 "Duration" = "Длительность";
 
 "%.0f h %02.0f min" = "%.0f ч %02.0f мин";
 
-"Cancel Temp Basal" = "Cancel Temp Basal";
+"Cancel Temp Basal" = "Отменить временный базал";
 
-"Set" = "Set";
+"Set" = "Задать";
 
 "Safety" = "Безопасность";
 
