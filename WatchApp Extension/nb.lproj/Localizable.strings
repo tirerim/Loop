@@ -25,7 +25,7 @@
 "Override" = "Overstyr";
 
 /* The label and value showing the recommended bolus */
-"Rec: %@ U" = "Rec: %@ E";
+"Rec: %@ U" = "Anb: %@ E";
 
 /* HUD row title for remaining reservoir volume */
 "Reservoir Volume" = "Reservoarstørrelse";

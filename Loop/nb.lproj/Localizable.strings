@@ -68,13 +68,13 @@
 "Active Insulin: %@" = "Aktivt insulin: %@";
 
 /* Title of the user activity for adding carbs */
-"Add Carb Entry" = "Legg til karbohydrater";
+"Add Carb Entry" = "Legg til karbo";
 
 /* */
-"Edit Carb Entry" = "Rediger karbohydrater";
+"Edit Carb Entry" = "Rediger karbo";
 
 /* Back button text for bolus screen to return to carb entry screen */
-"Carb Entry" = "Karbohydrater";
+"Carb Entry" = "Karbo";
 
 /* Title of the carb entry date picker cell */
 "Date" = "Dato";
