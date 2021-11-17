@@ -278,7 +278,7 @@ private extension DeviceDataManager {
     }
 }
 
-// MARK: - Client API - this is when user intiates bolus
+// MARK: - Client API
 extension DeviceDataManager {
     func enactBolus(units: Double, at startDate: Date = Date(), automatic: Bool, completion: @escaping (_ error: Error?) -> Void) {
         guard let pumpManager = pumpManager else {
@@ -287,7 +287,7 @@ extension DeviceDataManager {
         }
 
         self.loopManager.addRequestedBolus(DoseEntry(type: .bolus, startDate: Date(), value: units, unit: .units), completion: nil)
-        pumpManager.enactBolus(units: units, at: startDate, automatic: false, willRequest: { (dose) in
+        pumpManager.enactBolus(units: units, at: startDate, automatic: automatic, willRequest: { (dose) in
             // No longer used...
         }) { (result) in
             switch result {
