@@ -209,7 +209,7 @@ final class DeviceDataManager {
                 
                 let report = [
                     "## LoopVersion",
-                    "* Version: \(Bundle.main.localizedNameAndVersion)",
+                    "* Version: \(Bundle.main.localizedNameAndVersionAndBuild)",
                     "* profileExpiration: \(Bundle.main.profileExpirationString)",
                     "* gitRevision: \(Bundle.main.gitRevision ?? "N/A")",
                     "* gitBranch: \(Bundle.main.gitBranch ?? "N/A")",
