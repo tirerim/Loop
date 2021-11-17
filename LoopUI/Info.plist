@@ -19,7 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>2.2</string>
 	<key>CFBundleVersion</key>
-	<string>204-dev</string>
+	<string>204</string>
 	<key>NSPrincipalClass</key>
 	<string></string>
 </dict>
