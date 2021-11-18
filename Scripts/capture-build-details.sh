@@ -70,7 +70,15 @@ if [ -e .git ]; then
   if [ -n "$branch" ]; then
     plutil -replace com-loopkit-Loop-git-branch -string "${branch}" "${info_plist_path}"
   else
-    warn "No git branch found, not setting com-loopkit-Loop-git-branch"
+    pushd .
+    cd ..
+    branch=$(git branch --show-current)
+    popd
+    if [ -n "$branch" ]; then
+      plutil -replace com-loopkit-Loop-git-branch -string "LoopWorkspace ${branch}" "${info_plist_path}"
+    else
+      warn "No git branch found, not setting com-loopkit-Loop-git-branch"
+    fi
   fi
 fi
 
@@ -86,5 +94,3 @@ if [ -e "${provisioning_profile_path}" ]; then
 else
   warn "Invalid provisioning profile path ${provisioning_profile_path}"
 fi
-
-info "Added ${profile_expire_date} as profile expiration to ${info_plist_path}"
