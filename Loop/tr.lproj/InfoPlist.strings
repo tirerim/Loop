@@ -8,7 +8,7 @@
 "NSBluetoothPeripheralUsageDescription" = "Bluetooth, insülin pompası ve sürekli glikoz izleme cihazları ile iletişim kurmak için kullanılır.";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Face ID, insülin bolusunun kimliğini doğrulamak için kullanılır.";
+"NSFaceIDUsageDescription" = "Face ID, bolusu doğrulamak için kullanılır.";
 
 /* Privacy - Health Share Usage Description */
 "NSHealthShareUsageDescription" = "Sağlık veri tabanından alınan yemek verileri, glikoz etkilerini belirlemek için kullanılır. Sağlık veri tabanından alınan glikoz verileri, grafik ve momentum hesaplaması için kullanılır. Sağlık veritabanındaki uyku verileri, Apple Watch komplikasyonunu iyileştirmek için kullanılır.";
