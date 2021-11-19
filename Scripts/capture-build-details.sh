@@ -64,14 +64,18 @@ info "Gathering build details in ${git_source_root}"
 cd "${git_source_root}"
 
 if [ -e .git ]; then
-  rev=$(git rev-parse HEAD)
-  plutil -replace com-loopkit-Loop-git-revision -string ${rev} "${info_plist_path}"
+  # if branch exists, report Loop branch and SHA
+  # else, go up one level and report LoopWorkspace values
   branch=$(git branch --show-current)
   if [ -n "$branch" ]; then
+    rev=$(git rev-parse HEAD)
+    plutil -replace com-loopkit-Loop-git-revision -string ${rev} "${info_plist_path}"
     plutil -replace com-loopkit-Loop-git-branch -string "${branch}" "${info_plist_path}"
   else
     pushd .
     cd ..
+    rev=$(git rev-parse HEAD)
+    plutil -replace com-loopkit-Loop-git-revision -string "LoopWorkspace ${rev}" "${info_plist_path}"
     branch=$(git branch --show-current)
     popd
     if [ -n "$branch" ]; then
