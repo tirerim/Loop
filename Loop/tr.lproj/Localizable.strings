@@ -206,7 +206,7 @@
 "Current glucose of %1$@ is below correction range." = "%1$@ Mevcut KŞ düzeltme aralığının altında.";
 
 /* The title of the cell indicating a generic temporary override is enabled */
-"Custom Override" = "Özel Geçici Ayar";
+"Custom Override" = "Kendi Üzerine Yaz";
 
 /* The title of the Loggly customer token credential */
 "Customer Token" = "Müşteri Token";
@@ -322,7 +322,7 @@
 "No connected devices, or failure during device connection" = "Bağlı cihaz yok veya cihaza bağlantı sırasında arıza oluştu";
 
 /* The title text for the override presets */
-"Override Presets" = "Ön Ayarları Geçersiz Kıl";
+"Override Presets" = "Ön Ayarları Üzerine Yaz";
 
 /* The label of the pre-meal mode toggle button */
 "Pre-Meal Targets" = "Yemek öncesi Hedefleri";
@@ -456,11 +456,11 @@
 
 "Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting. This setting is ignored if microboluses are disabled." = "Maksimum bazal oranı, döngüdeki programlanmış bazal hızın katıyla sınırlar. Bu değer maksimum bazal oranı ayarınızı aşamaz. Mikro boluslar devre dışı bırakıldığında bu ayar yok sayılır.";
 
-"Temporary overrides" = "Geçici geçersiz kılmalar";
+"Temporary overrides" = "Geçici üzerine yaz";
 
-"Disable MB by enabling temporary override" = "Geçici geçersiz kılmayı etkinleştirerek MicroBolus'u devre dışı bırak";
+"Disable MB by enabling temporary override" = "Geçici üzerine yaz etkinleştirilirse MicroBolus'u devre dışı kalır";
 
-"If the override's target range starts at the given value or more" = "Hedef aralığı geçersiz kılarsa, verilen değer veya daha fazla değerde başlar";
+"If the override's target range starts at the given value or more" = "Eğer üzerine yazılan hedef aralığın girilen değer veya daha fazlası ile başlatılır";
 
 "Other Options" = "Diğer Ayarlar";
 
