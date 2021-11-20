@@ -71,28 +71,28 @@
 "Add Carb Entry" = "添加碳水化合物";
 
 /* */
-"Edit Carb Entry" = "Edit Carb Entry";
+"Edit Carb Entry" = "编辑碳水";
 
 /* Back button text for bolus screen to return to carb entry screen */
 "Carb Entry" = "Carb Entry";
 
 /* Title of the carb entry date picker cell */
-"Date" = "Date";
+"Date" = "日期";
 
 /* Title of the carb entry absorption time cell */
-"Absorption Time" = "Absorption Time";
+"Absorption Time" = "吸收时间";
 
 /* Carb entry section footer text explaining absorption time */
-"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact.";
+"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "如果吃大餐请选择比较长的吸收时间，或者是以脂肪和蛋白为主的食物。该设置仅为算法的一般原则，具体请根据自身情况调整";
 
 /* The button text to save a carb entry without bolusing*/
 "Save without Bolusing" = "Save without Bolusing";
 
 /* Title text for bolus screen following a carb entry */
-"Meal Bolus" = "Meal Bolus";
+"Meal Bolus" = "正餐大剂量";
 
 /* The button text to initiate a bolus */
-"Deliver" = "Deliver";
+"Deliver" = "输注";
 
 /* Action sheet title selecting CGM
    Title text for button to set up a CGM */
@@ -106,7 +106,7 @@
 "Add Pump" = "添加泵";
 
 /* The title of the Amplitude service */
-"Amplitude" = "Amplitude";
+"Amplitude" = "振幅";
 
 /* Subtitle of Rapid-Acting – Children preset */
 "An adjustment to the adult model based on empirical effects in children." = "在成人胰岛素模型基础上专为儿童修改的胰岛素代谢模型";
@@ -150,7 +150,7 @@
 "Cancel" = "取消";
 
 /* (No Comment) */
-"Cancel Temp Basal" = "Cancel Temp Basal";
+"Cancel Temp Basal" = "取消临时基础率";
 
 /* The title of the cell indicating a bolus is being canceled */
 "Canceling Bolus" = "取消大剂量";
@@ -187,7 +187,7 @@
 "Closed Loop" = "开启闭环";
 
 /* The title of the action used to dismiss an error alert */
-"com.loudnate.LoopKit.errorAlertActionTitle" = "OK";
+"com.loudnate.LoopKit.errorAlertActionTitle" = "确定";
 
 /* The title of the configuration section in settings */
 "Configuration" = "配置";
@@ -239,7 +239,7 @@
 "Exceeds Maximum Bolus" = "超过大剂量最大输注限制";
 
 /* Title of insulin model preset */
-"Fiasp" = "Fiasp";
+"Fiasp" = "Fiasp超速效";
 
 /* The format string used to describe a finite workout targets duration */
 "For %1$@" = "对于 %1$@";
@@ -304,7 +304,7 @@
 "Loop has not completed successfully in %@" = "Loop运行异常 %@";
 
 /* (No Comment) */
-"Manual Temp Basal" = "Manual Temp Basal";
+"Manual Temp Basal" = "手动设置临时基础";
 
 /* (No Comment) */
 "Max basal limit" = "Max basal limit";
@@ -385,7 +385,7 @@
 "Services" = "服务";
 
 /* (No Comment) */
-"Set" = "Set";
+"Set" = "设置";
 
 /* The label of the settings button */
 "Settings" = "设置";
@@ -418,7 +418,7 @@
 "The maximum bolus amount is %@ Units" = "大剂量输注最大限制为%@单位";
 
 /* The short unit display string for international units of insulin */
-"U" = "U";
+"U" = "单位";
 
 /* The format for the description of a temporary override end date */
 "until %@" = "直到 %@";
@@ -472,23 +472,23 @@
 
 "This is the minimum microbolus size in units that will be delivered. Only if the microbolus calculated is equal to or greater than this number of units will a bolus be delivered." = "This is the minimum microbolus size in units that will be delivered. Only if the microbolus calculated is equal to or greater than this number of units will a bolus be delivered.";
 
-"Disabled" = "Disabled";
+"Disabled" = "停用";
 
-"Always" = "Always";
+"Always" = "总是";
 
 "With Carbs" = "With Carbs";
 
 "Without Carbs" = "Without Carbs";
 
-"Export Settings" = "Export Settings";
+"Export Settings" = "导出设置";
 
-"Import Settings" = "Import Settings";
+"Import Settings" = "导入设置";
 
-"Manual Temp Basal" = "Manual Temp Basal";
+"Manual Temp Basal" = "手动设置临时基础";
 
 "Basal rate (U/h)" = "Basal rate (U/h)";
 
-"Duration" = "Duration";
+"Duration" = "持续时间";
 
 "%.0f h %02.0f min" = "%.0f h %02.0f min";
 

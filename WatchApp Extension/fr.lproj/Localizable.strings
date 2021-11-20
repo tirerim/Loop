@@ -5,7 +5,7 @@
 "Active Insulin" = "Insuline active";
 
 /* Title of the user activity for adding carbs */
-"Add Carb Entry" = "Add Carb Entry";
+"Add Carb Entry" = "Ajouter des glucides";
 
 /* The title of the alert controller displayed after a bolus attempt fails */
 "Bolus Failed" = "Bolus Échoué";
