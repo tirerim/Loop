@@ -69,13 +69,13 @@ if [ -e .git ]; then
   branch=$(git branch --show-current)
   if [ -n "$branch" ]; then
     rev=$(git rev-parse HEAD)
-    plutil -replace com-loopkit-Loop-git-revision -string ${rev} "${info_plist_path}"
-    plutil -replace com-loopkit-Loop-git-branch -string "${branch}" "${info_plist_path}"
+    plutil -replace com-loopkit-Loop-git-revision -string "Loop ${rev:0:7}" "${info_plist_path}"
+    plutil -replace com-loopkit-Loop-git-branch -string "Loop ${branch}" "${info_plist_path}"
   else
     pushd .
     cd ..
     rev=$(git rev-parse HEAD)
-    plutil -replace com-loopkit-Loop-git-revision -string "LoopWorkspace ${rev}" "${info_plist_path}"
+    plutil -replace com-loopkit-Loop-git-revision -string "LoopWorkspace ${rev:0:7}" "${info_plist_path}"
     branch=$(git branch --show-current)
     popd
     if [ -n "$branch" ]; then
