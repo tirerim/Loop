@@ -294,6 +294,7 @@
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                             <variation key="device=watch44mm" widthAdjustment="-19"/>
+                                            <variation key="device=watch45mm" widthAdjustment="-19"/>
                                         </label>
                                     </items>
                                 </group>
