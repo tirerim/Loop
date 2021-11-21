@@ -154,6 +154,7 @@
                                         </group>
                                     </items>
                                     <variation key="device=watch40mm" widthAdjustment="-8.5"/>
+                                    <variation key="device=watch41mm" widthAdjustment="-8.5"/>
                                     <variation key="device=watch44mm" widthAdjustment="-9.5"/>
                                 </group>
                             </items>
@@ -258,6 +259,7 @@
                                 </group>
                             </items>
                             <variation key="device=watch38mm" spacing="6"/>
+                            <variation key="device=watch41mm" spacing="6"/>
                         </group>
                     </items>
                     <variation key="device=watch38mm" spacing="5"/>
