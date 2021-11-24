@@ -264,11 +264,12 @@
                             </items>
                             <variation key="device=watch38mm" spacing="6"/>
                             <variation key="device=watch41mm" layout="vertical" spacing="6">
-                                <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="16"/>
+                                <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="25"/>
                             </variation>
                         </group>
                     </items>
                     <variation key="device=watch38mm" spacing="5"/>
+                    <variation key="device=watch41mm" spacing="4"/>
                     <connections>
                         <outlet property="eventualGlucoseLabel" destination="0zU-nK-BWD" id="0V7-RE-Lnr"/>
                         <outlet property="glucoseLabel" destination="MHD-Is-5mK" id="MDr-iV-fr1"/>
