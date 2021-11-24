@@ -263,7 +263,9 @@
                                 </group>
                             </items>
                             <variation key="device=watch38mm" spacing="6"/>
-                            <variation key="device=watch41mm" spacing="6"/>
+                            <variation key="device=watch41mm" layout="vertical" spacing="6">
+                                <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="16"/>
+                            </variation>
                         </group>
                     </items>
                     <variation key="device=watch38mm" spacing="5"/>
