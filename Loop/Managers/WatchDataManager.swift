@@ -99,7 +99,7 @@ final class WatchDataManager: NSObject {
         }
 
         switch updateContext {
-        case .glucose, .tempBasal:
+        case .glucose, .tempBasal, .carbs:
             sendWatchContextIfNeeded()
         case .preferences:
             sendSettingsIfNeeded()
