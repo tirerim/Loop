@@ -1,44 +1,44 @@
 /* HUD row title for COB */
-"Active Carbs" = "Aktif Karbonhidrat";
+"Active Carbs" = "Aktívne Sach";
 
 /* HUD row title for IOB */
-"Active Insulin" = "Etkin İnsülin";
+"Active Insulin" = "Aktívny Inzulín";
 
 /* Title of the user activity for adding carbs */
-"Add Carb Entry" = "Karbonhidrat Girdisi Ekle";
+"Add Carb Entry" = "Pridaj Sacharidy";
 
 /* The title of the alert controller displayed after a bolus attempt fails */
-"Bolus Failed" = "Bolus Hatası";
+"Bolus Failed" = "Chyba pri podaní bolusu";
 
 /* The action button title to dismiss an error message */
-"Dismiss" = "Reddet";
+"Dismiss" = "Zamietnuť";
 
 /* The recovery message displayed after a bolus attempt fails
    The recovery message displayed after a carb entry send attempt fails
    The recovery message displayed after a glucose range override send attempt fails */
-"Make sure your iPhone is nearby and try again" = "iPhone'unuzun yakında olduğundan emin olun ve tekrar deneyin";
+"Make sure your iPhone is nearby and try again" = "Uistite sa že je váš iPhone v dosahu a skúste znova";
 
 /* HUD row title for Net Basal Rate */
-"Net Basal Rate" = "Net Bazal Oranı";
+"Net Basal Rate" = "Čistá Hodnota Bazálu";
 
 /* The text for the Watch button for enabling a temporary override */
-"Override" = "Üzerine yaz";
+"Override" = "Override";
 
 /* The label and value showing the recommended bolus */
-"Rec: %@ U" = "Önerilen: %@ Ü";
+"Rec: %@ U" = "Odpr: %@ J";
 
 /* HUD row title for remaining reservoir volume */
-"Reservoir Volume" = "Rezervuar Hacmi";
+"Reservoir Volume" = "Obsah Rezervoára";
 
 /* The title of the alert controller displayed after a carb entry send attempt fails
    The title of the alert controller displayed after a glucose range override send attempt fails */
-"Send Failed" = "Gönderme Başarısız";
+"Send Failed" = "Odoslanie zlyhalo";
 
 /* The short unit display string for international units of insulin */
-"U" = "Ü";
+"U" = "J";
 
 /* The short unit display string for international units of insulin delivery per hour */
-"U/hr" = "Ü/Sa";
+"U/hr" = "J/hod";
 
 /* The text for the Watch button for enabling workout mode */
-"Workout" = "Egzersiz";
+"Workout" = "Cvičenie";
