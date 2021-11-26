@@ -1,44 +1,44 @@
 /* Class = "UILabel"; text = "g"; ObjectID = "0RV-d5-muE"; */
-"0RV-d5-muE.text" = "gr";
+"0RV-d5-muE.text" = "g";
 
 /* Class = "UINavigationItem"; title = "Status"; ObjectID = "3kU-n2-fha"; */
-"3kU-n2-fha.title" = "Durum";
+"3kU-n2-fha.title" = "Stav";
 
 /* Class = "UILabel"; text = "Pump ID"; ObjectID = "5TX-kX-nBo"; */
-"5TX-kX-nBo.text" = "Pompa ID";
+"5TX-kX-nBo.text" = "ID Pumpy";
 
 /* Class = "UILabel"; text = "3.5 U/hour @ 12:12 PM"; ObjectID = "5gz-kZ-iF1"; */
-"5gz-kZ-iF1.text" = "3.5 Ü/sa @ 12:12";
+"5gz-kZ-iF1.text" = "3.5 J/hod @ 12:12";
 
 /* Class = "UILabel"; text = "Bolus"; ObjectID = "5oA-6d-ZTL"; */
 "5oA-6d-ZTL.text" = "Bolus";
 
 /* Class = "UITextField"; accessibilityLabel = "Bolus Amount"; ObjectID = "7LT-50-ZzK"; */
-"7LT-50-ZzK.accessibilityLabel" = "Bolus Miktarı";
+"7LT-50-ZzK.accessibilityLabel" = "Množstvo Bolusu";
 
 /* Class = "UITextField"; placeholder = "0.0"; ObjectID = "7LT-50-ZzK"; */
 "7LT-50-ZzK.placeholder" = "0.0";
 
 /* Class = "UILabel"; text = "Predicted"; ObjectID = "87H-N1-0vJ"; */
-"87H-N1-0vJ.text" = "Tahmin edilen";
+"87H-N1-0vJ.text" = "Predpovedané";
 
 /* Class = "UILabel"; accessibilityLabel = "Units"; ObjectID = "BR0-dr-Fj2"; */
-"BR0-dr-Fj2.accessibilityLabel" = "Birimler";
+"BR0-dr-Fj2.accessibilityLabel" = "Jednotky";
 
 /* Class = "UILabel"; text = "U"; ObjectID = "BR0-dr-Fj2"; */
 "BR0-dr-Fj2.text" = "U";
 
 /* Class = "UILabel"; text = "Future glucose is predicted by combining the effects of multiple inputs. Use this tool to toggle various inputs to see how they compare to the final prediction."; ObjectID = "D4C-I2-dhA"; */
-"D4C-I2-dhA.text" = "Gelecekteki glikoz, çoklu girdilerin etkilerinin birleştirilmesiyle tahmin edilir. Son tahminle nasıl karşılaştırıldıklarını görmek için çeşitli girdiler arasında geçiş yapmak için bu aracı kullanın.";
+"D4C-I2-dhA.text" = "Budúca hladina krvného cukru je predpovedaná kombináciou vplyvov viacerých vstupov. Použite tento nástroj pre prepojenie viacerých vstupov aby ste videli v akom sú vzťahu k finálnej predikcii.";
 
 /* Class = "UILabel"; text = "DEVICES"; ObjectID = "DyC-Sv-qP8"; */
-"DyC-Sv-qP8.text" = "AYGITLAR";
+"DyC-Sv-qP8.text" = "ZARIADENIA";
 
 /* Class = "UILabel"; text = "eventually 92 mg/dL"; ObjectID = "E41-FN-nkk"; */
 "E41-FN-nkk.text" = "eventually 92 mg/dL";
 
 /* Class = "UILabel"; text = "Observed"; ObjectID = "EAn-Ja-S1d"; */
-"EAn-Ja-S1d.text" = "Görüldü";
+"EAn-Ja-S1d.text" = "Pozorované";
 
 /* Class = "UIButton"; normalTitle = "🍭"; ObjectID = "Fal-Vf-lfh"; */
 "Fal-Vf-lfh.normalTitle" = "🍭";
@@ -50,7 +50,7 @@
 "IRb-Yj-AQH.text" = "Label";
 
 /* Class = "UILabel"; text = "Observed changes in glucose, subtracting changes modeled from insulin delivery, can be used to estimate carbohydrate absorption."; ObjectID = "IxU-As-glo"; */
-"IxU-As-glo.text" = "KŞ'erinde gözlemlenen değişiklikler, insülin iletiminde modellenen değişimler çıkararak, karbonhidrat emilimini tahmin etmek için kullanılabilir.";
+"IxU-As-glo.text" = "Pozorované zmeny krvného cukru, odčítaním zmien modelovaných podávaním inzulínu, môžu byť použité pre odhad vstrebávania sacharidov.";
 
 /* Class = "UILabel"; text = "Detail"; ObjectID = "J7x-W5-gwo"; */
 "J7x-W5-gwo.text" = "Detail";
@@ -62,10 +62,10 @@
 "OFA-qT-ZAg.text" = "Label";
 
 /* Class = "UITableViewController"; title = "Predicted Glucose"; ObjectID = "PA3-sP-cWY"; */
-"PA3-sP-cWY.title" = "Tahmin Edilen KŞ";
+"PA3-sP-cWY.title" = "Predpovedaný Krvný cukor";
 
 /* Class = "UILabel"; text = "An insulin activity model is used to estimate effects of insulin on glucose levels. An accurate model can help prevent insulin stacking and safely recommend corrective treatments."; ObjectID = "PJv-p9-cFe"; */
-"PJv-p9-cFe.text" = "İnsülinin KŞ seviyeleri üzerindeki etkisini tahmin etmek için bir insülin aktivite modeli kullanılır. Doğru bir model, insülin birikmesini önlemeye yardımcı olabilir ve düzeltmeleri güvenli bir şekilde önerebilir.";
+"PJv-p9-cFe.text" = "Model inzulínovej aktivity je použitý na odhad účinkov inzulínu na hladinu krvného cukru. Precízny model môže pomôcť predísť stohovaniu inzulínu a bezpečne odporúčať korekčnú liečbu.";
 
 /* Class = "UIButton"; normalTitle = "🍽"; ObjectID = "Qe9-uc-vPR"; */
 "Qe9-uc-vPR.normalTitle" = "🍽";
@@ -77,19 +77,19 @@
 "Rse-x8-amW.text" = "eventually 92 mg/dL";
 
 /* Class = "UILabel"; text = "g COB"; ObjectID = "SQx-au-ZcM"; */
-"SQx-au-ZcM.text" = "gr COB Aktif Karbonhidrat";
+"SQx-au-ZcM.text" = "g SA";
 
 /* Class = "UINavigationItem"; title = "Add/Edit Carb Entry"; ObjectID = "Tz7-80-bJ7"; */
-"Tz7-80-bJ7.title" = "Karbonhidrat Girdisi Ekle/Düzenle";
+"Tz7-80-bJ7.title" = "Pridaj/Uprav Sacharidy";
 
 /* Class = "UINavigationItem"; title = "Carbohydrates"; ObjectID = "Vpi-5b-bY5"; */
-"Vpi-5b-bY5.title" = "Karbonhidratlar";
+"Vpi-5b-bY5.title" = "Sacharidy";
 
 /* Class = "UITextField"; text = "4 hour"; ObjectID = "Wk3-xv-IM5"; */
-"Wk3-xv-IM5.text" = "4 saat";
+"Wk3-xv-IM5.text" = "4 hodiny";
 
 /* Class = "UILabel"; text = "Amount Consumed"; ObjectID = "Wx8-Tf-FnG"; */
-"Wx8-Tf-FnG.text" = "Tüketilen Miktar";
+"Wx8-Tf-FnG.text" = "Konzumované Množstvo";
 
 /* Class = "UITextField"; placeholder = "0"; ObjectID = "Yf6-fw-Gex"; */
 "Yf6-fw-Gex.placeholder" = "0";
@@ -101,58 +101,58 @@
 "aiu-ZA-zVa.title" = "Bolus";
 
 /* Class = "UILabel"; text = "Food Type"; ObjectID = "ap1-M6-naG"; */
-"ap1-M6-naG.text" = "Yemek Türü";
+"ap1-M6-naG.text" = "Typ Jedla";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "bIL-Ub-qYp"; */
 "bIL-Ub-qYp.text" = "Label";
 
 /* Class = "UILabel"; text = "Glucose Change"; ObjectID = "bq4-98-cQU"; */
-"bq4-98-cQU.text" = "Glikoz Değişimi";
+"bq4-98-cQU.text" = "Krvný cukor Zmena";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "cpo-Po-gFM"; */
 "cpo-Po-gFM.text" = "Label";
 
 /* Class = "UILabel"; text = "g Total"; ObjectID = "d3X-AN-tA5"; */
-"d3X-AN-tA5.text" = "Toplam gr";
+"d3X-AN-tA5.text" = "g Celkom";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "d6m-qV-wWi"; */
 "d6m-qV-wWi.text" = "Label";
 
 /* Class = "UINavigationItem"; title = "Settings"; ObjectID = "dmB-PQ-B44"; */
-"dmB-PQ-B44.title" = "Ayarlar";
+"dmB-PQ-B44.title" = "Nastavenia";
 
 /* Class = "UITableViewController"; title = "Carbohydrate Effects"; ObjectID = "hZZ-2S-lrd"; */
-"hZZ-2S-lrd.title" = "Karbonhidrat Etkileri";
+"hZZ-2S-lrd.title" = "Vplyvy Sacharidov";
 
 /* Class = "UILabel"; text = "Detail"; ObjectID = "jQv-xb-gwu"; */
 "jQv-xb-gwu.text" = "Detail";
 
 /* Class = "UILabel"; text = "⚠ Glucose Predicted Below Range"; ObjectID = "k0g-P7-OVN"; */
-"k0g-P7-OVN.text" = "⚠ Hedef aralığın altında tahmin edilen KŞ";
+"k0g-P7-OVN.text" = "⚠ Predpovedaný Krvný cukor Pod Rozsahom";
 
 /* Class = "UILabel"; text = "Recommended Basal"; ObjectID = "k3F-Na-7mn"; */
-"k3F-Na-7mn.text" = "Önerilen Bazal";
+"k3F-Na-7mn.text" = "Odporúčaný Bazál";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "l7l-mw-Oc9"; */
 "l7l-mw-Oc9.text" = "Label";
 
 /* Class = "UILabel"; text = "Tap to set"; ObjectID = "m9c-SQ-djE"; */
-"m9c-SQ-djE.text" = "Ayarlamak için dokun";
+"m9c-SQ-djE.text" = "Dotykom nastavte";
 
 /* Class = "UILabel"; accessibilityLabel = "Units"; ObjectID = "mVz-dr-xLU"; */
-"mVz-dr-xLU.accessibilityLabel" = "Birim";
+"mVz-dr-xLU.accessibilityLabel" = "Jednotky";
 
 /* Class = "UILabel"; text = "U"; ObjectID = "mVz-dr-xLU"; */
-"mVz-dr-xLU.text" = "Ü";
+"mVz-dr-xLU.text" = "J";
 
 /* Class = "UITableViewController"; title = "Insulin Model"; ObjectID = "pi6-Dh-72V"; */
-"pi6-Dh-72V.title" = "İnsülin Tipi";
+"pi6-Dh-72V.title" = "Inzulínový Model";
 
 /* Class = "UILabel"; text = "Food Type"; ObjectID = "qPH-vU-xlu"; */
-"qPH-vU-xlu.text" = "Yemek Türü";
+"qPH-vU-xlu.text" = "Typ Jedla";
 
 /* Class = "UILabel"; text = "Glucose"; ObjectID = "tuw-av-A3x"; */
-"tuw-av-A3x.text" = "Glikoz";
+"tuw-av-A3x.text" = "Krvný cukor";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "ufi-Kj-33k"; */
 "ufi-Kj-33k.text" = "Label";
@@ -164,7 +164,7 @@
 "yn7-2M-jZz.text" = "0";
 
 /* Class = "UILabel"; text = "Recommended"; ObjectID = "ywT-OR-NnU"; */
-"ywT-OR-NnU.text" = "Önerilen";
+"ywT-OR-NnU.text" = "Odporúčané";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "zbc-87-wxZ"; */
 "zbc-87-wxZ.text" = "Title";
@@ -179,4 +179,4 @@
 "hHZ-uY-aKw.text" = "Active Carbohydrates: 40g";
 
 /* Class = "UIButton"; normalTitle = "Deliver"; ObjectID = "Ya0-9b-ZAS"; */
-"Ya0-9b-ZAS.normalTitle" = "İlet";
+"Ya0-9b-ZAS.normalTitle" = "Podaj";
