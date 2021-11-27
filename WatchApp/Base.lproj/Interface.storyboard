@@ -50,7 +50,7 @@
                                             </items>
                                         </group>
                                         <label alignment="center" text="10:09 AM" id="Ury-of-vQg">
-                                            <color key="textColor" systemColor="lightTextColor"/>
+                                            <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                             <fontDescription key="font" type="system" pointSize="15"/>
                                         </label>
                                         <separator alignment="left" id="psX-Zk-dTM">
