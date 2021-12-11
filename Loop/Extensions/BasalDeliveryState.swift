@@ -21,6 +21,7 @@ extension PumpManagerStatus.BasalDeliveryState {
                 return NetBasal(
                     lastTempBasal: dose,
                     maxBasal: settings.maximumBasalRatePerHour,
+                    minBasal: settings.minimumBasalRatePerHour,
                     scheduledBasal: scheduledBasal
                 )
             } else {
@@ -31,6 +32,7 @@ extension PumpManagerStatus.BasalDeliveryState {
                 return NetBasal(
                     suspendedAt: date,
                     maxBasal: settings.maximumBasalRatePerHour,
+                    minBasal: settings.minimumBasalRatePerHour,
                     scheduledBasal: scheduledBasal
                 )
             } else {

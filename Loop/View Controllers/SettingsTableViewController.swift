@@ -75,7 +75,9 @@ final class SettingsTableViewController: UITableViewController {
         case glucoseTargetRange = 0
         case suspendThreshold
         case basalRate
-        case deliveryLimits
+        case maxBasal
+        case minBasal
+        case maxBolus
         case insulinModel
         case carbRatio
         case insulinSensitivity
@@ -97,7 +99,7 @@ final class SettingsTableViewController: UITableViewController {
 
         formatter.numberStyle = .decimal
         formatter.minimumFractionDigits = 0
-        formatter.maximumFractionDigits = 2
+        formatter.maximumFractionDigits = 3
 
         return formatter
     }()
@@ -126,8 +128,9 @@ final class SettingsTableViewController: UITableViewController {
         setupViewController.setupDelegate = self
         setupViewController.completionDelegate = self
         setupViewController.basalSchedule = dataManager.loopManager.basalRateSchedule
-        setupViewController.maxBolusUnits = dataManager.loopManager.settings.maximumBolus
         setupViewController.maxBasalRateUnitsPerHour = dataManager.loopManager.settings.maximumBasalRatePerHour
+        setupViewController.minBasalRateUnitsPerHour = dataManager.loopManager.settings.minimumBasalRatePerHour
+        setupViewController.maxBolusUnits = dataManager.loopManager.settings.maximumBolus
         return setupViewController
     }
     
@@ -309,19 +312,39 @@ final class SettingsTableViewController: UITableViewController {
                 } else {
                     configCell.detailTextLabel?.text = SettingsTableViewCell.TapToSetString
                 }
-            case .deliveryLimits:
-                configCell.textLabel?.text = NSLocalizedString("Delivery Limits", comment: "Title text for delivery limits")
-
-                if dataManager.loopManager.settings.maximumBolus == nil || dataManager.loopManager.settings.maximumBasalRatePerHour == nil {
-                    configCell.detailTextLabel?.text = SettingsTableViewCell.TapToSetString
+            case .maxBasal:
+                configCell.textLabel?.text = NSLocalizedString("Maximum Basal Rate", comment: "Title text for maximum basal rate")
+                if let rate = dataManager.loopManager.settings.maximumBasalRatePerHour {
+                    let unit = NSLocalizedString("U/hour", comment: "The unit string for units per hour")
+                    let value = valueNumberFormatter.string(from: rate, unit: unit)
+                    configCell.detailTextLabel?.text = value
                 } else {
-                    configCell.detailTextLabel?.text = SettingsTableViewCell.EnabledString
+                    configCell.detailTextLabel?.text = SettingsTableViewCell.TapToSetString
+                }
+            case .minBasal:
+                configCell.textLabel?.text = NSLocalizedString("Minimum Basal Rate", comment: "Title text for minimum basal rate")
+                if let rate = dataManager.loopManager.settings.minimumBasalRatePerHour {
+                    let unit = NSLocalizedString("U/hour", comment: "The unit string for units per hour")
+                    let value = valueNumberFormatter.string(from: rate, unit: unit)
+                    configCell.detailTextLabel?.text = value
+                } else {
+                    configCell.detailTextLabel?.text = SettingsTableViewCell.TapToSetString
+                }
+            case .maxBolus:
+                configCell.textLabel?.text = NSLocalizedString("Maximum Bolus", comment: "Title text for maximum bolus")
+                if let amount = dataManager.loopManager.settings.maximumBolus {
+                    let unit = NSLocalizedString("U", comment: "The unit string for units abbreviation")
+                    let value = valueNumberFormatter.string(from: amount, unit: unit)
+                    configCell.detailTextLabel?.text = value
+                } else {
+                    configCell.detailTextLabel?.text = SettingsTableViewCell.TapToSetString
                 }
             case .basalRate:
                 configCell.textLabel?.text = NSLocalizedString("Basal Rates", comment: "The title text for the basal rate schedule")
 
                 if let basalRateSchedule = dataManager.loopManager.basalRateSchedule {
-                    configCell.detailTextLabel?.text = valueNumberFormatter.string(from: basalRateSchedule.total(), unit: "U")
+                    let unit = NSLocalizedString("U", comment: "The unit string for units abbreviation")
+                    configCell.detailTextLabel?.text = valueNumberFormatter.string(from: basalRateSchedule.total(), unit: unit)
                 } else {
                     configCell.detailTextLabel?.text = SettingsTableViewCell.TapToSetString
                 }
@@ -564,13 +587,14 @@ final class SettingsTableViewController: UITableViewController {
                 }
             case .insulinModel:
                 performSegue(withIdentifier: InsulinModelSettingsViewController.className, sender: sender)
-            case .deliveryLimits:
+            case .maxBasal, .minBasal, .maxBolus:
                 let vc = DeliveryLimitSettingsTableViewController(style: .grouped)
 
                 vc.maximumBasalRatePerHour = dataManager.loopManager.settings.maximumBasalRatePerHour
+                vc.minimumBasalRatePerHour = dataManager.loopManager.settings.minimumBasalRatePerHour
                 vc.maximumBolus = dataManager.loopManager.settings.maximumBolus
 
-                vc.title = sender?.textLabel?.text
+                vc.title = NSLocalizedString("Delivery Limits", comment: "Title text for delivery limits")
                 vc.delegate = self
                 vc.syncSource = dataManager.pumpManager
 
@@ -803,12 +827,17 @@ extension SettingsTableViewController: PumpManagerSetupViewControllerDelegate {
 
         if let maxBasalRateUnitsPerHour = pumpManagerSetupViewController.maxBasalRateUnitsPerHour {
             dataManager.loopManager.settings.maximumBasalRatePerHour = maxBasalRateUnitsPerHour
-            tableView.reloadRows(at: [[Section.configuration.rawValue, ConfigurationRow.deliveryLimits.rawValue]], with: .none)
+            tableView.reloadRows(at: [[Section.configuration.rawValue, ConfigurationRow.maxBasal.rawValue]], with: .none)
+        }
+
+        if let minBasalRateUnitsPerHour = pumpManagerSetupViewController.minBasalRateUnitsPerHour {
+            dataManager.loopManager.settings.minimumBasalRatePerHour = minBasalRateUnitsPerHour
+            tableView.reloadRows(at: [[Section.configuration.rawValue, ConfigurationRow.minBasal.rawValue]], with: .none)
         }
 
         if let maxBolusUnits = pumpManagerSetupViewController.maxBolusUnits {
             dataManager.loopManager.settings.maximumBolus = maxBolusUnits
-            tableView.reloadRows(at: [[Section.configuration.rawValue, ConfigurationRow.deliveryLimits.rawValue]], with: .none)
+            tableView.reloadRows(at: [[Section.configuration.rawValue, ConfigurationRow.maxBolus.rawValue]], with: .none)
         }
     }
 }
@@ -947,13 +976,19 @@ extension SettingsTableViewController: DeliveryLimitSettingsTableViewControllerD
     func deliveryLimitSettingsTableViewControllerDidUpdateMaximumBasalRatePerHour(_ vc: DeliveryLimitSettingsTableViewController) {
         dataManager.loopManager.settings.maximumBasalRatePerHour = vc.maximumBasalRatePerHour
 
-        tableView.reloadRows(at: [[Section.configuration.rawValue, ConfigurationRow.deliveryLimits.rawValue]], with: .none)
+        tableView.reloadRows(at: [[Section.configuration.rawValue, ConfigurationRow.maxBasal.rawValue]], with: .none)
+    }
+
+    func deliveryLimitSettingsTableViewControllerDidUpdateMinimumBasalRatePerHour(_ vc: DeliveryLimitSettingsTableViewController) {
+        dataManager.loopManager.settings.minimumBasalRatePerHour = vc.minimumBasalRatePerHour
+
+        tableView.reloadRows(at: [[Section.configuration.rawValue, ConfigurationRow.minBasal.rawValue]], with: .none)
     }
 
     func deliveryLimitSettingsTableViewControllerDidUpdateMaximumBolus(_ vc: DeliveryLimitSettingsTableViewController) {
         dataManager.loopManager.settings.maximumBolus = vc.maximumBolus
 
-        tableView.reloadRows(at: [[Section.configuration.rawValue, ConfigurationRow.deliveryLimits.rawValue]], with: .none)
+        tableView.reloadRows(at: [[Section.configuration.rawValue, ConfigurationRow.maxBolus.rawValue]], with: .none)
     }
 }
 

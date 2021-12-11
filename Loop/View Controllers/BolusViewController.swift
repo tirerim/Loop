@@ -172,7 +172,7 @@ final class BolusViewController: ChartsTableViewController, IdentifiableClass, U
         }
     }
 
-    var maxBolus: Double = 25
+    var maxBolus: Double = 25 // min of max boluses values -- Medtronic 25U max, Omnipod 30U max
 
     private(set) var bolus: Double?
 

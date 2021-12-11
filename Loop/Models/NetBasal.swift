@@ -18,7 +18,7 @@ struct NetBasal {
     let start: Date
     let end: Date?
 
-    init(suspendedAt: Date, maxBasal: Double?, scheduledBasal: AbsoluteScheduleValue<Double>) {
+    init(suspendedAt: Date, maxBasal: Double?, minBasal: Double?, scheduledBasal: AbsoluteScheduleValue<Double>) {
         rate = -scheduledBasal.value
         start = suspendedAt
         end = nil
@@ -37,7 +37,7 @@ struct NetBasal {
         percent = 0
     }
 
-    init(lastTempBasal: DoseEntry?, maxBasal: Double?, scheduledBasal: AbsoluteScheduleValue<Double>) {
+    init(lastTempBasal: DoseEntry?, maxBasal: Double?, minBasal: Double?, scheduledBasal: AbsoluteScheduleValue<Double>) {
         if let lastTempBasal = lastTempBasal, lastTempBasal.endDate > Date() {
             let maxBasal = maxBasal ?? defaultMaxBasalForScale
             rate = lastTempBasal.unitsPerHour - scheduledBasal.value

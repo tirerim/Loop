@@ -37,12 +37,14 @@ extension InsulinCorrection {
     /// - Parameters:
     ///   - scheduledBasalRate: The scheduled basal rate at the time the correction is delivered
     ///   - maxBasalRate: The maximum allowed basal rate
+    ///   - minBasalRate: The minimum allowed basal rate
     ///   - duration: The duration of the temporary basal
     ///   - rateRounder: The smallest fraction of a unit supported in basal delivery
     /// - Returns: A temp basal recommendation
     fileprivate func asTempBasal(
         scheduledBasalRate: Double,
         maxBasalRate: Double,
+        minBasalRate: Double,
         duration: TimeInterval,
         rateRounder: ((Double) -> Double)?
     ) -> TempBasalRecommendation {
@@ -55,6 +57,7 @@ extension InsulinCorrection {
         }
 
         rate = Swift.min(maxBasalRate, Swift.max(0, rate))
+        rate = Swift.max(minBasalRate, rate)
 
         rate = rateRounder?(rate) ?? rate
 
@@ -342,6 +345,7 @@ extension Collection where Element: GlucoseValue {
     ///   - model: The insulin absorption model
     ///   - basalRates: The schedule of basal rates
     ///   - maxBasalRate: The maximum allowed basal rate
+    ///   - minBasalRate: The minimum allowed basal rate
     ///   - lastTempBasal: The previously set temp basal
     ///   - rateRounder: Closure that rounds recommendation to nearest supported rate. If nil, no rounding is performed
     ///   - isBasalRateScheduleOverrideActive: A flag describing whether a basal rate schedule override is in progress
@@ -356,6 +360,7 @@ extension Collection where Element: GlucoseValue {
         model: InsulinModel,
         basalRates: BasalRateSchedule,
         maxBasalRate: Double,
+        minBasalRate: Double,
         lastTempBasal: DoseEntry?,
         rateRounder: ((Double) -> Double)? = nil,
         isBasalRateScheduleOverrideActive: Bool = false,
@@ -383,6 +388,7 @@ extension Collection where Element: GlucoseValue {
         let temp = correction?.asTempBasal(
             scheduledBasalRate: scheduledBasalRate,
             maxBasalRate: maxBasalRate,
+            minBasalRate: minBasalRate,
             duration: duration,
             rateRounder: rateRounder
         )

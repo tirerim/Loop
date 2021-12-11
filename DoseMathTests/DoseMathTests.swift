@@ -55,6 +55,8 @@ class RecommendTempBasalTests: XCTestCase {
 
     fileprivate let maxBasalRate = 3.0
 
+    fileprivate let minBasalRate = 0.0
+
     fileprivate let fortyIncrementsPerUnitRounder = { round($0 * 40) / 40 }
 
     func loadGlucoseValueFixture(_ resourceName: String) -> [GlucoseFixtureValue] {
@@ -114,6 +116,7 @@ class RecommendTempBasalTests: XCTestCase {
             model: insulinModel,
             basalRates: basalRateSchedule,
             maxBasalRate: maxBasalRate,
+            minBasalRate: minBasalRate,
             lastTempBasal: nil
         )
 
@@ -131,6 +134,7 @@ class RecommendTempBasalTests: XCTestCase {
             model: insulinModel,
             basalRates: basalRateSchedule,
             maxBasalRate: maxBasalRate,
+            minBasalRate: minBasalRate,
             lastTempBasal: nil,
             isBasalRateScheduleOverrideActive: true
         )
@@ -150,6 +154,7 @@ class RecommendTempBasalTests: XCTestCase {
             model: insulinModel,
             basalRates: basalRateSchedule,
             maxBasalRate: maxBasalRate,
+            minBasalRate: minBasalRate,
             lastTempBasal: nil
         )
 
@@ -172,6 +177,7 @@ class RecommendTempBasalTests: XCTestCase {
             model: insulinModel,
             basalRates: basalRateSchedule,
             maxBasalRate: maxBasalRate,
+            minBasalRate: minBasalRate,
             lastTempBasal: lastTempBasal
         )
 
@@ -190,6 +196,7 @@ class RecommendTempBasalTests: XCTestCase {
             model: insulinModel,
             basalRates: basalRateSchedule,
             maxBasalRate: maxBasalRate,
+            minBasalRate: minBasalRate,
             lastTempBasal: nil
         )
 
@@ -211,6 +218,7 @@ class RecommendTempBasalTests: XCTestCase {
             model: insulinModel,
             basalRates: basalRateSchedule,
             maxBasalRate: maxBasalRate,
+            minBasalRate: minBasalRate,
             lastTempBasal: lastTempBasal
         )
 
@@ -238,6 +246,7 @@ class RecommendTempBasalTests: XCTestCase {
             model: insulinModel,
             basalRates: basalRateSchedule,
             maxBasalRate: maxBasalRate,
+            minBasalRate: minBasalRate,
             lastTempBasal: lastTempBasal
         )
 
@@ -252,6 +261,7 @@ class RecommendTempBasalTests: XCTestCase {
             model: insulinModel,
             basalRates: basalRateSchedule,
             maxBasalRate: maxBasalRate,
+            minBasalRate: minBasalRate,
             lastTempBasal: nil
         )
 
@@ -269,6 +279,7 @@ class RecommendTempBasalTests: XCTestCase {
             model: insulinModel,
             basalRates: basalRateSchedule,
             maxBasalRate: maxBasalRate,
+            minBasalRate: minBasalRate,
             lastTempBasal: nil
         )
 
@@ -287,6 +298,7 @@ class RecommendTempBasalTests: XCTestCase {
             model: insulinModel,
             basalRates: basalRateSchedule,
             maxBasalRate: maxBasalRate,
+            minBasalRate: minBasalRate,
             lastTempBasal: nil
         )
 
@@ -308,6 +320,7 @@ class RecommendTempBasalTests: XCTestCase {
             model: insulinModel,
             basalRates: basalRateSchedule,
             maxBasalRate: maxBasalRate,
+            minBasalRate: minBasalRate,
             lastTempBasal: lastTempBasal
         )
 
@@ -326,6 +339,7 @@ class RecommendTempBasalTests: XCTestCase {
             model: insulinModel,
             basalRates: basalRateSchedule,
             maxBasalRate: maxBasalRate,
+            minBasalRate: minBasalRate,
             lastTempBasal: nil
         )
 
@@ -344,6 +358,7 @@ class RecommendTempBasalTests: XCTestCase {
             model: insulinModel,
             basalRates: basalRateSchedule,
             maxBasalRate: maxBasalRate,
+            minBasalRate: minBasalRate,
             lastTempBasal: nil
         )
 
@@ -362,6 +377,7 @@ class RecommendTempBasalTests: XCTestCase {
             model: insulinModel,
             basalRates: basalRateSchedule,
             maxBasalRate: maxBasalRate,
+            minBasalRate: minBasalRate,
             lastTempBasal: nil
         )
 
@@ -380,6 +396,7 @@ class RecommendTempBasalTests: XCTestCase {
             model: insulinModel,
             basalRates: basalRateSchedule,
             maxBasalRate: maxBasalRate,
+            minBasalRate: minBasalRate,
             lastTempBasal: nil
         )
 
@@ -397,6 +414,7 @@ class RecommendTempBasalTests: XCTestCase {
             model: insulinModel,
             basalRates: basalRateSchedule,
             maxBasalRate: maxBasalRate,
+            minBasalRate: minBasalRate,
             lastTempBasal: nil
         )
 
@@ -415,6 +433,7 @@ class RecommendTempBasalTests: XCTestCase {
             model: insulinModel,
             basalRates: basalRateSchedule,
             maxBasalRate: maxBasalRate,
+            minBasalRate: minBasalRate,
             lastTempBasal: nil
         )
         
@@ -433,6 +452,7 @@ class RecommendTempBasalTests: XCTestCase {
             model: insulinModel,
             basalRates: basalRateSchedule,
             maxBasalRate: maxBasalRate,
+            minBasalRate: minBasalRate,
             lastTempBasal: nil
         )
 
@@ -450,6 +470,7 @@ class RecommendTempBasalTests: XCTestCase {
             model: insulinModel,
             basalRates: basalRateSchedule,
             maxBasalRate: maxBasalRate,
+            minBasalRate: minBasalRate,
             lastTempBasal: nil
         )
 

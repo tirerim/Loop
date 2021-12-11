@@ -1262,9 +1262,11 @@ extension LoopDataManager {
         let selectedMaxBasal = useCurrentBasalRateMultiplier
             ? settings.currentMaximumBasalRatePerHour(date: startDate, basalRates: basalRateScheduleApplyingOverrideHistory)
             : settings.maximumBasalRatePerHour
+        let selectedMinBasal = settings.minimumBasalRatePerHour
 
         guard
             let maxBasal = selectedMaxBasal,
+            let minBasal = selectedMinBasal,
             let glucoseTargetRange = settings.glucoseTargetRangeScheduleApplyingOverrideIfActive,
             let insulinSensitivity = insulinSensitivityScheduleApplyingOverrideHistory,
             let basalRates = basalRateScheduleApplyingOverrideHistory,
@@ -1303,6 +1305,7 @@ extension LoopDataManager {
             model: model,
             basalRates: basalRates,
             maxBasalRate: maxBasal,
+            minBasalRate: minBasal,
             lastTempBasal: lastTempBasal,
             rateRounder: rateRounder,
             isBasalRateScheduleOverrideActive: settings.scheduleOverride?.isBasalRateScheduleOverriden(at: startDate) == true
@@ -1532,8 +1535,10 @@ extension LoopDataManager {
 
     func setManualTempBasal(_ recommendation: TempBasalRecommendation) {
         guard let maxBasal = self.settings.maximumBasalRatePerHour else { return }
+        guard let minBasal = self.settings.minimumBasalRatePerHour else { return }
         self.dataAccessQueue.async {
-            let units = min(recommendation.unitsPerHour, maxBasal)
+            var units = min(recommendation.unitsPerHour, maxBasal)
+            units = max(units, minBasal)
             let recommendedTempBasal = (
                 recommendation: TempBasalRecommendation(unitsPerHour: units, duration: recommendation.duration),
                 date: Date()
@@ -1835,7 +1840,7 @@ extension Notification.Name {
     static let LoopCompleted = Notification.Name(rawValue: "com.loopkit.Loop.LoopCompleted")
 }
 
-protocol LoopDataManagerDelegate: class {
+protocol LoopDataManagerDelegate: AnyObject {
 
     /// Informs the delegate that an immediate basal change is recommended
     ///

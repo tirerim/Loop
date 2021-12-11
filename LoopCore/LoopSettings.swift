@@ -31,6 +31,8 @@ public struct LoopSettings: Equatable {
 
     public var maximumBasalRatePerHour: Double?
 
+    public var minimumBasalRatePerHour: Double?
+
     public var maximumBolus: Double?
 
     public var suspendThreshold: GlucoseThreshold? = nil
@@ -97,12 +99,14 @@ public struct LoopSettings: Equatable {
         dosingEnabled: Bool = false,
         glucoseTargetRangeSchedule: GlucoseRangeSchedule? = nil,
         maximumBasalRatePerHour: Double? = nil,
+        minimumBasalRatePerHour: Double? = nil,
         maximumBolus: Double? = nil,
         suspendThreshold: GlucoseThreshold? = nil
     ) {
         self.dosingEnabled = dosingEnabled
         self.glucoseTargetRangeSchedule = glucoseTargetRangeSchedule
         self.maximumBasalRatePerHour = maximumBasalRatePerHour
+        self.minimumBasalRatePerHour = minimumBasalRatePerHour
         self.maximumBolus = maximumBolus
         self.suspendThreshold = suspendThreshold
     }
@@ -258,6 +262,8 @@ extension LoopSettings: RawRepresentable {
 
         self.maximumBasalRatePerHour = rawValue["maximumBasalRatePerHour"] as? Double
 
+        self.minimumBasalRatePerHour = rawValue["minimumBasalRatePerHour"] as? Double
+
         self.maximumBolus = rawValue["maximumBolus"] as? Double
 
         if let rawThreshold = rawValue["minimumBGGuard"] as? GlucoseThreshold.RawValue {
@@ -279,6 +285,7 @@ extension LoopSettings: RawRepresentable {
         raw["legacyWorkoutTargetRange"] = legacyWorkoutTargetRange?.rawValue
         raw["scheduleOverride"] = scheduleOverride?.rawValue
         raw["maximumBasalRatePerHour"] = maximumBasalRatePerHour
+        raw["minimumBasalRatePerHour"] = minimumBasalRatePerHour
         raw["maximumBolus"] = maximumBolus
         raw["minimumBGGuard"] = suspendThreshold?.rawValue
 
