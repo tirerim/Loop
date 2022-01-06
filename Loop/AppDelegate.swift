@@ -10,6 +10,7 @@ import UIKit
 import Intents
 import LoopKit
 import UserNotifications
+import BackgroundTasks
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -86,6 +87,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidEnterBackground(_ application: UIApplication) {
         log.default(#function)
+        deviceManager?.scheduleAppTask()
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {

@@ -12,6 +12,7 @@ import LoopKitUI
 import LoopCore
 import LoopTestingKit
 import UserNotifications
+import BackgroundTasks
 
 final class DeviceDataManager {
 
@@ -108,7 +109,8 @@ final class DeviceDataManager {
         } else if isCGMManagerValidPumpManager {
             self.cgmManager = pumpManager as? CGMManager
         }
-        
+        registerAppTask()
+
         remoteDataManager.delegate = self
         statusExtensionManager = StatusExtensionDataManager(deviceDataManager: self)
 
@@ -318,6 +320,8 @@ extension DeviceDataManager {
 
     func updatePumpManagerBLEHeartbeatPreference() {
         pumpManager?.setMustProvideBLEHeartbeat(pumpManagerMustProvideBLEHeartbeat)
+
+        scheduleAppTask()
     }
 }
 
@@ -754,5 +758,41 @@ extension DeviceDataManager {
         } else {
             log.info("Unhandled remote notification: \(notification)")
         }
+    }
+}
+
+// MARK: - Background processing
+extension DeviceDataManager {
+    private func registerAppTask() {
+        BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.loopkit.LoopCore.heartbeat", using: nil) { task in
+            self.handleAppTask(task: task as! BGAppRefreshTask)
+        }
+    }
+
+    func scheduleAppTask() {
+        log.debug("ScheduleAppTask")
+        let appProcessTask = BGAppRefreshTaskRequest(identifier: "com.loopkit.LoopCore.heartbeat")
+        appProcessTask.earliestBeginDate = Date(timeIntervalSinceNow: 1)
+        do {
+          try BGTaskScheduler.shared.submit(appProcessTask)
+        } catch {
+          print("Unable to submit task: \(error.localizedDescription)")
+        }
+    }
+
+    private func handleAppTask(task: BGAppRefreshTask) {
+        log.debug("BG Processing")
+        task.expirationHandler = {
+            task.setTaskCompleted(success: false)
+        }
+
+        guard let pumpManager = pumpManager else { return }
+        self.queue.async {
+            self.pumpManagerBLEHeartbeatDidFire(pumpManager)
+            task.setTaskCompleted(success: true)
+        }
+
+        // Schedule next task.
+        scheduleAppTask()
     }
 }
