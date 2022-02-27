@@ -311,6 +311,7 @@
 
 /* The error message for missing data. (1: missing data details) */
 "Missing data: %1$@" = "Chýbajúce dáta: %1$@";
+
 /* Details for missing data error when momentum effects are missing */
 "Momentum effects" = "Účinky Momentum";
 
