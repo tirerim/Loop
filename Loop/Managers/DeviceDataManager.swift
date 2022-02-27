@@ -208,11 +208,13 @@ final class DeviceDataManager {
                 }
                 
                 let report = [
-                    "## LoopVersion",
-                    "* Version: \(Bundle.main.localizedNameAndVersionAndBuild)",
+                    "## Build Details",
+                    "* appNameAndVersion: \(Bundle.main.localizedNameAndVersionAndBuild)",
                     "* profileExpiration: \(Bundle.main.profileExpirationString)",
                     "* gitRevision: \(Bundle.main.gitRevision ?? "N/A")",
                     "* gitBranch: \(Bundle.main.gitBranch ?? "N/A")",
+                    "* workspaceGitRevision: \(Bundle.main.workspaceGitRevision ?? "N/A")",
+                    "* workspaceGitBranch: \(Bundle.main.workspaceGitBranch ?? "N/A")",
                     "* sourceRoot: \(Bundle.main.sourceRoot ?? "N/A")",
                     "* buildDateString: \(Bundle.main.buildDateString ?? "N/A")",
                     "* xcodeVersion: \(Bundle.main.xcodeVersion ?? "N/A")",
