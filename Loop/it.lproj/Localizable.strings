@@ -150,7 +150,7 @@
 "Cancel" = "Cancella";
 
 /* (No Comment) */
-"Cancel Temp Basal" = "Cancel Temp Basal";
+"Cancel Temp Basal" = "Cancella basale temporanea";
 
 /* The title of the cell indicating a bolus is being canceled */
 "Canceling Bolus" = "Annullamento bolo in corso";
@@ -304,7 +304,7 @@
 "Loop has not completed successfully in %@" = "Loop non completato con successo da %@";
 
 /* (No Comment) */
-"Manual Temp Basal" = "Manual Temp Basal";
+"Manual Temp Basal" = "Basale manuale temporanea";
 
 /* (No Comment) */
 "Max basal limit" = "Limite basale massimo";
@@ -438,9 +438,9 @@
 /*-----------------------------------------------------------------------------*/
 // FreeAPS strings
 
-"Microboluses" = "Microboluses";
+"Microboluses" = "Microboli";
 
-"Caution! Microboluses have potential to reduce the safety effects of other mitigations like max temp basal rate. Please be careful!\nThe actual size of a microbolus is always limited to the partial application of recommended bolus." = "Caution! Microboluses have potential to reduce the safety effects of other mitigations like max temp basal rate. Please be careful!\nThe actual size of a microbolus is always limited to the partial application of recommended bolus.";
+"Caution! Microboluses have potential to reduce the safety effects of other mitigations like max temp basal rate. Please be careful!\nThe actual size of a microbolus is always limited to the partial application of recommended bolus." = "Attenzione! I microboli hanno possono ridurre gli effetti di sicurezza di altre mitigazioni come la velocità basale massima temporanea. Attenzione!\nLa dimensione effettiva di un microbolo è sempre limitata all'applicazione parziale del bolo raccomandato.";
 
 "Enable With Carbs" = "Abilita con Carboidrati";
 
