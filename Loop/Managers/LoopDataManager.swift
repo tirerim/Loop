@@ -439,7 +439,7 @@ extension LoopDataManager {
     /// This is measured in <blood glucose>/gram
     var carbSensitivityScheduleApplyingOverrideHistory: CarbSensitivitySchedule? {
         guard let crSchedule = carbRatioScheduleApplyingOverrideHistory,
-            let isfSchedule = insulinSensitivityScheduleApplyingOverrideHistory
+            var isfSchedule = insulinSensitivityScheduleApplyingOverrideHistory
         else {
             return nil
         }
