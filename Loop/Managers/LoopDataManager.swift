@@ -443,6 +443,11 @@ extension LoopDataManager {
         else {
             return nil
         }
+        // FreeAPS specific fix:
+        //   This prevents the timeZone bug in future and allows recovery with rebuild
+        if crSchedule.timeZone != isfSchedule.timeZone {
+            isfSchedule.timeZone = crSchedule.timeZone
+        }
 
         return .carbSensitivitySchedule(insulinSensitivitySchedule: isfSchedule, carbRatioSchedule: crSchedule)
     }
