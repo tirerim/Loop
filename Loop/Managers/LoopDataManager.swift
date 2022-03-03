@@ -439,9 +439,14 @@ extension LoopDataManager {
     /// This is measured in <blood glucose>/gram
     var carbSensitivityScheduleApplyingOverrideHistory: CarbSensitivitySchedule? {
         guard let crSchedule = carbRatioScheduleApplyingOverrideHistory,
-            let isfSchedule = insulinSensitivityScheduleApplyingOverrideHistory
+            var isfSchedule = insulinSensitivityScheduleApplyingOverrideHistory
         else {
             return nil
+        }
+        // FreeAPS specific fix:
+        //   This prevents the timeZone bug in future and allows recovery with rebuild
+        if crSchedule.timeZone != isfSchedule.timeZone {
+            isfSchedule.timeZone = crSchedule.timeZone
         }
 
         return .carbSensitivitySchedule(insulinSensitivitySchedule: isfSchedule, carbRatioSchedule: crSchedule)
