@@ -2633,6 +2633,7 @@
 				"$(BUILT_PRODUCTS_DIR)/xDripClientUI.framework/xDripClientUI",
 				"$(BUILT_PRODUCTS_DIR)/LibreDirectClient.framework/xLibreDirectClient",
 				"$(BUILT_PRODUCTS_DIR)/LibreDirectClientUI.framework/LibreDirectClientUI",
+				"$(BUILT_PRODUCTS_DIR)/OmniBLE.framework/OmniBLE",
 			);
 			name = "Copy Frameworks with Carthage";
 			outputPaths = (
@@ -2657,6 +2658,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/xDripClientUI.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/LibreDirectClient.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/LibreDirectClientUI.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/OmniBLE.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
