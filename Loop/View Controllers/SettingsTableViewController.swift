@@ -527,6 +527,14 @@ final class SettingsTableViewController: UITableViewController {
 
                 scheduleVC.schedule = dataManager.loopManager.insulinSensitivitySchedule
 
+                if let schedule = dataManager.loopManager.insulinSensitivitySchedule {
+                    // if pump timeZone is not same as phone timeZone, use pump timeZone
+                    scheduleVC.timeZone = schedule.timeZone
+                } else if let timeZone = dataManager.pumpManager?.status.timeZone {
+                    // parallel to CR code but not sure this is ever used
+                    scheduleVC.timeZone = timeZone
+                }
+
                 show(scheduleVC, sender: sender)
             case .glucoseTargetRange:
                 let unit = dataManager.loopManager.settings.glucoseTargetRangeSchedule?.unit ?? dataManager.loopManager.glucoseStore.preferredUnit ?? HKUnit.milligramsPerDeciliter
@@ -541,6 +549,7 @@ final class SettingsTableViewController: UITableViewController {
                 scheduleVC.title = NSLocalizedString("Correction Range", comment: "The title of the glucose target range schedule screen")
 
                 if let schedule = dataManager.loopManager.settings.glucoseTargetRangeSchedule {
+                    scheduleVC.timeZone = schedule.timeZone
                     var overrides: [TemporaryScheduleOverride.Context: DoubleRange] = [:]
                     overrides[.preMeal] = dataManager.loopManager.settings.preMealTargetRange.filter { !$0.isZero }
                     overrides[.legacyWorkout] = dataManager.loopManager.settings.legacyWorkoutTargetRange.filter { !$0.isZero }
