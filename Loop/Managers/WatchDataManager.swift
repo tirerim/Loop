@@ -14,7 +14,7 @@ import LoopCore
 
 final class WatchDataManager: NSObject {
 
-    unowned let deviceManager: DeviceDataManager
+    private unowned let deviceManager: DeviceDataManager
 
     init(deviceManager: DeviceDataManager) {
         self.deviceManager = deviceManager
@@ -26,6 +26,7 @@ final class WatchDataManager: NSObject {
         super.init()
 
         NotificationCenter.default.addObserver(self, selector: #selector(updateWatch(_:)), name: .LoopDataUpdated, object: deviceManager.loopManager)
+        NotificationCenter.default.addObserver(self, selector: #selector(sendSupportedBolusVolumesIfNeeded), name: .PumpManagerChanged, object: deviceManager)
 
         watchSession?.delegate = self
         watchSession?.activate()
@@ -42,6 +43,7 @@ final class WatchDataManager: NSObject {
     }()
 
     private var lastSentSettings: LoopSettings?
+    private var lastSentBolusVolumes: [Double]?
 
     let sleepStore: SleepStore
     
@@ -98,13 +100,11 @@ final class WatchDataManager: NSObject {
             return
         }
 
-        switch updateContext {
-        case .glucose, .tempBasal, .carbs:
-            sendWatchContextIfNeeded()
-        case .preferences:
+        // Any update context should trigger a watch update
+        sendWatchContextIfNeeded()
+
+        if case .preferences = updateContext {
             sendSettingsIfNeeded()
-        default:
-            break
         }
     }
 
@@ -134,6 +134,31 @@ final class WatchDataManager: NSObject {
 
         log.default("Transferring LoopSettingsUserInfo")
         session.transferUserInfo(LoopSettingsUserInfo(settings: settings).rawValue)
+    }
+
+    @objc private func sendSupportedBolusVolumesIfNeeded() {
+        guard
+            let volumes = deviceManager.pumpManager?.supportedBolusVolumes,
+            let session = watchSession,
+            session.isPaired,
+            session.isWatchAppInstalled
+        else {
+            return
+        }
+
+        guard case .activated = session.activationState else {
+            session.activate()
+            return
+        }
+
+        guard volumes != lastSentBolusVolumes else {
+            log.default("Skipping bolus volumes transfer due to no changes")
+            return
+        }
+
+        lastSentBolusVolumes = volumes
+
+        log.default("Transferring supported bolus volumes")
     }
 
     private func sendWatchContextIfNeeded() {
@@ -190,7 +215,8 @@ final class WatchDataManager: NSObject {
         }
     }
 
-    private func createWatchContext(_ completion: @escaping (_ context: WatchContext) -> Void) {
+    private func createWatchContext(recommendingBolusFor potentialCarbEntry: NewCarbEntry? = nil, _ completion: @escaping (_ context: WatchContext) -> Void) {
+
         let loopManager = deviceManager.loopManager!
 
         let glucose = loopManager.glucoseStore.latestGlucose
