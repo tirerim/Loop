@@ -17,9 +17,9 @@
 	<key>CFBundlePackageType</key>
 	<string>FMWK</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.3</string>
+	<string>$(LOOP_MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
-	<string>300</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>NSPrincipalClass</key>
 	<string></string>
 </dict>
