@@ -1522,7 +1522,7 @@ extension LoopDataManager {
             return
         }
 
-        delegate?.loopDataManager(self, didRecommendBasalChange: recommendedTempBasal) { (result) in
+        delegate?.loopDataManager(self, didRecommendBasalChange: recommendedTempBasal, automatic: true) { (result) in
             self.dataAccessQueue.async {
                 switch result {
                 case .success:
@@ -1543,7 +1543,7 @@ extension LoopDataManager {
                 recommendation: TempBasalRecommendation(unitsPerHour: units, duration: recommendation.duration),
                 date: Date()
             )
-            self.delegate?.loopDataManager(self, didRecommendBasalChange: recommendedTempBasal) { (result) in
+            self.delegate?.loopDataManager(self, didRecommendBasalChange: recommendedTempBasal, automatic: false) { (result) in
                 self.dataAccessQueue.async {
                     self.notify(forChange: .tempBasal)
                 }
@@ -1840,16 +1840,17 @@ extension Notification.Name {
     static let LoopCompleted = Notification.Name(rawValue: "com.loopkit.Loop.LoopCompleted")
 }
 
-protocol LoopDataManagerDelegate: class {
+protocol LoopDataManagerDelegate: AnyObject {
 
     /// Informs the delegate that an immediate basal change is recommended
     ///
     /// - Parameters:
     ///   - manager: The manager
     ///   - basal: The new recommended basal
+    ///   - automatic: Will be true for a Loop enacted or suggested temp basal, false for a manual temp basal
     ///   - completion: A closure called once on completion
     ///   - result: The enacted basal
-    func loopDataManager(_ manager: LoopDataManager, didRecommendBasalChange basal: (recommendation: TempBasalRecommendation, date: Date), completion: @escaping (_ result: Result<DoseEntry>) -> Void) -> Void
+    func loopDataManager(_ manager: LoopDataManager, didRecommendBasalChange basal: (recommendation: TempBasalRecommendation, date: Date), automatic: Bool, completion: @escaping (_ result: Result<DoseEntry>) -> Void) -> Void
 
     /// Asks the delegate to round a recommended basal rate to a supported rate
     ///
