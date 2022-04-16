@@ -74,7 +74,7 @@
 "eu3-pj-GH3.title" = "+";
 
 /* Class = "WKInterfaceLabel"; text = "Pre-Meal"; ObjectID = "f5G-bS-9pd"; */
-"f5G-bS-9pd.text" = "Voor de maaltijd";
+"f5G-bS-9pd.text" = "Pre-Maal";
 
 /* Class = "WKInterfaceMenuItem"; title = "3 hours"; ObjectID = "fR1-7h-SNe"; */
 "fR1-7h-SNe.title" = "3 uur";
@@ -98,7 +98,7 @@
 "mpK-zY-UvA.text" = "0.000";
 
 /* Class = "WKInterfaceLabel"; text = "Override"; ObjectID = "nC0-X3-oFJ"; */
-"nC0-X3-oFJ.text" = "Aangepast programma";
+"nC0-X3-oFJ.text" = "TempRide";
 
 /* Class = "WKInterfaceController"; title = "Loop"; ObjectID = "rNf-Mh-tID"; */
 "rNf-Mh-tID.title" = "Loop";

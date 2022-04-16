@@ -68,13 +68,13 @@
 "Active Insulin: %@" = "Aktivt insulin: %@";
 
 /* Title of the user activity for adding carbs */
-"Add Carb Entry" = "Legg til karbohydrater";
+"Add Carb Entry" = "Legg til karbo";
 
 /* */
-"Edit Carb Entry" = "Rediger karbohydrater";
+"Edit Carb Entry" = "Rediger karbo";
 
 /* Back button text for bolus screen to return to carb entry screen */
-"Carb Entry" = "Karbohydrater";
+"Carb Entry" = "Karbo";
 
 /* Title of the carb entry date picker cell */
 "Date" = "Dato";
@@ -187,7 +187,7 @@
 "Closed Loop" = "Lukket Loop";
 
 /* The title of the action used to dismiss an error alert */
-"com.loudnate.LoopKit.errorAlertActionTitle" = "Ok";
+"com.loudnate.LoopKit.errorAlertActionTitle" = "OK";
 
 /* The title of the configuration section in settings */
 "Configuration" = "Konfigurasjon";
@@ -331,7 +331,7 @@
 "Predicted glucose at %1$@ is %2$@." = "Forventet blodsukker om %1$@ er %2$@.";
 
 /* Notice message when recommending bolus when BG is below the suspend threshold. (1: glucose value) */
-"Predicted glucose of %1$@ is below your suspend threshold setting." = "Forventet blodsukker %1$@ er under gitt grense for insulinstopp.";
+"Predicted glucose of %1$@ is below your suspend threshold setting." = "Forventet blodsukker %1$@ er under innstilling for insulinstopp";
 
 /* Format string describing retrospective glucose prediction comparison. (1: Predicted glucose)(2: Actual glucose)(3: difference) */
 "Predicted: %1$@\nActual: %2$@ (%3$@)" = "Forespeilet: %1$@\nFaktisk: %2$@ (%3$@)";

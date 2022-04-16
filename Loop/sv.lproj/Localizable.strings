@@ -14,7 +14,7 @@
 "%1$@ U left: %2$@" = "%1$@ E kvar: %2$@";
 
 /* The format for recommended temp basal rate and time. (1: localized rate number)(2: localized time) */
-"%1$@ U/hour @ %2$@" = "%1$@ E/timme @ %2$@";
+"%1$@ U/hour @ %2$@" = "%1$@ IE/h @ %2$@";
 
 /* The format string for the app name and version number. (1: bundle name)(2: bundle version) */
 "%1$@ v%2$@" = "%1$@ v%2$@";
@@ -486,11 +486,11 @@
 
 "Manual Temp Basal" = "Manuell temporär basal";
 
-"Basal rate (U/h)" = "Basaldos (Е/h)";
+"Basal rate (U/h)" = "Basaldos (IЕ/h)";
 
 "Duration" = "Duration";
 
-"%.0f h %02.0f min" = "%.av h %02.av min";
+"%.0f h %02.0f min" = "%.0f h %02.0f min";
 
 "Cancel Temp Basal" = "Avbryt temporär basal";
 
