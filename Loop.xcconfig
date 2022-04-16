@@ -11,7 +11,7 @@
 MAIN_APP_BUNDLE_IDENTIFIER = com.${DEVELOPMENT_TEAM}.loopkit
 
 // MAIN_APP_DISPLAY_NAME appears as the app name
-MAIN_APP_DISPLAY_NAME = Loop
+MAIN_APP_DISPLAY_NAME = FreeAPS
 
 // LOOP_MARKETING_VERSION appears preceded by "V"
 LOOP_MARKETING_VERSION = 2.3
@@ -21,6 +21,6 @@ CURRENT_PROJECT_VERSION  = 300
 
 APPICON_NAME = AppIcon
 
-// Optional workspace configuration overrides, e.g., for MAIN_APP_DISPLAY_NAME
+// Optional workspace configuration overrides
 #include? "../LoopConfigOverride.xcconfig"
 
