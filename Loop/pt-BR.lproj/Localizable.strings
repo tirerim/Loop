@@ -32,7 +32,7 @@
 "%@ absorbed" = "%@ absorvida";
 
 /* The subtitle format describing total insulin. (1: localized insulin total) */
-"%@ U Total" = "%@ U Total";
+"%@ U Total" = "%@ U total";
 
 /* Appends a full-stop to a statement */
 "%@." = "%@.";
@@ -50,7 +50,7 @@
 "A model based on the published absorption of Humalog, Novolog, and Apidra insulin in adults." = "Um modelo baseado na absorção publicada das insulinas Humalog, Novolog e Apidra em adultos.";
 
 /* Subtitle of Lyumjev preset */
-"A model based on the published absorption of Lyumjev insulin." = "A model based on the published absorption of Lyumjev insulin.";
+"A model based on the published absorption of Lyumjev insulin." = "Um modelo baseado na absorção da insulina de Lyumjev.";
 
 /* Action to copy the recommended Bolus value to the actual Bolus Field */
 "AcceptRecommendedBolus" = "AcceptRecommendedBolus";
@@ -71,28 +71,28 @@
 "Add Carb Entry" = "Adicionar Carb";
 
 /* */
-"Edit Carb Entry" = "Edit Carb Entry";
+"Edit Carb Entry" = "Editar Carb";
 
 /* Back button text for bolus screen to return to carb entry screen */
-"Carb Entry" = "Carb Entry";
+"Carb Entry" = "Adicionar Carb";
 
 /* Title of the carb entry date picker cell */
-"Date" = "Date";
+"Date" = "Data";
 
 /* Title of the carb entry absorption time cell */
-"Absorption Time" = "Absorption Time";
+"Absorption Time" = "Tempo de Absorção";
 
 /* Carb entry section footer text explaining absorption time */
-"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact.";
+"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Escolha um tempo de absorção mais longo para refeições maiores ou aquelas que contenham gorduras e proteínas. Esta é apenas uma orientação para o algoritmo e não precisa ser exata.";
 
 /* The button text to save a carb entry without bolusing*/
-"Save without Bolusing" = "Save without Bolusing";
+"Save without Bolusing" = "Salvar sem Bolus";
 
 /* Title text for bolus screen following a carb entry */
-"Meal Bolus" = "Meal Bolus";
+"Meal Bolus" = "Bolus de refeição";
 
 /* The button text to initiate a bolus */
-"Deliver" = "Deliver";
+"Deliver" = "Entregar";
 
 /* Action sheet title selecting CGM
    Title text for button to set up a CGM */
@@ -112,10 +112,10 @@
 "An adjustment to the adult model based on empirical effects in children." = "Um ajuste do modelo para adultos baseado nos efeitos empíricos em crianças.";
 
 /* The title of the amplitude API key credential */
-"API Key" = "API Key";
+"API Key" = "Chave API";
 
 /* The title of the nightscout API secret credential */
-"API Secret" = "API Secret";
+"API Secret" = "Senha API";
 
 /* Confirmation message for deleting a CGM */
 "Are you sure you want to delete this CGM?" = "Você está certo que quer remover este CGM?";
@@ -127,7 +127,7 @@
 "Authenticate to Bolus %@ Units" = "Autentique para Bolus de %@ Unidades";
 
 /* (No Comment) */
-"Basal rate (U/h)" = "Basal rate (U/h)";
+"Basal rate (U/h)" = "Taxa de Basal (U/h)";
 
 /* Details for configuration error when basal rate schedule is missing */
 "Basal Rate Schedule" = "Programação da Taxa Basal";
@@ -150,7 +150,7 @@
 "Cancel" = "Cancelar";
 
 /* (No Comment) */
-"Cancel Temp Basal" = "Cancel Temp Basal";
+"Cancel Temp Basal" = "Cancelar Basal Temporária";
 
 /* The title of the cell indicating a bolus is being canceled */
 "Canceling Bolus" = "Cancelando Bolus";
@@ -187,7 +187,7 @@
 "Closed Loop" = "Ciclo Fechado";
 
 /* The title of the action used to dismiss an error alert */
-"com.loudnate.LoopKit.errorAlertActionTitle" = "OK";
+"com.loudnate.LoopKit.errorAlertActionTitle" = "Aceitar";
 
 /* The title of the configuration section in settings */
 "Configuration" = "Configurações";
@@ -257,7 +257,7 @@
 "Glucose Momentum" = "Aceleração da Glicose";
 
 /* The placeholder text for the nightscout site URL credential */
-"https://mysite.herokuapp.com" = "https://mysite.herokuapp.com";
+"https://mysite.herokuapp.com" = "https://meusite.herokuapp.com";
 
 /* The title of a target alert action specifying an indefinitely long workout targets duration */
 "Indefinitely" = "Indefinidamente";
@@ -304,10 +304,10 @@
 "Loop has not completed successfully in %@" = "Nenhum ciclo completo com sucesso em %@";
 
 /* (No Comment) */
-"Manual Temp Basal" = "Manual Temp Basal";
+"Manual Temp Basal" = "Basal Temporária Manual";
 
 /* (No Comment) */
-"Max basal limit" = "Max basal limit";
+"Max basal limit" = "Limite máximo de basal";
 
 /* The error message for missing data. (1: missing data details) */
 "Missing data: %1$@" = "Dados ausentes: %1$@";
@@ -385,7 +385,7 @@
 "Services" = "Serviços";
 
 /* (No Comment) */
-"Set" = "Set";
+"Set" = "Definir";
 
 /* The label of the settings button */
 "Settings" = "Configurações";
@@ -397,7 +397,7 @@
 "since %@" = "desde %@";
 
 /* The title of the nightscout site URL credential */
-"Site URL" = "Site URL";
+"Site URL" = "URL do site";
 
 /* The format for the description of a temporary override start date */
 "starting at %@" = "iniciando às %@";
@@ -438,74 +438,74 @@
 /*-----------------------------------------------------------------------------*/
 // FreeAPS strings
 
-"Microboluses" = "Microboluses";
+"Microboluses" = "Microbolus";
 
-"Caution! Microboluses have potential to reduce the safety effects of other mitigations like max temp basal rate. Please be careful!\nThe actual size of a microbolus is always limited to the partial application of recommended bolus." = "Caution! Microboluses have potential to reduce the safety effects of other mitigations like max temp basal rate. Please be careful!\nThe actual size of a microbolus is always limited to the partial application of recommended bolus.";
+"Caution! Microboluses have potential to reduce the safety effects of other mitigations like max temp basal rate. Please be careful!\nThe actual size of a microbolus is always limited to the partial application of recommended bolus." = "Cuidado! Os microbolus têm potencial para reduzir os efeitos de segurança de outras mitigações, como a taxa máxima de basal temporal. Tenha cuidado!\nO valor real de um microbolus é sempre limitado à aplicação parcial do bolus recomendado.";
 
-"Enable With Carbs" = "Enable With Carbs";
+"Enable With Carbs" = "Ativar com Carbs";
 
-"Enable Without Carbs" = "Enable Without Carbs";
+"Enable Without Carbs" = "Ativar sem Carbs";
 
-"Partial Bolus Application" = "Partial Bolus Application";
+"Partial Bolus Application" = "Aplicação Parcial de Bólus";
 
-"What part of the recommended bolus will be applied automatically." = "What part of the recommended bolus will be applied automatically.";
+"What part of the recommended bolus will be applied automatically." = "Que parte do bólus recomendado será aplicada automaticamente.";
 
-"Basal Rate Multiplier" = "Basal Rate Multiplier";
+"Basal Rate Multiplier" = "Multiplicador da Taxa Basal";
 
-"Max basal limit" = "Max basal limit";
+"Max basal limit" = "Limite máximo de basal";
 
-"Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting. This setting is ignored if microboluses are disabled." = "Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting. This setting is ignored if microboluses are disabled.";
+"Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting. This setting is ignored if microboluses are disabled." = "Limita a taxa de basal máxima a um múltiplo da taxa de basal agendada no loop. O valor não pode exceder a sua configuração de taxa de basal máxima. Esta configuração é ignorada se os microbólus estiverem desativados.";
 
-"Temporary overrides" = "Temporary overrides";
+"Temporary overrides" = "Sobreposição temporária";
 
-"Disable MB by enabling temporary override" = "Disable MB by enabling temporary override";
+"Disable MB by enabling temporary override" = "Desativar MB ativando a substituição temporária";
 
-"If the override's target range starts at the given value or more" = "If the override's target range starts at the given value or more";
+"If the override's target range starts at the given value or more" = "Se o intervalo do alvo da sobreposição começa no valor determinado ou mais";
 
-"Other Options" = "Other Options";
+"Other Options" = "Outras Opções";
 
-"Open bolus screen after carbs on watch" = "Open bolus screen after carbs on watch";
+"Open bolus screen after carbs on watch" = "Abrir tela de bólus após os carbs no relógio";
 
-"Minimum Bolus Size" = "Minimum Bolus Size";
+"Minimum Bolus Size" = "Valor mínimo do bolus";
 
-"Last Event" = "Last Event";
+"Last Event" = "Último Evento";
 
-"This is the minimum microbolus size in units that will be delivered. Only if the microbolus calculated is equal to or greater than this number of units will a bolus be delivered." = "This is the minimum microbolus size in units that will be delivered. Only if the microbolus calculated is equal to or greater than this number of units will a bolus be delivered.";
+"This is the minimum microbolus size in units that will be delivered. Only if the microbolus calculated is equal to or greater than this number of units will a bolus be delivered." = "Este é o valor mínimo de microbolus em unidades que será entregue. Somente se o microbolus calculado for igual ou maior do que este número de unidades será entregue.";
 
-"Disabled" = "Disabled";
+"Disabled" = "Desativado";
 
-"Always" = "Always";
+"Always" = "Sempre";
 
-"With Carbs" = "With Carbs";
+"With Carbs" = "Com Carboidratos";
 
-"Without Carbs" = "Without Carbs";
+"Without Carbs" = "Sem Carboidratos";
 
-"Export Settings" = "Export Settings";
+"Export Settings" = "Exportar Configurações";
 
-"Import Settings" = "Import Settings";
+"Import Settings" = "Importar Configurações";
 
-"Manual Temp Basal" = "Manual Temp Basal";
+"Manual Temp Basal" = "Basal Temporária Manual";
 
-"Basal rate (U/h)" = "Basal rate (U/h)";
+"Basal rate (U/h)" = "Taxa de Basal (U/h)";
 
-"Duration" = "Duration";
+"Duration" = "Duração";
 
 "%.0f h %02.0f min" = "%.0f h %02.0f min";
 
-"Cancel Temp Basal" = "Cancel Temp Basal";
+"Cancel Temp Basal" = "Cancelar Basal Temporária";
 
-"Set" = "Set";
+"Set" = "Definir";
 
-"Safety" = "Safety";
+"Safety" = "Segurança";
 
-"Allow MBs when the sensor value is invalid" = "Allow MBs when the sensor value is invalid";
+"Allow MBs when the sensor value is invalid" = "Permitir MBs quando o valor do sensor for inválido";
 
-"Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings." = "Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings.";
+"Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings." = "Às vezes você pode ver um ponto de exclamação ao lado do valor de glicose. Nesses casos, os microbolus não serão aplicados. Ative esta configuração se quiser ignorar avisos.";
 
-"Other FreeAPS settings" = "Other FreeAPS settings";
+"Other FreeAPS settings" = "Outras configurações do FreeAPS";
 
-"Show required carbs on the app badge" = "Show required carbs on the app badge";
+"Show required carbs on the app badge" = "Mostrar carbs necessários no ícone do aplicativo";
 
-"Allow MBs when glucose is below target range" = "Allow MBs when glucose is below target range";
+"Allow MBs when glucose is below target range" = "Permitir MBs quando a glicose estiver abaixo do intervalo de destino";
 
-"Retrospective Correction interval" = "Retrospective Correction interval";
+"Retrospective Correction interval" = "Intervalo de Correção Retrospectiva";
