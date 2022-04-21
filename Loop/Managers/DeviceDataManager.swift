@@ -654,6 +654,7 @@ extension DeviceDataManager: LoopDataManagerDelegate {
     func loopDataManager(
         _ manager: LoopDataManager,
         didRecommendBasalChange basal: (recommendation: TempBasalRecommendation, date: Date),
+        automatic: Bool,
         completion: @escaping (_ result: Result<DoseEntry>) -> Void
     ) {
         guard let pumpManager = pumpManager else {
@@ -666,6 +667,7 @@ extension DeviceDataManager: LoopDataManagerDelegate {
         pumpManager.enactTempBasal(
             unitsPerHour: basal.recommendation.unitsPerHour,
             for: basal.recommendation.duration,
+            automatic: automatic,
             completion: { result in
                 switch result {
                 case .success(let doseEntry):
