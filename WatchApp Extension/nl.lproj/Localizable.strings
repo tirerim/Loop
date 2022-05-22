@@ -35,7 +35,7 @@
 "Send Failed" = "Versturen mislukt";
 
 /* The short unit display string for international units of insulin */
-"U" = "U";
+"U" = "E";
 
 /* The short unit display string for international units of insulin delivery per hour */
 "U/hr" = "E/uur";

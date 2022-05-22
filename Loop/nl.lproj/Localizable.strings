@@ -452,7 +452,7 @@
 
 "Basal Rate Multiplier" = "Basaal snelheid vermenigvuldiger";
 
-"Max basal limit" = "Max basal limit";
+"Max basal limit" = "Max basaal limiet";
 
 "Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting. This setting is ignored if microboluses are disabled." = "Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting. This setting is ignored if microboluses are disabled.";
 
@@ -484,17 +484,17 @@
 
 "Import Settings" = "Importeer instellingen";
 
-"Manual Temp Basal" = "Manual Temp Basal";
+"Manual Temp Basal" = "Handmatige tijdelijke basaal";
 
-"Basal rate (U/h)" = "Basal rate (U/h)";
+"Basal rate (U/h)" = "Basaalstand (E/u)";
 
 "Duration" = "Duur";
 
 "%.0f h %02.0f min" = "%.0f u %02.0f min";
 
-"Cancel Temp Basal" = "Cancel Temp Basal";
+"Cancel Temp Basal" = "Annuleer tijdelijke basaal";
 
-"Set" = "Set";
+"Set" = "Instellen";
 
 "Safety" = "Veiligheid";
 

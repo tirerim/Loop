@@ -50,7 +50,7 @@
 "A model based on the published absorption of Humalog, Novolog, and Apidra insulin in adults." = "Mô hình dựa trên sự hấp thụ được công bố của các loại insulin Humalog, Novolog và Apidra ở người lớn.";
 
 /* Subtitle of Lyumjev preset */
-"A model based on the published absorption of Lyumjev insulin." = "A model based on the published absorption of Lyumjev insulin.";
+"A model based on the published absorption of Lyumjev insulin." = "Một mô hình dựa trên sự hấp thụ insulin Lyumjev đã được công bố.";
 
 /* Action to copy the recommended Bolus value to the actual Bolus Field */
 "AcceptRecommendedBolus" = "AcceptRecommendedBolus";
@@ -71,28 +71,28 @@
 "Add Carb Entry" = "Khai báo khối lượng Carb";
 
 /* */
-"Edit Carb Entry" = "Edit Carb Entry";
+"Edit Carb Entry" = "Chỉnh sửa mục nhập Carb";
 
 /* Back button text for bolus screen to return to carb entry screen */
-"Carb Entry" = "Carb Entry";
+"Carb Entry" = "Nhập Carb";
 
 /* Title of the carb entry date picker cell */
-"Date" = "Date";
+"Date" = "Ngày tháng";
 
 /* Title of the carb entry absorption time cell */
-"Absorption Time" = "Absorption Time";
+"Absorption Time" = "Thời gian hấp thụ";
 
 /* Carb entry section footer text explaining absorption time */
-"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact.";
+"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Chọn thời gian hấp thụ lâu hơn cho các bữa ăn lớn hơn, hoặc những bữa ăn có chứa chất béo và protein. Đây chỉ là hướng dẫn cho thuật toán và không cần chính xác.";
 
 /* The button text to save a carb entry without bolusing*/
-"Save without Bolusing" = "Save without Bolusing";
+"Save without Bolusing" = "Lưu lại mà không cần Bolus";
 
 /* Title text for bolus screen following a carb entry */
-"Meal Bolus" = "Meal Bolus";
+"Meal Bolus" = "Bolus cho bữa ăn";
 
 /* The button text to initiate a bolus */
-"Deliver" = "Deliver";
+"Deliver" = "Chấp nhận";
 
 /* Action sheet title selecting CGM
    Title text for button to set up a CGM */
@@ -106,16 +106,16 @@
 "Add Pump" = "Khai báo bơm";
 
 /* The title of the Amplitude service */
-"Amplitude" = "Amplitude";
+"Amplitude" = "Độ lớn";
 
 /* Subtitle of Rapid-Acting – Children preset */
 "An adjustment to the adult model based on empirical effects in children." = "Sự điều chỉnh cho mẫu người lớn dựa trên hiệu ứng theo kinh nghiệm ở trẻ em.";
 
 /* The title of the amplitude API key credential */
-"API Key" = "API Key";
+"API Key" = "Mã API";
 
 /* The title of the nightscout API secret credential */
-"API Secret" = "API Secret";
+"API Secret" = "Mã bảo mật API";
 
 /* Confirmation message for deleting a CGM */
 "Are you sure you want to delete this CGM?" = "Bạn có chắc sẽ xóa CGM này?";
@@ -127,14 +127,14 @@
 "Authenticate to Bolus %@ Units" = "Xác thực liều Bolus %@ Units";
 
 /* (No Comment) */
-"Basal rate (U/h)" = "Basal rate (U/h)";
+"Basal rate (U/h)" = "Tốc độ cơ bản (U / h)";
 
 /* Details for configuration error when basal rate schedule is missing */
 "Basal Rate Schedule" = "Lịch biểu tiêm liều basal";
 
 /* The title of the basal rate profile screen
    The title text for the basal rate schedule */
-"Basal Rates" = "Basal Rates";
+"Basal Rates" = "Tỷ lệ cơ bản";
 
 /* The label of the bolus entry button
    The notification title for a bolus failure */
@@ -150,7 +150,7 @@
 "Cancel" = "Hủy bỏ";
 
 /* (No Comment) */
-"Cancel Temp Basal" = "Cancel Temp Basal";
+"Cancel Temp Basal" = "Huỷ bỏ Temp Basal";
 
 /* The title of the cell indicating a bolus is being canceled */
 "Canceling Bolus" = "Hủy bỏ liều Bolus";
@@ -187,7 +187,7 @@
 "Closed Loop" = "Vòng lặp kín";
 
 /* The title of the action used to dismiss an error alert */
-"com.loudnate.LoopKit.errorAlertActionTitle" = "OK";
+"com.loudnate.LoopKit.errorAlertActionTitle" = "Đồng ý";
 
 /* The title of the configuration section in settings */
 "Configuration" = "Cấu hình";
@@ -486,13 +486,13 @@
 
 "Manual Temp Basal" = "Manual Temp Basal";
 
-"Basal rate (U/h)" = "Basal rate (U/h)";
+"Basal rate (U/h)" = "Tốc độ cơ bản (U / h)";
 
 "Duration" = "Duration";
 
 "%.0f h %02.0f min" = "%.0f h %02.0f min";
 
-"Cancel Temp Basal" = "Cancel Temp Basal";
+"Cancel Temp Basal" = "Huỷ bỏ Temp Basal";
 
 "Set" = "Set";
 

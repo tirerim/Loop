@@ -484,7 +484,7 @@
 
 "Import Settings" = "Importa le impostazioni";
 
-"Manual Temp Basal" = "Manual Temp Basal";
+"Manual Temp Basal" = "Basale manuale temporanea";
 
 "Basal rate (U/h)" = "Tasso del basale (U/h)";
 
@@ -492,7 +492,7 @@
 
 "%.0f h %02.0f min" = "%.0f h %02.0f min";
 
-"Cancel Temp Basal" = "Cancel Temp Basal";
+"Cancel Temp Basal" = "Cancella basale temporanea";
 
 "Set" = "Imposta";
 

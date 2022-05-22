@@ -35,7 +35,7 @@
 "Send Failed" = "发送失败";
 
 /* The short unit display string for international units of insulin */
-"U" = "U";
+"U" = "单位";
 
 /* The short unit display string for international units of insulin delivery per hour */
 "U/hr" = "U/小时";

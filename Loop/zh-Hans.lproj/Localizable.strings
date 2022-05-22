@@ -492,9 +492,9 @@
 
 "%.0f h %02.0f min" = "%.0f h %02.0f min";
 
-"Cancel Temp Basal" = "Cancel Temp Basal";
+"Cancel Temp Basal" = "取消临时基础率";
 
-"Set" = "Set";
+"Set" = "设置";
 
 "Safety" = "Safety";
 
