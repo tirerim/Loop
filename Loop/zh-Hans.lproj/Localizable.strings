@@ -50,7 +50,7 @@
 "A model based on the published absorption of Humalog, Novolog, and Apidra insulin in adults." = "基于已公布的Humalog，Novolog和Apidra胰岛素在成人中吸收的模型。";
 
 /* Subtitle of Lyumjev preset */
-"A model based on the published absorption of Lyumjev insulin." = "A model based on the published absorption of Lyumjev insulin.";
+"A model based on the published absorption of Lyumjev insulin." = "基于公布的Lyumjev胰岛素吸收的模型";
 
 /* Action to copy the recommended Bolus value to the actual Bolus Field */
 "AcceptRecommendedBolus" = "AcceptRecommendedBolus";
@@ -74,7 +74,7 @@
 "Edit Carb Entry" = "编辑碳水";
 
 /* Back button text for bolus screen to return to carb entry screen */
-"Carb Entry" = "Carb Entry";
+"Carb Entry" = "添加碳水";
 
 /* Title of the carb entry date picker cell */
 "Date" = "日期";
@@ -86,7 +86,7 @@
 "Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "如果吃大餐请选择比较长的吸收时间，或者是以脂肪和蛋白为主的食物。该设置仅为算法的一般原则，具体请根据自身情况调整";
 
 /* The button text to save a carb entry without bolusing*/
-"Save without Bolusing" = "Save without Bolusing";
+"Save without Bolusing" = "保存并且不执行的大剂量";
 
 /* Title text for bolus screen following a carb entry */
 "Meal Bolus" = "正餐大剂量";
@@ -127,7 +127,7 @@
 "Authenticate to Bolus %@ Units" = "解锁以输注大剂量 %@ 单位";
 
 /* (No Comment) */
-"Basal rate (U/h)" = "Basal rate (U/h)";
+"Basal rate (U/h)" = "基础率值 [U/小时]";
 
 /* Details for configuration error when basal rate schedule is missing */
 "Basal Rate Schedule" = "基础率表";
@@ -295,7 +295,7 @@
 "Loading..." = "读取中...";
 
 /* The title of the loggly service */
-"Loggly" = "Loggly";
+"Loggly" = "日志记录";
 
 /* The notification title for a loop failure */
 "Loop Failure" = "Loop失败";
@@ -307,7 +307,7 @@
 "Manual Temp Basal" = "手动设置临时基础";
 
 /* (No Comment) */
-"Max basal limit" = "Max basal limit";
+"Max basal limit" = "最大的大剂量限制";
 
 /* The error message for missing data. (1: missing data details) */
 "Missing data: %1$@" = "数据缺失: %1$@";
@@ -427,7 +427,7 @@
 "Use Workout Glucose Targets" = "使用运动状态的血糖目标";
 
 /* Title of insulin model setting */
-"Walsh" = "Walsh";
+"Walsh" = "Walsh 胰岛素曲线";
 
 /* Explanation of suspend threshold */
 "When current or forecasted glucose is below the suspend threshold, Loop will not recommend a bolus, and will always recommend a temporary basal rate of 0 units per hour." = "当前或预测的葡萄糖低于暂停阈值时，Loop不推荐推注，并且总是建议每小时0单位的临时基础速率。";
@@ -438,21 +438,21 @@
 /*-----------------------------------------------------------------------------*/
 // FreeAPS strings
 
-"Microboluses" = "Microboluses";
+"Microboluses" = "微型大剂量";
 
-"Caution! Microboluses have potential to reduce the safety effects of other mitigations like max temp basal rate. Please be careful!\nThe actual size of a microbolus is always limited to the partial application of recommended bolus." = "Caution! Microboluses have potential to reduce the safety effects of other mitigations like max temp basal rate. Please be careful!\nThe actual size of a microbolus is always limited to the partial application of recommended bolus.";
+"Caution! Microboluses have potential to reduce the safety effects of other mitigations like max temp basal rate. Please be careful!\nThe actual size of a microbolus is always limited to the partial application of recommended bolus." = "注意！自动大剂量会降低安全性，如最大临时基础的输注限制。\n 自动大剂量的输注量为推荐总量一部分,不会一次性全部输注。";
 
-"Enable With Carbs" = "Enable With Carbs";
+"Enable With Carbs" = "仅在有活性碳水化合物时启用自动大剂量";
 
-"Enable Without Carbs" = "Enable Without Carbs";
+"Enable Without Carbs" = "即使没有活性碳水也启用自动大剂量";
 
-"Partial Bolus Application" = "Partial Bolus Application";
+"Partial Bolus Application" = "自动大剂量输注占比(指单次输注推荐大剂量的总量占比)";
 
 "What part of the recommended bolus will be applied automatically." = "What part of the recommended bolus will be applied automatically.";
 
 "Basal Rate Multiplier" = "Basal Rate Multiplier";
 
-"Max basal limit" = "Max basal limit";
+"Max basal limit" = "最大的大剂量限制";
 
 "Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting. This setting is ignored if microboluses are disabled." = "Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting. This setting is ignored if microboluses are disabled.";
 
@@ -486,7 +486,7 @@
 
 "Manual Temp Basal" = "手动设置临时基础";
 
-"Basal rate (U/h)" = "Basal rate (U/h)";
+"Basal rate (U/h)" = "基础率值 [U/小时]";
 
 "Duration" = "持续时间";
 

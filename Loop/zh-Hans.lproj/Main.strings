@@ -1,5 +1,5 @@
 /* Class = "UILabel"; text = "g"; ObjectID = "0RV-d5-muE"; */
-"0RV-d5-muE.text" = "g";
+"0RV-d5-muE.text" = "克";
 
 /* Class = "UINavigationItem"; title = "Status"; ObjectID = "3kU-n2-fha"; */
 "3kU-n2-fha.title" = "状态";
@@ -80,7 +80,7 @@
 "SQx-au-ZcM.text" = "活性碳水化合物 克";
 
 /* Class = "UINavigationItem"; title = "Add/Edit Carb Entry"; ObjectID = "Tz7-80-bJ7"; */
-"Tz7-80-bJ7.title" = "Add/Edit Carb Entry";
+"Tz7-80-bJ7.title" = "添加/编辑碳水化合物条目";
 
 /* Class = "UINavigationItem"; title = "Carbohydrates"; ObjectID = "Vpi-5b-bY5"; */
 "Vpi-5b-bY5.title" = "碳水化合物";
@@ -89,7 +89,7 @@
 "Wk3-xv-IM5.text" = "4小时";
 
 /* Class = "UILabel"; text = "Amount Consumed"; ObjectID = "Wx8-Tf-FnG"; */
-"Wx8-Tf-FnG.text" = "Amount Consumed";
+"Wx8-Tf-FnG.text" = "摄入碳水克数";
 
 /* Class = "UITextField"; placeholder = "0"; ObjectID = "Yf6-fw-Gex"; */
 "Yf6-fw-Gex.placeholder" = "0";
@@ -101,7 +101,7 @@
 "aiu-ZA-zVa.title" = "大剂量";
 
 /* Class = "UILabel"; text = "Food Type"; ObjectID = "ap1-M6-naG"; */
-"ap1-M6-naG.text" = "Food Type";
+"ap1-M6-naG.text" = "食物类型";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "bIL-Ub-qYp"; */
 "bIL-Ub-qYp.text" = "Label";
@@ -149,7 +149,7 @@
 "pi6-Dh-72V.title" = "胰岛素模型";
 
 /* Class = "UILabel"; text = "Food Type"; ObjectID = "qPH-vU-xlu"; */
-"qPH-vU-xlu.text" = "Food Type";
+"qPH-vU-xlu.text" = "食物类型";
 
 /* Class = "UILabel"; text = "Glucose"; ObjectID = "tuw-av-A3x"; */
 "tuw-av-A3x.text" = "葡萄糖";
