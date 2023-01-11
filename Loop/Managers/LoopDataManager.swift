@@ -1390,6 +1390,15 @@ extension LoopDataManager {
             return
         }
 
+        // Add check for invalidFutureGlucose; prevent MB
+        if let latestGlucose = glucoseStore.latestGlucose {
+            let futureGlucoseInterval = latestGlucose.startDate.timeIntervalSinceNow
+            guard futureGlucoseInterval < 300.0 else {
+                completion(.canceled(date: startDate, recommended: insulinReq, reason: "Invalid Future Glucose -> Check your device time and/or remove any invalid data from Apple Health."), nil)
+                return
+            }
+        }
+
         if let sensorState = delegate?.sensorState {
             guard sensorState.isStateValid || settings.microbolusSettings.enabledWhenSensorStateIsInvalid else {
                 completion(.canceled(date: startDate, recommended: insulinReq, reason: "Possible sensor noise or calibration."), nil)
