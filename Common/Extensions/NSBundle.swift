@@ -77,4 +77,14 @@ extension Bundle {
             return "N/A"
         }
     }
+
+    // These strings are only configured if it is a workspace build
+    var workspaceGitRevision: String? {
+        return object(forInfoDictionaryKey: "com-loopkit-LoopWorkspace-git-revision") as? String
+    }
+
+    var workspaceGitBranch: String? {
+       return object(forInfoDictionaryKey: "com-loopkit-LoopWorkspace-git-branch") as? String
+   }
+
 }

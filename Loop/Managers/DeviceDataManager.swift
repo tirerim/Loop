@@ -208,11 +208,13 @@ final class DeviceDataManager {
                 }
                 
                 let report = [
-                    "## LoopVersion",
-                    "* Version: \(Bundle.main.localizedNameAndVersionAndBuild)",
+                    "## Build Details",
+                    "* appNameAndVersion: \(Bundle.main.localizedNameAndVersionAndBuild)",
                     "* profileExpiration: \(Bundle.main.profileExpirationString)",
                     "* gitRevision: \(Bundle.main.gitRevision ?? "N/A")",
                     "* gitBranch: \(Bundle.main.gitBranch ?? "N/A")",
+                    "* workspaceGitRevision: \(Bundle.main.workspaceGitRevision ?? "N/A")",
+                    "* workspaceGitBranch: \(Bundle.main.workspaceGitBranch ?? "N/A")",
                     "* sourceRoot: \(Bundle.main.sourceRoot ?? "N/A")",
                     "* buildDateString: \(Bundle.main.buildDateString ?? "N/A")",
                     "* xcodeVersion: \(Bundle.main.xcodeVersion ?? "N/A")",
@@ -397,27 +399,6 @@ extension DeviceDataManager: PumpManagerDelegate {
         dispatchPrecondition(condition: .onQueue(queue))
         log.default("PumpManager:\(type(of: pumpManager)) did fire BLE heartbeat")
 
-        let bleHeartbeatUpdateInterval: TimeInterval
-        switch loopManager.lastLoopCompleted?.timeIntervalSinceNow {
-        case .none:
-            // If we haven't looped successfully, retry only every 5 minutes
-            bleHeartbeatUpdateInterval = .minutes(5)
-        case let interval? where interval < .minutes(-10):
-            // If we haven't looped successfully in more than 10 minutes, retry only every 5 minutes
-            bleHeartbeatUpdateInterval = .minutes(5)
-        case let interval? where interval <= .minutes(-5):
-            // If we haven't looped successfully in more than 5 minutes, retry every minute
-            bleHeartbeatUpdateInterval = .minutes(1)
-        case let interval?:
-            // If we looped successfully less than 5 minutes ago, ignore the heartbeat.
-            log.default("PumpManager:\(type(of: pumpManager)) ignoring pumpManager heartbeat. Last loop completed \(-interval.minutes) minutes ago")
-            return
-        }
-
-        guard lastBLEDrivenUpdate.timeIntervalSinceNow <= -bleHeartbeatUpdateInterval else {
-            log.default("PumpManager:\(type(of: pumpManager)) ignoring pumpManager heartbeat. Last ble update \(lastBLEDrivenUpdate)")
-            return
-        }
         lastBLEDrivenUpdate = Date()
 
         refreshCGM()
@@ -673,6 +654,7 @@ extension DeviceDataManager: LoopDataManagerDelegate {
     func loopDataManager(
         _ manager: LoopDataManager,
         didRecommendBasalChange basal: (recommendation: TempBasalRecommendation, date: Date),
+        automatic: Bool,
         completion: @escaping (_ result: Result<DoseEntry>) -> Void
     ) {
         guard let pumpManager = pumpManager else {
@@ -685,6 +667,7 @@ extension DeviceDataManager: LoopDataManagerDelegate {
         pumpManager.enactTempBasal(
             unitsPerHour: basal.recommendation.unitsPerHour,
             for: basal.recommendation.duration,
+            automatic: automatic,
             completion: { result in
                 switch result {
                 case .success(let doseEntry):

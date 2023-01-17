@@ -62,7 +62,7 @@
 "OFA-qT-ZAg.text" = "Label";
 
 /* Class = "UITableViewController"; title = "Predicted Glucose"; ObjectID = "PA3-sP-cWY"; */
-"PA3-sP-cWY.title" = "Tahmin Edilen Glikoz";
+"PA3-sP-cWY.title" = "Tahmin Edilen KŞ";
 
 /* Class = "UILabel"; text = "An insulin activity model is used to estimate effects of insulin on glucose levels. An accurate model can help prevent insulin stacking and safely recommend corrective treatments."; ObjectID = "PJv-p9-cFe"; */
 "PJv-p9-cFe.text" = "İnsülinin KŞ seviyeleri üzerindeki etkisini tahmin etmek için bir insülin aktivite modeli kullanılır. Doğru bir model, insülin birikmesini önlemeye yardımcı olabilir ve düzeltmeleri güvenli bir şekilde önerebilir.";
@@ -89,7 +89,7 @@
 "Wk3-xv-IM5.text" = "4 saat";
 
 /* Class = "UILabel"; text = "Amount Consumed"; ObjectID = "Wx8-Tf-FnG"; */
-"Wx8-Tf-FnG.text" = "Miktar Tüketildi";
+"Wx8-Tf-FnG.text" = "Tüketilen Miktar";
 
 /* Class = "UITextField"; placeholder = "0"; ObjectID = "Yf6-fw-Gex"; */
 "Yf6-fw-Gex.placeholder" = "0";
@@ -149,7 +149,7 @@
 "pi6-Dh-72V.title" = "İnsülin Tipi";
 
 /* Class = "UILabel"; text = "Food Type"; ObjectID = "qPH-vU-xlu"; */
-"qPH-vU-xlu.text" = "Gıda Türü";
+"qPH-vU-xlu.text" = "Yemek Türü";
 
 /* Class = "UILabel"; text = "Glucose"; ObjectID = "tuw-av-A3x"; */
 "tuw-av-A3x.text" = "Glikoz";
@@ -179,4 +179,4 @@
 "hHZ-uY-aKw.text" = "Active Carbohydrates: 40g";
 
 /* Class = "UIButton"; normalTitle = "Deliver"; ObjectID = "Ya0-9b-ZAS"; */
-"Ya0-9b-ZAS.normalTitle" = "Teslimet";
+"Ya0-9b-ZAS.normalTitle" = "İlet";
