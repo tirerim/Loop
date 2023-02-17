@@ -26,7 +26,7 @@
 "IRi-4t-ESO.text" = "—";
 
 /* Class = "WKInterfaceLabel"; text = "Running"; ObjectID = "JXa-s1-PJx"; */
-"JXa-s1-PJx.text" = "Antrenman";
+"JXa-s1-PJx.text" = "Çalışıyor";
 
 /* Class = "WKInterfaceLabel"; text = "TITLE"; ObjectID = "MZU-QV-PtZ"; */
 "MZU-QV-PtZ.text" = "TITLE";
@@ -92,7 +92,7 @@
 "hln-CI-MRP.text" = "Karb";
 
 /* Class = "WKInterfaceLabel"; text = "Bolus Failed"; ObjectID = "jj3-Gq-HBy"; */
-"jj3-Gq-HBy.text" = "Başarısız Bolus";
+"jj3-Gq-HBy.text" = "Bolus Hatası";
 
 /* Class = "WKInterfaceLabel"; text = "0.000"; ObjectID = "mpK-zY-UvA"; */
 "mpK-zY-UvA.text" = "0.000";
@@ -104,7 +104,7 @@
 "rNf-Mh-tID.title" = "Loop";
 
 /* Class = "WKInterfaceLabel"; text = "UNITS"; ObjectID = "rV7-d9-n6u"; */
-"rV7-d9-n6u.text" = "ÜNİTE";
+"rV7-d9-n6u.text" = "BİRİMLER";
 
 /* Class = "WKInterfaceLabel"; text = "Bolus"; ObjectID = "smL-Rc-IZh"; */
 "smL-Rc-IZh.text" = "Bolus";

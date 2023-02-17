@@ -8,7 +8,7 @@
 "Add Carb Entry" = "Karbonhidrat Girdisi Ekle";
 
 /* The title of the alert controller displayed after a bolus attempt fails */
-"Bolus Failed" = "Başarısız Bolus";
+"Bolus Failed" = "Bolus Hatası";
 
 /* The action button title to dismiss an error message */
 "Dismiss" = "Reddet";
