@@ -65,7 +65,9 @@ struct MicrobolusView: View {
             }
 
             VStack(alignment: .leading) {
-                Text("If the override's target range starts at the given value or more").font(.caption)
+                Text("If the override's target range starts at the given value or more")
+                    .fixedSize(horizontal: false, vertical: true)
+                    .font(.caption)
                 HStack {
                     TextField("0", text: $viewModel.lowerBound)
                     .keyboardType(.decimalPad)
@@ -75,6 +77,10 @@ struct MicrobolusView: View {
                     Text(viewModel.unit.localizedShortUnitString)
                 }
             }
+            .frame(maxHeight: .infinity)
+            .padding(.vertical, 1.0)
+            
+            
         }
     }
 
